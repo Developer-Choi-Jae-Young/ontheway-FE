@@ -1,0 +1,17 @@
+.custom-button{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: var(--btn-width);
+    height: 58px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid var(--btn-color);
+    background-color: var(--btn-color);
+    color: var(--font-color);
+    border-radius: 100px;
+}
+
+.custom-button:hover {
+    cursor : pointer;
+}
