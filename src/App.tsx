@@ -1,4 +1,5 @@
 import CustomButton from './components/CustomButton.tsx'
+import './App.css'
 
 function App() {
 
