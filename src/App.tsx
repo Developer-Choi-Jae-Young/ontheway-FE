@@ -1,4 +1,4 @@
-import CustomButton from './CustomButton.tsx'
+import CustomButton from './components/CustomButton.tsx'
 
 function App() {
 
