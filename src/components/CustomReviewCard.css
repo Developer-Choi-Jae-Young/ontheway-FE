@@ -1,0 +1,46 @@
+.custom-review {
+    display: flex;
+    flex-direction: column;
+    border: 0px 1px white;
+    border-radius: 16px;
+    background-color: white;
+    padding: 16px;
+    width: calc(var(--review-width) * 1px);
+    gap: 12px;
+}
+
+.review-profile-info {
+    display: flex;
+    justify-content: space-between
+}
+
+.review-profile-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-nickname {
+    font-weight: 600;
+    font-size: 16pt;
+}
+
+.reivew-date {
+    color: #9CA3AF;
+    font-size: 12pt;
+}
+
+.review-star-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rating-number {
+    font-size: 16pt;
+}
+
+.review-content {
+    font-size: 16pt;
+    color: #6B7280;
+}
