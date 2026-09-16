@@ -1,0 +1,53 @@
+.custom-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0px 1px white;
+    border-radius: 16px;
+    background-color: white;
+    padding: 16px;
+    width: calc(var(--product-width) * 1px);
+    gap: 16px;
+}
+
+.product-section {
+    display: flex;
+    gap: 12px;
+}
+
+.product-box-section {
+    width: 40px;
+    height: 40px;
+    background-color: #E3EAFD;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.product-number {
+    font-size: 12pt;
+    color: #6B7280;
+}
+
+.product-category {
+    font-size: 16pt;
+}
+
+.product-money {
+    font-weight: 600;
+    font-size: 18pt;
+    color: #FD5D35;
+}
+
+.product-money-unit {
+    font-size: 14pt;
+    color: #FD5D35;
+}

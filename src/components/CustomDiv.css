@@ -1,0 +1,24 @@
+.custom-div {
+    width: 393px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.custom-div > div:first-child {
+    flex-shrink: 0;
+    height: 60px;
+}
+
+.custom-div > div:last-child {
+    flex-shrink: 0;
+    height: 60px;
+}
+
+.custom-div-body {
+    flex: 1;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
