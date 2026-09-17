@@ -1,5 +1,5 @@
 import './TextField.css'
-import { MapPinOutline } from './CustomIcon'
+import { MapPinOutline, XButton } from './CustomIcon'
 //2. props
 type TextFieldProps = {
   height: 56 | 48
@@ -18,8 +18,8 @@ function TextField(props : TextFieldProps) {
             {props.leftLocationIcon && <span><MapPinOutline width={20} height={24} stroke="#4B5663" strokeWidth={2} /></span>}
             <input placeholder={props.placeholder}/>
             {props.timer && <span>2:59</span>}
-            {props.rightButton === 'x' && <button>ⓧ</button>}
-            {props.rightButton === 'label' && <button>Label</button>}
+            {props.rightButton === 'x' && <XButton/>}
+            {props.rightButton === 'label' && <div className='label-button'><button>Label</button></div>}
         </div>
     )
 }

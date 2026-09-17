@@ -1,6 +1,6 @@
 .text-field {
   width: 337px;
-  border-radius: 15px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   border: 1px solid;
@@ -14,4 +14,41 @@
   background: transparent;
   width: 100%;
   font : 16px;
+}
+
+.x-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: none;
+    background: none;
+    border-radius: 50%;
+}
+
+.x-button:hover {
+    cursor: pointer;
+}
+
+.x-button:active {
+    transform: scale(0.8);
+}
+
+.label-button{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--Neutral-Border4, #F2F2F2);
+  border-radius: 8px;
+}
+
+.label-button button {
+  all: unset;
+  cursor: pointer;
+}
+
+.label-button button:active{
+  transform: scale(0.9);
 }

@@ -1,5 +1,5 @@
 import './EmptyState.css'
-import { Box } from './CustomIcon'
+import { Box, Camera } from './CustomIcon'
 
 type EmptyStateProps = {
   type: 'route' | 'photo'
@@ -10,7 +10,7 @@ function EmptyState(props: EmptyStateProps) {
     <div className="empty-state">
 
       <div className="empty-icon">
-        {props.type === 'route' ? <Box width={30} height={30} strokeWidth={2} /> : '▣'}
+        {props.type === 'route' ? <Box width={48} height={48} strokeWidth={2} /> : <Camera width={48} height={48} strokeWidth={4} />}
       </div>
 
       <strong>
