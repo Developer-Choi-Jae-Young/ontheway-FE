@@ -1,4 +1,5 @@
 import './Dropdown.css'
+import { Arrow } from './CustomIcon'
 
 type DropdownProps = {
   borderColor: 'lightGray' | 'gray' | 'orange'
@@ -7,11 +8,15 @@ type DropdownProps = {
 function Dropdown(props: DropdownProps) {
   return (
     <div className="dropdown">
-      <select style={{ borderColor: props.borderColor }}>
-        <option>선택해주세요</option>
-      </select>
-
-      {props.borderColor === 'orange' && <p>항목을 선택해주세요.</p>}
+      <div className='select-wrapper'>
+        <select style={{ borderColor: props.borderColor }}>
+            <option>선택해주세요</option>
+        </select>
+        <div className="dropdown-arrow">
+          <Arrow width={24} height={24} strokeWidth={2}></Arrow>
+        </div>
+    </div>
+      {props.borderColor === 'orange' && <p style={{color:'orange'}}>항목을 선택해주세요.</p>}
     </div>
   )
 }

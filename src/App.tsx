@@ -150,7 +150,7 @@ function App() {
         {/* 예진 컴포넌트 */}
 
         <TextField
-          height={88}
+          height={56}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -160,7 +160,7 @@ function App() {
         />
 
         <TextField
-          height={88}
+          height={56}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -170,7 +170,7 @@ function App() {
         />
 
         <TextField
-          height={88}
+          height={56}
           borderColor="gray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -180,7 +180,7 @@ function App() {
         />
 
         <TextField
-          height={88}
+          height={56}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -190,7 +190,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -200,7 +200,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -210,7 +210,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -220,7 +220,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="gray"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -230,7 +230,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -240,7 +240,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -250,7 +250,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="gray"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -260,7 +260,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -270,7 +270,7 @@ function App() {
         />
 
         <TextField
-          height={80}
+          height={48}
           borderColor="none"
           backgroundColor="gray"
           leftLocationIcon={true}

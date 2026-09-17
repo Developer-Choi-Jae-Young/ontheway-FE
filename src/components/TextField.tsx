@@ -1,8 +1,8 @@
 import './TextField.css'
-
+import { MapPinOutline } from './CustomIcon'
 //2. props
 type TextFieldProps = {
-  height: 80 | 88
+  height: 56 | 48
   borderColor: 'lightGray' | 'gray' | 'orange' | 'none'
   backgroundColor: 'white' | 'gray'
   leftLocationIcon: boolean
@@ -15,7 +15,7 @@ type TextFieldProps = {
 function TextField(props : TextFieldProps) {
     return(
         <div className="text-field" style={{ height: `${props.height}px`, borderColor: props.borderColor, backgroundColor: props.backgroundColor }}>
-            {props.leftLocationIcon && <span>📍</span>}
+            {props.leftLocationIcon && <span><MapPinOutline width={20} height={24} stroke="#4B5663" strokeWidth={2} /></span>}
             <input placeholder={props.placeholder}/>
             {props.timer && <span>2:59</span>}
             {props.rightButton === 'x' && <button>ⓧ</button>}
