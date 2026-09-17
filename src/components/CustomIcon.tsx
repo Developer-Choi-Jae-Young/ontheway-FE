@@ -103,7 +103,7 @@ interface MapPinIcon {
 
 export const MapPin = ({ width = 18, height = 22, stroke = '#4576F7', strokeWidth = 2, innerRadius = 3 }: MapPinIcon) => {
     return (
-        <svg width={width} height={height} viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox={`0 0 18 22`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path 
                 d="M9.601 20.799C11.461 19.193 17 13.993 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1C6.87827 1 4.84344 1.84285 3.34315 3.34315C1.84285 4.84344 1 6.87827 1 9C1 13.993 6.539 19.193 8.399 20.799C8.57228 20.9293 8.7832 20.9998 9 20.9998C9.2168 20.9998 9.42772 20.9293 9.601 20.799Z" 
                 fill={stroke} stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"
@@ -158,3 +158,33 @@ export const MapPinOutline = ({ width = 20, height = 24, stroke = '#4B5663', str
     </svg>
   )
 }
+
+interface Dot {
+    width?: number;
+    height?: number;
+    fill?: string;
+    stroke?: string;
+}
+
+export const Dot = ({ width = 20, height = 20, fill = 'white',stroke = '#6A6A67' }: Dot) => {
+    return ( 
+        <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx={width/2} cy={height/2} r={width/2} fill={stroke} />
+            <circle cx={width/2} cy={height/2} r={width/4} fill={fill} />
+        </svg>
+    );
+};
+
+interface Recipe {
+    width?: number;
+    height?: number;
+    stroke?: string;
+}
+
+export const Recipe = ({ width = 10, height = 12, stroke = '#6A6A67' }: Recipe) => {
+    return ( 
+        <svg width={width} height={height} viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5625 0.562502H1.5625C1.29728 0.562502 1.04293 0.667858 0.855393 0.855395C0.667857 1.04293 0.5625 1.29729 0.5625 1.5625V9.5625C0.5625 9.82772 0.667857 10.0821 0.855393 10.2696C1.04293 10.4571 1.29728 10.5625 1.5625 10.5625H7.5625C7.82772 10.5625 8.08207 10.4571 8.26961 10.2696C8.45714 10.0821 8.5625 9.82772 8.5625 9.5625V3.5625M5.5625 0.562502C5.72078 0.562245 5.87754 0.593303 6.02377 0.653886C6.16999 0.714469 6.30278 0.803381 6.4145 0.915502L8.2085 2.7095C8.32092 2.82125 8.41009 2.95417 8.47085 3.10058C8.53161 3.24699 8.56276 3.40399 8.5625 3.5625M5.5625 0.562502V3.0625C5.5625 3.19511 5.61518 3.32229 5.70895 3.41605C5.80271 3.50982 5.92989 3.5625 6.0625 3.5625L8.5625 3.5625M3.5625 4.0625H2.5625M6.5625 6.0625H2.5625M6.5625 8.0625H2.5625" stroke={stroke} stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    );
+};

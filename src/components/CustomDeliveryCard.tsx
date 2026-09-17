@@ -1,5 +1,5 @@
 import './CustomDeliveryCard.css'
-import { Arrow, Calendar, Clock, MapPin } from './CustomIcon';
+import { Calendar, Dot, MapPin, Recipe } from './CustomIcon';
 import CustomRequestCount from './CustomRequestCount'
 
 interface CustomDeliveryCard {
@@ -19,31 +19,42 @@ function CustomDeliveryCard({width, startAddr, endAddr, date, startTime, endTime
             <div><CustomRequestCount count={6}></CustomRequestCount></div>
             <div className='delivery-location-section'>
                 <div className='delivery-location-info'>
-                    <MapPin width={24} height={24}></MapPin>
-                    <span className='delivery-location'>{startAddr}</span>    
-                </div>
-                <div className={'location-arrow rotated'}>
-                    <Arrow width={24} height={24} strokeWidth={2}></Arrow>
-                </div>
-                <div className='delivery-location-info'>
-                    <MapPin width={24} height={24} stroke='#FD5D35'></MapPin>
-                    <span className='delivery-location'>{endAddr}</span>
+                    <div className='delivery-row'>
+                        <div className='icon-wrapper'>
+                            <div style={{padding:'1px'}}>
+                                <Dot width={20} height={20}></Dot>
+                            </div>
+                        </div>
+                        <span className='delivery-location'>{startAddr}</span>
+                    </div>
+                    <div className='delivery-row'>
+                        <div className='icon-wrapper'>
+                            <MapPin width={22} height={22} stroke='#FD5D35'></MapPin>
+                        </div>
+                        <span className='delivery-location'>{endAddr}</span>
+                    </div>
                 </div>
             </div>
             <div className='delivery-date-section'>
                 <div className='delivery-date-info'>
-                    <Calendar width={16} height={16}></Calendar>
-                    <span className='delivery-date-font'>{date}</span>
+                    <div style={{display: 'flex', alignItems:'center', gap:'4px'}}>
+                        <Calendar width={16} height={16}></Calendar>
+                        <span className='delivery-date-font'>일정</span>
+                    </div>
+                    <div>
+                        <span className='delivery-date-font'>{date} {startTime}~{endTime}</span>
+                    </div>
                 </div>
                 
                 <div className='delivery-date-info'>
-                    <Clock width={16} height={16}></Clock>
-                    <span className='delivery-date-font'>{startTime}~{endTime}</span>
+                    <div style={{display: 'flex', alignItems:'center', gap:'4px'}}>
+                        <Recipe width={16} height={16}></Recipe>
+                        <span className='delivery-date-font'>희망금액</span>
+                    </div>
+                    <div>
+                        <span className='delivery-date-font'>{price}원</span>
+                    </div>
                 </div>
-            </div>
-            <div className='delivery-price-section'>
-                <span className='delivery-price'>{price}</span>
-                <span className='delivery-price-unit'>원</span>
             </div>
         </div>
     </>

@@ -26,7 +26,8 @@ import CustomFilterChip from './components/CustomFilterChip.tsx'
 import CustomCheckbox from './components/CustomCheckbox.tsx'
 import CustomTab from './components/CustomTab.tsx'
 import CustomFab from './components/CustomFab.tsx'
- 
+import CustomAccordion from './components/CustomAccordion.tsx'
+
 function App() {
   return (
     <>
@@ -359,7 +360,8 @@ function App() {
         <CustomTab tabs={['Label', 'Label']} activeIndex={1} />
  
         <CustomFab />
- 
+        <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'}></CustomAccordion>
+        
       </CustomDiv>
     </>
   )
