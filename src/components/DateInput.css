@@ -1,0 +1,24 @@
+.date-input-box {
+  width: 310px;
+  height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.date-input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.calendar-icon {
+  margin-left: auto;
+  font-size: 20px;
+}

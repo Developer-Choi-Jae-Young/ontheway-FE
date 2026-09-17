@@ -1,0 +1,22 @@
+.time-input {
+  width: 241px;
+}
+
+.time-input-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-input-block select {
+  width: 105px;
+  height: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.time-input-block p {
+  margin: 0;
+}
