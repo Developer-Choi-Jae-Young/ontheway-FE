@@ -31,8 +31,8 @@ function App() {
   return (
     <>
       <CustomDiv
-        headerElement={<span>헤더</span>}
-        footerElement={<span>푸터</span>}
+        headerElement={<CustomTopAppBar title="Title" />}
+        footerElement={<CustomNavBar/>}
       >
         <CustomButton
           name={'활성화'}
@@ -318,10 +318,7 @@ function App() {
         <CustomTopAppBar variant="meta" title="Title" meta="Title" />
         <CustomTopAppBar variant="large" title="Title" subtitle="Title" />
  
-        <CustomNavBar active="home" />
-        <CustomNavBar active="history" />
-        <CustomNavBar active="posts" />
-        <CustomNavBar active="my" />
+        <CustomNavBar />
  
         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
           <CustomNavIcon type="home" />
@@ -348,12 +345,12 @@ function App() {
           <CustomFilterChip label="Text" disabled icon="chevron" />
         </div>
  
-        <CustomCheckbox label="Checked" checked />
-        <CustomCheckbox label="Checked" />
-        <CustomCheckbox label="Checked" checked disabled />
-        <CustomCheckbox label="Checked" size="sm" checked />
-        <CustomCheckbox label="Checked" size="sm" />
-        <CustomCheckbox label="Checked" size="sm" checked disabled />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <CustomCheckbox label="Checked" size="lg" />
+          <CustomCheckbox label="Checked" size="sm" />
+          <CustomCheckbox label="Checked" size="lg" defaultChecked disabled />
+          <CustomCheckbox label="Checked" size="sm" defaultChecked disabled />
+        </div>
  
         <CustomTab tabs={['Label', 'Label']} activeIndex={0} />
         <CustomTab tabs={['Label', 'Label']} activeIndex={1} />
