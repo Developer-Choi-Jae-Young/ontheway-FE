@@ -1,0 +1,16 @@
+.custom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--btn-width);
+    height: 58px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--btn-color);
+    color: var(--font-color);
+    border-radius: 16px;
+}
+ 
+.custom-button:hover {
+    cursor: pointer;
+}

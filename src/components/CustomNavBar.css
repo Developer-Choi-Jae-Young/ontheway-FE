@@ -1,0 +1,15 @@
+.nav-bar {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-top: 1px solid #f2f2f2;
+}
+ 
+.nav-bar__items {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 6px;
+}
