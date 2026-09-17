@@ -10,6 +10,16 @@
   background-color: white;
 }
 
+.calendar-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border: none;
+    background: none;
+    border-radius: 50%;
+}
+
 .date-input-box input {
   flex: 1;
   border: none;
