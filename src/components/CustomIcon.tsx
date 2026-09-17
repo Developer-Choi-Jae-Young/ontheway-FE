@@ -143,3 +143,18 @@ export const Clock = ({ width = 14, height = 15, stroke = '#6B7280', strokeWidth
     );
 };
 
+interface MapPinOutline {
+  width?: number;
+  height?: number;
+  stroke?: string;
+  strokeWidth?: number;
+}
+
+export const MapPinOutline = ({ width = 20, height = 24, stroke = '#4B5663', strokeWidth = 2 }: MapPinOutline) => {
+  return (
+    <svg width={width} height={height} viewBox="0 0 18 22" fill="none">
+      <path d="M9.601 20.799C11.461 19.193 17 13.993 17 9C17 4.58272 13.4183 1 9 1C4.58172 1 1 4.58272 1 9C1 13.993 6.539 19.193 8.399 20.799C8.57228 20.9293 8.7832 20.9998 9 20.9998C9.2168 20.9998 9.42772 20.9293 9.601 20.799Z" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="9" cy="9" r="3" stroke={stroke} strokeWidth={strokeWidth}/>
+    </svg>
+  )
+}
