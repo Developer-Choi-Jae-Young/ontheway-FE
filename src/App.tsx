@@ -3,7 +3,7 @@ import './App.css'
 import CustomProfile from './components/CustomProfile.tsx'
 import CustomChips from './components/CustomChips.tsx'
 import CustomProfileCard from './components/CustomProfileCard.tsx'
-
+ 
 import TextField from './components/TextField.tsx'
 import TextArea from './components/TextArea.tsx'
 import { Info1, Info2 } from './components/Info'
@@ -11,12 +11,22 @@ import TimeInput from './components/TimeInput.tsx'
 import Dropdown from './components/Dropdown.tsx'
 import DateInput from './components/DateInput.tsx'
 import EmptyState from './components/EmptyState.tsx'
-
+ 
 import CustomReviewCard from './components/CustomReviewCard.tsx'
 import CustomProductCard from './components/CustomProductCard.tsx'
 import CustomDeliveryCard from './components/CustomDeliveryCard.tsx'
 import CustomDiv from './components/CustomDiv.tsx'
-
+ 
+// 최인하 컴포넌트
+import CustomTopAppBar from './components/CustomTopAppBar.tsx'
+import CustomNavBar from './components/CustomNavBar.tsx'
+import CustomNavIcon from './components/CustomNavIcon.tsx'
+import CustomList from './components/CustomList.tsx'
+import CustomFilterChip from './components/CustomFilterChip.tsx'
+import CustomCheckbox from './components/CustomCheckbox.tsx'
+import CustomTab from './components/CustomTab.tsx'
+import CustomFab from './components/CustomFab.tsx'
+ 
 function App() {
   return (
     <>
@@ -30,18 +40,18 @@ function App() {
           fontColor={'#ffffff'}
           width={'361px'}
         ></CustomButton>
-
+ 
         <br />
-
+ 
         <CustomButton
           name={'활성화'}
           color={'#4576f7'}
           fontColor={'#1f2937'}
           width={'178px'}
         ></CustomButton>
-
+ 
         <br />
-
+ 
         <CustomProfileCard
           width={349}
           nickname="최재영"
@@ -67,11 +77,11 @@ function App() {
             ></CustomProfile>
           }
         ></CustomProfileCard>
-
+ 
         <br />
-
+ 
         {/* 팀원 컴포넌트 */}
-
+ 
         <CustomReviewCard
           width={349}
           profileElement={
@@ -89,18 +99,18 @@ function App() {
           rating={2.5}
           content={'후기 내용'}
         ></CustomReviewCard>
-
+ 
         <br />
-
+ 
         <CustomProductCard
           number={'물품번호'}
           category={'전자기기'}
           money={'00,000'}
           width={349}
         ></CustomProductCard>
-
+ 
         <br />
-
+ 
         <CustomDeliveryCard
           width={349}
           startAddr={'서울특별시 강남구'}
@@ -110,9 +120,9 @@ function App() {
           endTime={'00:00'}
           price={'00,000'}
         ></CustomDeliveryCard>
-
+ 
         <br />
-
+ 
         <CustomDeliveryCard
           width={349}
           startAddr={'서울특별시 강남구'}
@@ -122,9 +132,9 @@ function App() {
           endTime={'00:00'}
           price={'00,000'}
         ></CustomDeliveryCard>
-
+ 
         <br />
-
+ 
         <CustomDeliveryCard
           width={349}
           startAddr={'서울특별시 강남구'}
@@ -134,9 +144,9 @@ function App() {
           endTime={'00:00'}
           price={'00,000'}
         ></CustomDeliveryCard>
-
+ 
         <br />
-
+ 
         <CustomDeliveryCard
           width={349}
           startAddr={'서울특별시 강남구'}
@@ -146,9 +156,9 @@ function App() {
           endTime={'00:00'}
           price={'00,000'}
         ></CustomDeliveryCard>
-
+ 
         {/* 예진 컴포넌트 */}
-
+ 
         <TextField
           height={88}
           borderColor="lightGray"
@@ -158,7 +168,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={88}
           borderColor="orange"
@@ -168,7 +178,7 @@ function App() {
           timer={false}
           rightButton="x"
         />
-
+ 
         <TextField
           height={88}
           borderColor="gray"
@@ -178,7 +188,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={88}
           borderColor="orange"
@@ -188,7 +198,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="lightGray"
@@ -198,7 +208,7 @@ function App() {
           timer={true}
           rightButton="label"
         />
-
+ 
         <TextField
           height={80}
           borderColor="lightGray"
@@ -208,7 +218,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="orange"
@@ -218,7 +228,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="gray"
@@ -228,7 +238,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="lightGray"
@@ -238,7 +248,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="orange"
@@ -248,7 +258,7 @@ function App() {
           timer={false}
           rightButton="x"
         />
-
+ 
         <TextField
           height={80}
           borderColor="gray"
@@ -258,7 +268,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="orange"
@@ -268,7 +278,7 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextField
           height={80}
           borderColor="none"
@@ -278,33 +288,81 @@ function App() {
           timer={false}
           rightButton="none"
         />
-
+ 
         <TextArea borderColor="lightGray" textcount={0} />
         <TextArea borderColor="orange" textcount={1} />
         <TextArea borderColor="gray" textcount={70} />
         <TextArea borderColor="orange" textcount={100} />
-
+ 
         <Info1 />
         <Info2 />
-
+ 
         <TimeInput borderColor="lightGray" backgroundColor="white" />
         <TimeInput borderColor="none" backgroundColor="gray" />
         <TimeInput borderColor="orange" backgroundColor="white" />
-
+ 
         <Dropdown borderColor="lightGray" />
         <Dropdown borderColor="gray" />
         <Dropdown borderColor="orange" />
-
+ 
         <DateInput borderColor="lightGray" />
         <DateInput borderColor="orange" />
         <DateInput borderColor="gray" />
-
+ 
         <EmptyState type="route" />
         <EmptyState type="photo" />
-
+ 
+        {/* 최인하 컴포넌트 */}
+ 
+        <CustomTopAppBar title="Title" />
+        <CustomTopAppBar variant="meta" title="Title" meta="Title" />
+        <CustomTopAppBar variant="large" title="Title" subtitle="Title" />
+ 
+        <CustomNavBar active="home" />
+        <CustomNavBar active="history" />
+        <CustomNavBar active="posts" />
+        <CustomNavBar active="my" />
+ 
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <CustomNavIcon type="home" />
+          <CustomNavIcon type="history" />
+          <CustomNavIcon type="posts" />
+          <CustomNavIcon type="my" />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <CustomNavIcon type="home" active />
+          <CustomNavIcon type="history" active />
+          <CustomNavIcon type="posts" active />
+          <CustomNavIcon type="my" active />
+        </div>
+ 
+        <CustomList variant="list01" label="Text" />
+        <CustomList variant="list02" title="배송날짜" date="0000.00.00" time="AM 12:00" />
+ 
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <CustomFilterChip label="Text" variant="full" icon="chevron" />
+          <CustomFilterChip label="Text" selected />
+          <CustomFilterChip label="Text" variant="line" icon="chevron" />
+          <CustomFilterChip label="Text" selected icon="x" />
+          <CustomFilterChip label="Text" selected icon="chevron" />
+          <CustomFilterChip label="Text" disabled icon="chevron" />
+        </div>
+ 
+        <CustomCheckbox label="Checked" checked />
+        <CustomCheckbox label="Checked" />
+        <CustomCheckbox label="Checked" checked disabled />
+        <CustomCheckbox label="Checked" size="sm" checked />
+        <CustomCheckbox label="Checked" size="sm" />
+        <CustomCheckbox label="Checked" size="sm" checked disabled />
+ 
+        <CustomTab tabs={['Label', 'Label']} activeIndex={0} />
+        <CustomTab tabs={['Label', 'Label']} activeIndex={1} />
+ 
+        <CustomFab />
+ 
       </CustomDiv>
     </>
   )
 }
-
+ 
 export default App

@@ -1,20 +1,21 @@
-import './CustonButton.css'
-
-interface CustomButton {
-    name: string; color: string; fontColor: string; width: string;
+import './CustomButton.css'
+ 
+interface CustomButtonProps {
+    name: string;
+    color: string;
+    fontColor: string;
+    width: string;
 }
-
-function CustomButton({name,color,fontColor,width}: CustomButton) {
-  return (
-    <>
-        <div className="custom-button" 
-        style={{ '--btn-color': color, '--font-color':fontColor, '--btn-width':width} as React.CSSProperties}
-
-    >
+ 
+function CustomButton({ name, color, fontColor, width }: CustomButtonProps) {
+    return (
+        <div
+            className="custom-button"
+            style={{ '--btn-color': color, '--font-color': fontColor, '--btn-width': width } as React.CSSProperties}
+        >
             {name}
         </div>
-    </>
-  )
+    )
 }
-
+ 
 export default CustomButton
