@@ -35,20 +35,102 @@ function App() {
         footerElement={<CustomNavBar/>}
       >
         <CustomButton
-          name={'활성화'}
+          name={'Label'}
           color={'#fd5d35'}
           fontColor={'#ffffff'}
-          width={'361px'}
+          size = 'lg'
         ></CustomButton>
- 
+
         <br />
- 
         <CustomButton
-          name={'활성화'}
-          color={'#4576f7'}
-          fontColor={'#1f2937'}
-          width={'178px'}
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'lg'
         ></CustomButton>
+        <br />
+
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'lg'
+        ></CustomButton>
+
+        <br />
+        <CustomButton
+          name={'Label'}
+          color={'#fd5d35'}
+          fontColor={'#ffffff'}
+          size = 'md'
+        ></CustomButton>
+
+        <br/>
+
+        <CustomButton
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'md'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'md'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#fd5d35'}
+          fontColor={'#ffffff'}
+          size = 'sm'
+        ></CustomButton>
+      
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'sm'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'sm'
+        ></CustomButton>
+
+        <br/>
+
+        <CustomButton
+          name={'Label'}
+          color={'#fd5d35'}
+          fontColor={'#ffffff'}
+          size = 'xsm'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'xsm'
+        ></CustomButton>
+
+        <br />
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'xsm'
+        ></CustomButton>
+    
  
         <br />
  
