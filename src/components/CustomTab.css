@@ -1,0 +1,29 @@
+.tab {
+    display: flex;
+    height: 45px;
+    box-sizing: border-box;
+    background-color: #d7dae0;
+    border-radius: 16px;
+}
+ 
+.tab__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #4b5663;
+}
+ 
+.tab__item--active {
+    background-color: #fd5d35;
+    color: #ffffff;
+}

@@ -1,0 +1,26 @@
+.nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 0 8px 4px;
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #58616a;
+}
+ 
+.nav-icon--active {
+    color: #fd5d35;
+}
+ 
+.nav-icon__label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: currentColor;
+    white-space: nowrap;
+}
