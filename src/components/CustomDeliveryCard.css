@@ -16,19 +16,34 @@
 }
 
 .delivery-location-info {
+    position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.location-arrow {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    transition: transform 0.3s ease; 
+.delivery-location-info::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 9px;
+    border-left: 3px dashed #B7C9FD;
 }
 
-.location-arrow.rotated {
-    transform: rotate(270deg);
+.delivery-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-wrapper {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .delivery-location {
@@ -37,11 +52,14 @@
 
 .delivery-date-section {
     display: flex;
-    gap: 64px;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .delivery-date-info {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 4px;
 }
 
