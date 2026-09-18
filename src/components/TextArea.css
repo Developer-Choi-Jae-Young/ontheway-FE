@@ -4,8 +4,8 @@
   display: flex;
   
   align-items: flex-start; /* 위쪽 정렬 */
-  border: 3px solid;
-  border-radius: 15px;
+  border: 1px solid;
+  border-radius: 12px;
   background-color: white;
   position: relative;
 }
@@ -16,12 +16,13 @@
   bottom: 8px;
 }
 
-.text-area input {
+.text-area textarea {
   border: none;
   outline: none;
   background: transparent;
   width: 100%;
   font : 22px;
-
+  resize: none;
   margin-top: 16px;
+  padding: 16px 16px 36px 16px;
 }

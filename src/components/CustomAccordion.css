@@ -1,0 +1,120 @@
+.custom-accordion {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  position: relative;
+  overflow: hidden; 
+  width: calc(var(--accordion-width) * 1px);
+  box-sizing: border-box;
+  border: 1px solid transparent; 
+  transition: border-color 0.2s ease;
+}
+
+.custom-accordion.is-open {
+  border: 1px solid #ff6b35;
+  background-color: #FEF1ED;
+}
+
+.accordion-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.accordion-card-indicator {
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 55px;
+  background-color: #d1d5db;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-accordion.is-open .accordion-card-indicator {
+  background-color: #ff6b35;
+}
+
+.accordion-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.accordion-card-title {
+  margin: 0;
+  font-size: 15pt;
+  font-weight: 700;
+  color: #111827;
+}
+
+.accordion-card-item-name {
+  margin: 0;
+  font-size: 13pt;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.accordion-card-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.accordion-card-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.accordion-card-add-button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.accordion-card-add-button:hover {
+  color: #111827;
+}
+
+.accordion-card-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out, margin-top 0.1s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-accordion.is-open .accordion-card-content {
+  opacity: 1;
+  max-height: 1000px;
+  margin-top: 10px;
+  border-radius: 16px;
+  border: 1px solid #f3f4f6;
+  transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out, margin-top 0.1s ease-in-out;
+}
+
+.accordion-default-box {
+  width: 100%;
+  height: 300px;
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+}

@@ -1,5 +1,5 @@
 .date-input-box {
-  width: 310px;
+  width: 361px;
   height: 48px;
   box-sizing: border-box;
   display: flex;
@@ -8,6 +8,16 @@
   border: 1px solid;
   border-radius: 10px;
   background-color: white;
+}
+
+.calendar-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border: none;
+    background: none;
+    border-radius: 50%;
 }
 
 .date-input-box input {

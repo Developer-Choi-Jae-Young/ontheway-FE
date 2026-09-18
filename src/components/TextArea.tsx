@@ -9,7 +9,7 @@ type TextAreaProps = {
 // 1. TextField Component : () 안에 prop를 넣어주면 됨. 
 function TextArea(props : TextAreaProps){
     return(<div className='text-area' style={{borderColor: props.borderColor}}>
-        <input placeholder="Text"/>
+        <textarea placeholder="Text"/>
         <span className='text-count'>
             <span style={{ color: props.textcount === 100 ? 'orange' : 'gray' }}>
                 {props.textcount}

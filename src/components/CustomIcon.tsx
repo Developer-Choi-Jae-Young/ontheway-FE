@@ -78,6 +78,21 @@ export const Box = ({width, height, strokeWidth} : Box) => {
     );
 };
 
+interface Camera {
+    width: number;
+    height: number;
+    strokeWidth: number;
+}
+
+export const Camera = ({width, height, strokeWidth} : Camera) => {
+    return(
+        <svg width={width} height={height} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.994 8C28.7156 7.99999 29.4237 8.19517 30.0434 8.56487C30.6631 8.93457 31.1712 9.46501 31.514 10.1L32.486 11.9C32.8288 12.535 33.3369 13.0654 33.9566 13.4351C34.5763 13.8048 35.2844 14 36.006 14H40C41.0609 14 42.0783 14.4214 42.8284 15.1716C43.5786 15.9217 44 16.9391 44 18V36C44 37.0609 43.5786 38.0783 42.8284 38.8284C42.0783 39.5786 41.0609 40 40 40H8C6.93913 40 5.92172 39.5786 5.17157 38.8284C4.42143 38.0783 4 37.0609 4 36V18C4 16.9391 4.42143 15.9217 5.17157 15.1716C5.92172 14.4214 6.93913 14 8 14H11.994C12.7148 14 13.4223 13.8053 14.0416 13.4363C14.6608 13.0674 15.1689 12.5379 15.512 11.904L16.49 10.096C16.8331 9.46206 17.3412 8.93262 17.9604 8.56367C18.5797 8.19471 19.2872 7.99996 20.008 8H27.994Z" stroke="#58616A" stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24 32C27.3137 32 30 29.3137 30 26C30 22.6863 27.3137 20 24 20C20.6863 20 18 22.6863 18 26C18 29.3137 20.6863 32 24 32Z" stroke="#58616A" stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    );
+};
+
 interface Users {
     width: number;
     height: number;
@@ -103,7 +118,7 @@ interface MapPinIcon {
 
 export const MapPin = ({ width = 18, height = 22, stroke = '#4576F7', strokeWidth = 2, innerRadius = 3 }: MapPinIcon) => {
     return (
-        <svg width={width} height={height} viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox={`0 0 18 22`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path 
                 d="M9.601 20.799C11.461 19.193 17 13.993 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1C6.87827 1 4.84344 1.84285 3.34315 3.34315C1.84285 4.84344 1 6.87827 1 9C1 13.993 6.539 19.193 8.399 20.799C8.57228 20.9293 8.7832 20.9998 9 20.9998C9.2168 20.9998 9.42772 20.9293 9.601 20.799Z" 
                 fill={stroke} stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"
@@ -171,7 +186,65 @@ export const FileText = ({ width = 12, height = 12, stroke = '#6B7280', strokeWi
             <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M14 2v4a2 2 0 0 0 2 2h4" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M16 13H8M16 17H8M10 9H8" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+interface MapPinOutline {
+  width?: number;
+  height?: number;
+  stroke?: string;
+  strokeWidth?: number;
+}
+
+export const MapPinOutline = ({ width = 20, height = 24, stroke = '#4B5663', strokeWidth = 2 }: MapPinOutline) => {
+  return (
+    <svg width={width} height={height} viewBox="0 0 18 22" fill="none">
+      <path d="M9.601 20.799C11.461 19.193 17 13.993 17 9C17 4.58272 13.4183 1 9 1C4.58172 1 1 4.58272 1 9C1 13.993 6.539 19.193 8.399 20.799C8.57228 20.9293 8.7832 20.9998 9 20.9998C9.2168 20.9998 9.42772 20.9293 9.601 20.799Z" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="9" cy="9" r="3" stroke={stroke} strokeWidth={strokeWidth}/>
+    </svg>
+  )
+}
+
+interface Dot {
+    width?: number;
+    height?: number;
+    fill?: string;
+    stroke?: string;
+}
+
+export const Dot = ({ width = 20, height = 20, fill = 'white',stroke = '#6A6A67' }: Dot) => {
+    return ( 
+        <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx={width/2} cy={height/2} r={width/2} fill={stroke} />
+            <circle cx={width/2} cy={height/2} r={width/4} fill={fill} />
         </svg>
     );
 };
 
+interface Recipe {
+    width?: number;
+    height?: number;
+    stroke?: string;
+}
+
+export const Recipe = ({ width = 10, height = 12, stroke = '#6A6A67' }: Recipe) => {
+    return ( 
+        <svg width={width} height={height} viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5625 0.562502H1.5625C1.29728 0.562502 1.04293 0.667858 0.855393 0.855395C0.667857 1.04293 0.5625 1.29729 0.5625 1.5625V9.5625C0.5625 9.82772 0.667857 10.0821 0.855393 10.2696C1.04293 10.4571 1.29728 10.5625 1.5625 10.5625H7.5625C7.82772 10.5625 8.08207 10.4571 8.26961 10.2696C8.45714 10.0821 8.5625 9.82772 8.5625 9.5625V3.5625M5.5625 0.562502C5.72078 0.562245 5.87754 0.593303 6.02377 0.653886C6.16999 0.714469 6.30278 0.803381 6.4145 0.915502L8.2085 2.7095C8.32092 2.82125 8.41009 2.95417 8.47085 3.10058C8.53161 3.24699 8.56276 3.40399 8.5625 3.5625M5.5625 0.562502V3.0625C5.5625 3.19511 5.61518 3.32229 5.70895 3.41605C5.80271 3.50982 5.92989 3.5625 6.0625 3.5625L8.5625 3.5625M3.5625 4.0625H2.5625M6.5625 6.0625H2.5625M6.5625 8.0625H2.5625" stroke={stroke} stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    );
+};
+
+interface XButton{
+    width: number;
+    height: number;
+    strokeWidth: number;
+}
+
+export const XButton = () => {
+    return(
+            <div className="x-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 9L9 15M9 9L15 15M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#6A6A67" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+    )
+}

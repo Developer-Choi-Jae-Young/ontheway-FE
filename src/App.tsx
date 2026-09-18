@@ -30,6 +30,8 @@ import CustomFab from './components/CustomFab.tsx'
 // 최인하 페이지
 import HomePage from './pages/CustomHomePage.tsx'
  
+import CustomAccordion from './components/CustomAccordion.tsx'
+
 function App() {
   return (
     <>
@@ -249,7 +251,7 @@ function App() {
         {/* 예진 컴포넌트 */}
  
         <TextField
-          height={88}
+          height={56}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -259,7 +261,7 @@ function App() {
         />
  
         <TextField
-          height={88}
+          height={56}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -269,7 +271,7 @@ function App() {
         />
  
         <TextField
-          height={88}
+          height={56}
           borderColor="gray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -279,7 +281,7 @@ function App() {
         />
  
         <TextField
-          height={88}
+          height={56}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -289,7 +291,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -299,7 +301,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -309,7 +311,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -319,7 +321,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="gray"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -329,7 +331,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="lightGray"
           backgroundColor="white"
           leftLocationIcon={false}
@@ -339,7 +341,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -349,7 +351,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="gray"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -359,7 +361,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="orange"
           backgroundColor="white"
           leftLocationIcon={true}
@@ -369,7 +371,7 @@ function App() {
         />
  
         <TextField
-          height={80}
+          height={48}
           borderColor="none"
           backgroundColor="gray"
           leftLocationIcon={true}
@@ -445,7 +447,8 @@ function App() {
         <CustomTab tabs={['Label', 'Label']} activeIndex={1} />
  
         <CustomFab />
- 
+        <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'}></CustomAccordion>
+        
       </CustomDiv>
  
       <HomePage />
