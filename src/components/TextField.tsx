@@ -16,6 +16,7 @@ type TextFieldProps = {
 // 1. TextField Component : () 안에 prop를 넣어주면 됨. 
 function TextField(props : TextFieldProps) {
     return(
+        
         <div className="text-field-container">
             <p>{props.label}</p>
             <div className="text-field" style={{ height: `${props.height}px`, borderColor: props.borderColor, backgroundColor: props.backgroundColor }}>

@@ -107,7 +107,6 @@ function App() {
 
         <CustomDeliveryCard width={349} count={20} startAddr={'서울특별시 강남구'} endAddr={'경기도 성남시'} date={'00월 00일(월)'} startTime={'00:00'} endTime={'00:00'} price={'00,000'} />
 
-        {/* 예진 컴포넌트 */}
 
         <TextField label="Label" height={56} borderColor="lightGray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={56} borderColor="orange" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="x" />

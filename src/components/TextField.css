@@ -15,11 +15,12 @@
 }
 
 .text-field-container p {
+  
   margin: 0;
 
 }
 
-.text-field input {
+.text-field input { 
   border: none;
   outline: none;
   background: transparent;
