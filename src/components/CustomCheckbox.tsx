@@ -1,13 +1,13 @@
+import { useState } from 'react'
 import './CustomCheckbox.css'
- 
+
 interface CustomCheckboxProps {
     label: string;
-    checked?: boolean;
+    defaultChecked?: boolean;
     disabled?: boolean;
     size?: "sm" | "lg";
-    onChange?: (checked: boolean) => void;
 }
- 
+
 function CheckIcon() {
     return (
         <svg viewBox="0 0 24 24" fill="none"
@@ -16,8 +16,14 @@ function CheckIcon() {
         </svg>
     )
 }
- 
-function CustomCheckbox({ label, checked = false, disabled = false, size = "lg", onChange }: CustomCheckboxProps) {
+
+function CustomCheckbox({ label, defaultChecked = false, disabled = false, size = "lg" }: CustomCheckboxProps) {
+    const [checked, setChecked] = useState(defaultChecked);
+
+    const handleChange = () => {
+        setChecked(!checked);
+    };
+
     return (
         <label className={`checkbox checkbox--${size} ${disabled ? "checkbox--disabled" : ""}`}>
             <input
@@ -25,7 +31,7 @@ function CustomCheckbox({ label, checked = false, disabled = false, size = "lg",
                 className="checkbox__input"
                 checked={checked}
                 disabled={disabled}
-                onChange={(e) => onChange?.(e.target.checked)}
+                onChange={handleChange}
             />
             <span className="checkbox__box">
                 {checked && <CheckIcon />}
@@ -34,5 +40,5 @@ function CustomCheckbox({ label, checked = false, disabled = false, size = "lg",
         </label>
     )
 }
- 
+
 export default CustomCheckbox

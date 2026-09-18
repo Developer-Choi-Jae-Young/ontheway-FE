@@ -1,21 +1,21 @@
 import './CustomButton.css'
- 
+
 interface CustomButtonProps {
     name: string;
     color: string;
     fontColor: string;
-    width: string;
+    size?: "lg" | "md" | "sm" | "xsm"; // size는 줘도 되고 안 줘도 되는 걸로 설정했습니다. 기본값은 lg로 했습니다.
 }
- 
-function CustomButton({ name, color, fontColor, width }: CustomButtonProps) {
+
+function CustomButton({ name, color, fontColor, size = "lg" }: CustomButtonProps) {
     return (
         <div
-            className="custom-button"
-            style={{ '--btn-color': color, '--font-color': fontColor, '--btn-width': width } as React.CSSProperties}
+            className={`custom-button custom-button--${size}`} // 작은 따옴표 아니고 ``백틱입니다.
+            style={{ '--btn-color': color, '--font-color': fontColor } as React.CSSProperties}
         >
             {name}
         </div>
     )
 }
- 
+
 export default CustomButton

@@ -32,24 +32,106 @@ function App() {
   return (
     <>
       <CustomDiv
-        headerElement={<span>헤더</span>}
-        footerElement={<span>푸터</span>}
+        headerElement={<CustomTopAppBar title="Title" />}
+        footerElement={<CustomNavBar/>}
       >
         <CustomButton
-          name={'활성화'}
+          name={'Label'}
           color={'#fd5d35'}
           fontColor={'#ffffff'}
-          width={'361px'}
+          size = 'lg'
         ></CustomButton>
- 
+
         <br />
- 
         <CustomButton
-          name={'활성화'}
-          color={'#4576f7'}
-          fontColor={'#1f2937'}
-          width={'178px'}
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'lg'
         ></CustomButton>
+        <br />
+
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'lg'
+        ></CustomButton>
+
+        <br />
+        <CustomButton
+          name={'Label'}
+          color={'#fd5d35'}
+          fontColor={'#ffffff'}
+          size = 'md'
+        ></CustomButton>
+
+        <br/>
+
+        <CustomButton
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'md'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'md'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#fd5d35'}
+          fontColor={'#ffffff'}
+          size = 'sm'
+        ></CustomButton>
+      
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'sm'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'sm'
+        ></CustomButton>
+
+        <br/>
+
+        <CustomButton
+          name={'Label'}
+          color={'#fd5d35'}
+          fontColor={'#ffffff'}
+          size = 'xsm'
+        ></CustomButton>
+
+        <br/>
+        <CustomButton
+          name={'Label'}
+          color={'#FEF1ED'}
+          fontColor={'#fd5d35'}
+          size = 'xsm'
+        ></CustomButton>
+
+        <br />
+        <CustomButton
+          name={'Label'}
+          color={'#BABABA'}
+          fontColor={'#6B7280'}
+          size = 'xsm'
+        ></CustomButton>
+    
  
         <br />
  
@@ -319,10 +401,7 @@ function App() {
         <CustomTopAppBar variant="meta" title="Title" meta="Title" />
         <CustomTopAppBar variant="large" title="Title" subtitle="Title" />
  
-        <CustomNavBar active="home" />
-        <CustomNavBar active="history" />
-        <CustomNavBar active="posts" />
-        <CustomNavBar active="my" />
+        <CustomNavBar />
  
         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
           <CustomNavIcon type="home" />
@@ -349,12 +428,12 @@ function App() {
           <CustomFilterChip label="Text" disabled icon="chevron" />
         </div>
  
-        <CustomCheckbox label="Checked" checked />
-        <CustomCheckbox label="Checked" />
-        <CustomCheckbox label="Checked" checked disabled />
-        <CustomCheckbox label="Checked" size="sm" checked />
-        <CustomCheckbox label="Checked" size="sm" />
-        <CustomCheckbox label="Checked" size="sm" checked disabled />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <CustomCheckbox label="Checked" size="lg" />
+          <CustomCheckbox label="Checked" size="sm" />
+          <CustomCheckbox label="Checked" size="lg" defaultChecked disabled />
+          <CustomCheckbox label="Checked" size="sm" defaultChecked disabled />
+        </div>
  
         <CustomTab tabs={['Label', 'Label']} activeIndex={0} />
         <CustomTab tabs={['Label', 'Label']} activeIndex={1} />

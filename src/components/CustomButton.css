@@ -2,13 +2,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--btn-width);
-    height: 58px;
-    font-size: 20px;
+    box-sizing: border-box;
     font-weight: 500;
     background-color: var(--btn-color);
     color: var(--font-color);
+    cursor: pointer;
+}
+
+.custom-button--lg,
+.custom-button--md,
+.custom-button--sm {
+    height: 58px;
     border-radius: 16px;
+    font-size: 20px;
+}
+
+.custom-button--lg {
+    width: 361px;
+}
+
+.custom-button--md {
+    width: 335px;
+}
+
+.custom-button--sm {
+    width: 178px;
+}
+
+.custom-button--xsm {
+    width: 52px;
+    height: 32px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 14px;
 }
  
 .custom-button:hover {
