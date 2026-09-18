@@ -4,6 +4,7 @@ import './TextArea.css'
 type TextAreaProps = {
   borderColor: 'lightGray' | 'gray' | 'orange'
   textcount: number
+  label: string
 }
 
 // 1. TextField Component : () 안에 prop를 넣어주면 됨. 

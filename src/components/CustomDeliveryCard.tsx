@@ -1,9 +1,10 @@
 import './CustomDeliveryCard.css'
-import { Calendar, Dot, MapPin, Recipe } from './CustomIcon';
+import { Circle, MapPin, Calendar, FileText } from './CustomIcon'
 import CustomRequestCount from './CustomRequestCount'
-
+ 
 interface CustomDeliveryCard {
     width: number;
+    count: number;
     startAddr: string;
     endAddr: string;
     date: string;
@@ -11,54 +12,46 @@ interface CustomDeliveryCard {
     endTime: string;
     price: string;
 }
-
-function CustomDeliveryCard({width, startAddr, endAddr, date, startTime, endTime, price}: CustomDeliveryCard) {
-  return (
-    <>
-        <div className="custom-delivery" style={{'--delivery-width':width} as React.CSSProperties}>
-            <div><CustomRequestCount count={6}></CustomRequestCount></div>
-            <div className='delivery-location-section'>
-                <div className='delivery-location-info'>
-                    <div className='delivery-row'>
-                        <div className='icon-wrapper'>
-                            <div style={{padding:'1px'}}>
-                                <Dot width={20} height={20}></Dot>
-                            </div>
-                        </div>
-                        <span className='delivery-location'>{startAddr}</span>
+ 
+function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime, endTime, price }: CustomDeliveryCard) {
+    return (
+        <div className="custom-delivery" style={{ '--delivery-width': width } as React.CSSProperties}>
+            <CustomRequestCount count={count} />
+ 
+            <div className="delivery-content">
+                <div className="delivery-route">
+                    <div className="delivery-route-row">
+                        <Circle width={20} height={20} stroke="#4576F7" />
+                        <span className="delivery-address">{startAddr}</span>
                     </div>
-                    <div className='delivery-row'>
-                        <div className='icon-wrapper'>
-                            <MapPin width={22} height={22} stroke='#FD5D35'></MapPin>
-                        </div>
-                        <span className='delivery-location'>{endAddr}</span>
+                    <div className="delivery-route-line">
+                        <span></span>
+                    </div>
+                    <div className="delivery-route-row">
+                        <MapPin width={20} height={20} stroke="#FD5D35" />
+                        <span className="delivery-address">{endAddr}</span>
                     </div>
                 </div>
-            </div>
-            <div className='delivery-date-section'>
-                <div className='delivery-date-info'>
-                    <div style={{display: 'flex', alignItems:'center', gap:'4px'}}>
-                        <Calendar width={16} height={16}></Calendar>
-                        <span className='delivery-date-font'>일정</span>
+ 
+                <div className="delivery-info">
+                    <div className="delivery-info-row">
+                        <div className="delivery-info-label">
+                            <Calendar width={14} height={14} />
+                            <span>일정</span>
+                        </div>
+                        <span className="delivery-info-value">{date} {startTime}~{endTime}</span>
                     </div>
-                    <div>
-                        <span className='delivery-date-font'>{date} {startTime}~{endTime}</span>
-                    </div>
-                </div>
-                
-                <div className='delivery-date-info'>
-                    <div style={{display: 'flex', alignItems:'center', gap:'4px'}}>
-                        <Recipe width={16} height={16}></Recipe>
-                        <span className='delivery-date-font'>희망금액</span>
-                    </div>
-                    <div>
-                        <span className='delivery-date-font'>{price}원</span>
+                    <div className="delivery-info-row">
+                        <div className="delivery-info-label">
+                            <FileText width={14} height={14} />
+                            <span>희망금액</span>
+                        </div>
+                        <span className="delivery-info-value">{price}원</span>
                     </div>
                 </div>
             </div>
         </div>
-    </>
-  )
+    )
 }
-
+ 
 export default CustomDeliveryCard
