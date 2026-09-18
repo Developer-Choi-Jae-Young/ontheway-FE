@@ -7,12 +7,14 @@
     padding: 16px;
     border-radius: 24px;
     background-color: #ffffff;
+    align-items: flex-start;
 }
  
 .delivery-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width:100%;
 }
  
 .delivery-route {
@@ -42,19 +44,21 @@
 .delivery-route-line span {
     width: 0;
     height: 10px;
-    border-left: 2px dotted #d7dae0;
+    border-left: 2px solid #d7dae0;
 }
  
 .delivery-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 }
  
 .delivery-info-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
  
 .delivery-info-label {

@@ -69,6 +69,15 @@
 }
  
 .checkbox--sm .checkbox__label {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.checkbox__box svg {
+    display: block;
+    opacity: 0;
+}
+
+.checkbox__input:checked + .checkbox__box svg {
+    opacity: 1;
 }

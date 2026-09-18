@@ -1,0 +1,85 @@
+.route-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+    height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #f3f4f6;
+}
+ 
+/* 가운데: 스크롤 영역 */
+.route-detail__body {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+ 
+/* 프로필 */
+.route-detail__profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 12px;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+ 
+.route-detail__profile-text {
+    flex: 1;
+    min-width: 0;
+}
+ 
+.route-detail__profile-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #14191f;
+}
+ 
+.route-detail__profile-date {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #6b7280;
+}
+ 
+/* 추가정보 */
+.route-detail__extra {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+ 
+/* 게시자가 등록한 내용을 그대로 보여주는 읽기전용 문단 */
+.route-detail__extra-text {
+    margin: 0 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #fdf7f5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #14191f;
+    white-space: pre-wrap;      /* 줄바꿈 유지 */
+}
+ 
+/* 하단 고정 버튼 */
+.route-detail__footer {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background-color: #f3f4f6;
+}
