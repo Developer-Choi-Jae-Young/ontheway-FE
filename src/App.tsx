@@ -26,6 +26,10 @@ import CustomFilterChip from './components/CustomFilterChip.tsx'
 import CustomCheckbox from './components/CustomCheckbox.tsx'
 import CustomTab from './components/CustomTab.tsx'
 import CustomFab from './components/CustomFab.tsx'
+ 
+// 최인하 페이지
+import HomePage from './pages/CustomHomePage.tsx'
+ 
 import CustomAccordion from './components/CustomAccordion.tsx'
 
 function App() {
@@ -41,7 +45,7 @@ function App() {
           fontColor={'#ffffff'}
           size = 'lg'
         ></CustomButton>
-
+ 
         <br />
         <CustomButton
           name={'Label'}
@@ -50,14 +54,14 @@ function App() {
           size = 'lg'
         ></CustomButton>
         <br />
-
+ 
         <CustomButton
           name={'Label'}
           color={'#BABABA'}
           fontColor={'#6B7280'}
           size = 'lg'
         ></CustomButton>
-
+ 
         <br />
         <CustomButton
           name={'Label'}
@@ -65,16 +69,16 @@ function App() {
           fontColor={'#ffffff'}
           size = 'md'
         ></CustomButton>
-
+ 
         <br/>
-
+ 
         <CustomButton
           name={'Label'}
           color={'#FEF1ED'}
           fontColor={'#fd5d35'}
           size = 'md'
         ></CustomButton>
-
+ 
         <br/>
         <CustomButton
           name={'Label'}
@@ -82,7 +86,7 @@ function App() {
           fontColor={'#6B7280'}
           size = 'md'
         ></CustomButton>
-
+ 
         <br/>
         <CustomButton
           name={'Label'}
@@ -98,7 +102,7 @@ function App() {
           fontColor={'#fd5d35'}
           size = 'sm'
         ></CustomButton>
-
+ 
         <br/>
         <CustomButton
           name={'Label'}
@@ -106,16 +110,16 @@ function App() {
           fontColor={'#6B7280'}
           size = 'sm'
         ></CustomButton>
-
+ 
         <br/>
-
+ 
         <CustomButton
           name={'Label'}
           color={'#fd5d35'}
           fontColor={'#ffffff'}
           size = 'xsm'
         ></CustomButton>
-
+ 
         <br/>
         <CustomButton
           name={'Label'}
@@ -123,7 +127,7 @@ function App() {
           fontColor={'#fd5d35'}
           size = 'xsm'
         ></CustomButton>
-
+ 
         <br />
         <CustomButton
           name={'Label'}
@@ -131,7 +135,7 @@ function App() {
           fontColor={'#6B7280'}
           size = 'xsm'
         ></CustomButton>
-    
+ 
  
         <br />
  
@@ -196,6 +200,7 @@ function App() {
  
         <CustomDeliveryCard
           width={349}
+          count={6}
           startAddr={'서울특별시 강남구'}
           endAddr={'경기도 성남시'}
           date={'00월 00일(월)'}
@@ -208,6 +213,7 @@ function App() {
  
         <CustomDeliveryCard
           width={349}
+          count={12}
           startAddr={'서울특별시 강남구'}
           endAddr={'경기도 성남시'}
           date={'00월 00일(월)'}
@@ -220,6 +226,7 @@ function App() {
  
         <CustomDeliveryCard
           width={349}
+          count={3}
           startAddr={'서울특별시 강남구'}
           endAddr={'경기도 성남시'}
           date={'00월 00일(월)'}
@@ -232,6 +239,7 @@ function App() {
  
         <CustomDeliveryCard
           width={349}
+          count={20}
           startAddr={'서울특별시 강남구'}
           endAddr={'경기도 성남시'}
           date={'00월 00일(월)'}
@@ -442,6 +450,8 @@ function App() {
         <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'}></CustomAccordion>
         
       </CustomDiv>
+ 
+      <HomePage />
     </>
   )
 }
