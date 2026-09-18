@@ -1,67 +1,76 @@
 .custom-delivery {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border: 0px 1px white;
-    border-radius: 16px;
-    background-color: white;
-    padding: 12px;
-    width: calc(var(--delivery-width) * 1px);
     gap: 16px;
+    width: calc(var(--delivery-width) * 1px);
+    padding: 16px;
+    border-radius: 24px;
+    background-color: #ffffff;
 }
-
-.delivery-location-section {
+ 
+.delivery-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+.delivery-route {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.delivery-route-row {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
-
-.delivery-location-info {
+ 
+.delivery-address {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #14191f;
+}
+ 
+.delivery-route-line {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+}
+ 
+.delivery-route-line span {
+    width: 0;
+    height: 10px;
+    border-left: 2px dotted #d7dae0;
+}
+ 
+.delivery-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.delivery-info-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-
-.location-arrow {
+ 
+.delivery-info-label {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    transition: transform 0.3s ease; 
-}
-
-.location-arrow.rotated {
-    transform: rotate(270deg);
-}
-
-.delivery-location {
-    font-size: 14pt;
-}
-
-.delivery-date-section {
-    display: flex;
-    gap: 64px;
-}
-
-.delivery-date-info {
-    display: flex;
     gap: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #6b7280;
 }
-
-.delivery-date-font {
-    font-size: 12pt;
-    color: #6B7280;
+ 
+.delivery-info-value {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #6b7280;
 }
-
-.delivery-price-section {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.delivery-price {
-    color: #FD5D35;
-    font-size: 18pt;
-}
-
-.delivery-price-unit {
-    color: #FD5D35;
-    font-size: 14pt;
-}
+ 

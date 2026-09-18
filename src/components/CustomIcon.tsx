@@ -143,3 +143,35 @@ export const Clock = ({ width = 14, height = 15, stroke = '#6B7280', strokeWidth
     );
 };
 
+interface Circle {
+    width?: number;
+    height?: number;
+    stroke?: string;
+    strokeWidth?: number;
+}
+ 
+export const Circle = ({ width = 20, height = 20, stroke = '#4576F7', strokeWidth = 4 }: Circle) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8" stroke={stroke} strokeWidth={strokeWidth} />
+        </svg>
+    );
+};
+ 
+interface FileText {
+    width?: number;
+    height?: number;
+    stroke?: string;
+    strokeWidth?: number;
+}
+ 
+export const FileText = ({ width = 12, height = 12, stroke = '#6B7280', strokeWidth = 2 }: FileText) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M14 2v4a2 2 0 0 0 2 2h4" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M16 13H8M16 17H8M10 9H8" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};
+
