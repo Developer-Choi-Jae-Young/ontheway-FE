@@ -28,6 +28,9 @@ import CustomTab from './components/CustomTab.tsx'
 import CustomFab from './components/CustomFab.tsx'
 import CustomAccordion from './components/CustomAccordion.tsx'
 
+import FindId from './pages/FindId'
+
+
 function App() {
   return (
     <>
@@ -440,8 +443,12 @@ function App() {
  
         <CustomFab />
         <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'}></CustomAccordion>
-        
+      
+        <FindId/>
+      
       </CustomDiv>
+
+      
     </>
   )
 }
