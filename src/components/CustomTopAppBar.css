@@ -86,3 +86,18 @@
     line-height: 24px;
     color: #4b5663;
 }
+ 
+/* 뒤로가기 없는 왼쪽 제목 전용 (마이 탭 등) */
+.top-app-bar--title {
+    height: 64px;
+    align-items: center;
+    padding: 8px 16px;
+}
+ 
+.top-app-bar__page-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #14191f;
+}
