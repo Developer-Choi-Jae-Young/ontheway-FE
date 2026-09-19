@@ -114,21 +114,21 @@ function App() {
         <br />
         <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'} />
 
-        <TextField label="Label" height={56} borderColor="lightGray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
+        <TextField label="Label" height={56} borderColor="gray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={56} borderColor="orange" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="x" />
         <TextField label="Label" height={56} borderColor="gray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={56} borderColor="orange" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
-        <TextField label="Label" height={48} borderColor="lightGray" backgroundColor="white" leftLocationIcon={false} placeholder="Label" timer={true} rightButton="label" />
-        <TextField label="Label" height={48} borderColor="lightGray" backgroundColor="white" leftLocationIcon={true} placeholder="출발지를 입력해주세요." timer={false} rightButton="none" />
+        <TextField label="Label" height={48} borderColor="gray" backgroundColor="white" leftLocationIcon={false} placeholder="Label" timer={true} rightButton="label" />
+        <TextField label="Label" height={48} borderColor="gray" backgroundColor="white" leftLocationIcon={true} placeholder="출발지를 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={48} borderColor="orange" backgroundColor="white" leftLocationIcon={true} placeholder="출발지를 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={48} borderColor="gray" backgroundColor="white" leftLocationIcon={true} placeholder="출발지를 입력해주세요." timer={false} rightButton="none" />
-        <TextField label="Label" height={48} borderColor="lightGray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
+        <TextField label="Label" height={48} borderColor="gray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={48} borderColor="orange" backgroundColor="white" leftLocationIcon={true} placeholder="내용을 입력해주세요." timer={false} rightButton="x" />
         <TextField label="Label" height={48} borderColor="gray" backgroundColor="white" leftLocationIcon={true} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={48} borderColor="orange" backgroundColor="white" leftLocationIcon={true} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={48} borderColor="none" backgroundColor="gray" leftLocationIcon={true} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
 
-        <TextArea borderColor="lightGray" textcount={0} />
+        <TextArea borderColor="gray" textcount={0} />
         <TextArea borderColor="orange" textcount={1} />
         <TextArea borderColor="gray" textcount={70} />
         <TextArea borderColor="orange" textcount={100} />
@@ -136,15 +136,15 @@ function App() {
         <Info1 />
         <Info2 />
 
-        <TimeInput borderColor="lightGray" backgroundColor="white" />
+        <TimeInput borderColor="gray" backgroundColor="white" />
         <TimeInput borderColor="none" backgroundColor="gray" />
         <TimeInput borderColor="orange" backgroundColor="white" />
 
-        <Dropdown borderColor="lightGray" />
+        <Dropdown borderColor="gray" />
         <Dropdown borderColor="gray" />
         <Dropdown borderColor="orange" />
 
-        <DateInput borderColor="lightGray" />
+        <DateInput borderColor="gray" />
         <DateInput borderColor="orange" />
         <DateInput borderColor="gray" />
 
@@ -202,12 +202,13 @@ function App() {
       </CustomDiv>
 
 
-      <FindId />
       <HomePage />
       <br/>
       <LoginPage />
       <br/>
       <RouteDetailPage />
+
+      <FindId />
       
     </>
   )
