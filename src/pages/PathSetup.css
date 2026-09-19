@@ -1,0 +1,185 @@
+.path-setup-page {
+    width: 393px;
+    min-height: 1461px;
+    margin: 0 auto;
+    padding-top: 62px;
+    box-sizing: border-box;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-post {
+    width: calc(100% - 32px);
+    margin: 16px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 16px;
+    background: #FDF7F5;
+}
+
+.recent-post-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #FEE8E1;
+}
+
+.recent-post-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.recent-post-title {
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.recent-post-description {
+    color: #6B7280;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.path-info {
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.path-info-title {
+    margin: 20px 0 16px;
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.path-route {
+    position: relative;
+}
+
+.path-setup-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.path-setup-item + .path-setup-item {
+    margin-top: 16px;
+}
+
+.path-setup-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.start-icon .path-line {
+    position: absolute;
+    top:20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 128px;
+    background: #D7DAE0;
+    z-index: -1;
+}
+
+.path-setup-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.path-setup-label {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.path-setup-address-box {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #D7DAE0;
+    border-radius: 12px;
+    background: white;
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.registered-route {
+    margin: 24px 16px 0;
+}
+
+.delivery-section {
+    margin-top: 24px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.delivery-title {
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.delivery-time,
+.delivery-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.delivery-time-title,
+.delivery-extra-title {
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.path-setup-button {
+    margin: 24px 16px 30px;
+    display: flex;
+    justify-content: center;
+}

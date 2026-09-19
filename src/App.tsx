@@ -33,6 +33,8 @@ import Request from './pages/Request.tsx'
 import FindId from './pages/FindId'
 import FindPw from './pages/FindPw'
 import Agree from './pages/Agree.tsx'
+import PathSetup from './pages/PathSetup.tsx'
+import CreateRequest from './pages/CreateRequest.tsx'
 
 function App() {
   return (
@@ -150,6 +152,8 @@ function App() {
       <FindPw />
       <Agree />
       <Request />
+      <PathSetup />
+      <CreateRequest />
       {/* 최인하 페이지 */}
       <HomePage />
       <br/>
