@@ -1,12 +1,23 @@
-.path-setup-page {
-    width: 393px;
-    min-height: 1461px;
-    margin: 0 auto;
-    padding-top: 62px;
-    box-sizing: border-box;
-    background: white;
-    display: flex;
-    flex-direction: column;
+.path-setup-page .delivery-section .text-field-container,
+.path-setup-page .delivery-section .text-field,
+.path-setup-page .delivery-section .text-area,
+.path-setup-page .delivery-section .time-input{
+    width:100%;
+    box-sizing:border-box;
+}
+
+.path-setup-page .registered-route .empty-state{
+    width:100%;
+    box-sizing:border-box;
+}
+
+.path-setup-page{
+    width:393px;
+    min-height:852px;
+    margin:0 auto;
+    padding-bottom:30px;
+    box-sizing:border-box;
+    background:white;
 }
 
 .recent-post {

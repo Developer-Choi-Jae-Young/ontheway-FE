@@ -1,12 +1,9 @@
-.request-page {
-    background-color: white;
-    width: 393px;
-    height: 852px;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+.request-page{
+    background-color:white;
+    width:393px;
+    min-height:852px;
+    margin:0 auto;
+    box-sizing:border-box;
 }
 
 

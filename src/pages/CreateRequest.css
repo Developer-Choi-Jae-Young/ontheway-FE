@@ -1,3 +1,10 @@
+.create-request-page .text-field-container,
+.create-request-page .text-field,
+.create-request-page .text-area,
+.create-request-page .time-input{
+    width:100%;
+    box-sizing:border-box;
+}
 .create-request-page{
     width:393px;
     min-height:1460px;
@@ -172,4 +179,10 @@
     display:flex;
     justify-content:center;
     margin-top:4px;
+    margin-bottom:30px;
 }
+
+.info-content{display:flex;flex-direction:column;}
+.info-line{display:flex;align-items:flex-start;color:#6B7280;font-family:Pretendard;font-size:14px;font-weight:400;line-height:20px;}
+.info-line span{flex-shrink:0;margin-right:4px;}
+.info-line p{margin:0;word-break:keep-all;}
