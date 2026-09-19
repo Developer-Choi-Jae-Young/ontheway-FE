@@ -13,10 +13,10 @@
   padding: 0 22px;
   gap: 12px;
 
-  background-color: lightgray;
+  background-color: #D7DAE0;
   border-radius: 15px;
 
-  color: gray;
+  color: #6B7280;
   font-size: 15px;
 }
 
@@ -33,15 +33,17 @@
 
 #info2 {
   width: 361px;
-  height: 96px;
+  height: 133px;
   box-sizing: border-box;
-
-  padding: 5px 22px;
-
-  background-color: lightgray;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  background-color: #F2F2F2;
   border-radius: 15px;
-
-  color: gray;
+  color: #6B7280;
 }
 
 .info-title {
