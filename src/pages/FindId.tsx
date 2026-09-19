@@ -7,11 +7,15 @@ function FindId(){
     return(
         <>
         <div className="find-id-page">
-            <div className='find-id-page-hug'>
-                <CustomTopAppBar
+            <CustomTopAppBar
+                variant="large"
                 title="아이디 찾기"
+                subtitle="가입하신 아이디를 확인하실 수 있습니다."
                 onBack={() => window.history.back()}
                 />
+                
+            <div className='find-id-page-hug'>
+                
             
 
                 <div className="email-input email-send-row">

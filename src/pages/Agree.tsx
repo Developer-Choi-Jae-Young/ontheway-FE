@@ -22,12 +22,15 @@ function Agree(){
 
     return(
         <>
-        <div className="find-pw-page">
-            <div className='find-pw-page-hug'>
-                <CustomTopAppBar
+        <div className="agree-page">
+            <CustomTopAppBar
                     title="약관동의"
+                    variant="large"
+                    subtitle="서비스 이용을 위해 약관에 동의해 주세요."
                     onBack={() => window.history.back()}
                     />
+            <div className='find-pw-page-hug'>
+                
                 <div className={`all-agree ${agreed.every(Boolean) ? 'checked' : ''}`} onClick={toggleAll}>
                     <div className='check-icon'>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
