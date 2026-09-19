@@ -5,7 +5,6 @@ import CustomChips from './components/CustomChips.tsx'
 import CustomProfileCard from './components/CustomProfileCard.tsx'
 import TextField from './components/TextField.tsx'
 import TextArea from './components/TextArea.tsx'
-import { Info1, Info2 } from './components/Info'
 import TimeInput from './components/TimeInput.tsx'
 import Dropdown from './components/Dropdown.tsx'
 import DateInput from './components/DateInput.tsx'
@@ -35,6 +34,8 @@ import MyPage from './pages/CustomMyPage.tsx'
 import FindId from './pages/FindId'
 import FindPw from './pages/FindPw'
 import Agree from './pages/Agree.tsx'
+import PathSetup from './pages/PathSetup.tsx'
+import CreateRequest from './pages/CreateRequest.tsx'
 
 function App() {
   return (
@@ -97,8 +98,6 @@ function App() {
         <TextArea borderColor="orange" textcount={1} />
         <TextArea borderColor="gray" textcount={70} />
         <TextArea borderColor="orange" textcount={100} />
-        <Info1 />
-        <Info2 />
         <TimeInput borderColor="gray" backgroundColor="white" />
         <TimeInput borderColor="none" backgroundColor="gray" />
         <TimeInput borderColor="orange" backgroundColor="white" />
@@ -152,6 +151,8 @@ function App() {
       <FindPw />
       <Agree />
       <Request />
+      <PathSetup />
+      <CreateRequest />
       {/* 최인하 페이지 */}
       <HomePage />
       <br/>

@@ -1,13 +1,4 @@
 
-
-.find-pw-page .top-app-bar__headline {
-    padding: 0;
-}
-
-.find-pw-page .top-app-bar__back {
-    transform: translateX(-8px);
-}
-
 .find-pw-page {
     width: 393px;
     height: 852px;
