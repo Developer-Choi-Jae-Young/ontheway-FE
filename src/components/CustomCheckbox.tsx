@@ -34,7 +34,7 @@ function CustomCheckbox({ label, defaultChecked = false, disabled = false, size 
                 onChange={handleChange}
             />
             <span className="checkbox__box">
-                {checked && <CheckIcon />}
+                <CheckIcon />
             </span>
             <span className="checkbox__label">{label}</span>
         </label>

@@ -2,7 +2,7 @@ import { type ReactNode } from "react"
 import './CustomList.css'
  
 interface CustomListProps {
-    variant?: "list01" | "list02";
+    variant?: "list01" | "list02" | "list03";
  
     label?: string;
     icon?: ReactNode;
@@ -44,6 +44,14 @@ function CustomList({
     time = "AM 12:00",
     thumbnail,
 }: CustomListProps) {
+ 
+    if (variant === "list03") {
+        return (
+            <div className="list list--list03">
+                <span className="list__heading">{label}</span>
+            </div>
+        )
+    }
  
     if (variant === "list02") {
         return (

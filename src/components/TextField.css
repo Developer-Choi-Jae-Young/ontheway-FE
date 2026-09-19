@@ -65,3 +65,18 @@
 .label-button button:active{
   transform: scale(0.9);
 }
+
+.eye-button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Edge/IE가 password input에 자동으로 붙이는 눈·X 아이콘 숨기기 */
+.text-field input::-ms-reveal,
+.text-field input::-ms-clear {
+    display: none;
+}

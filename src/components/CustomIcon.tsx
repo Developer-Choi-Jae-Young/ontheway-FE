@@ -252,3 +252,104 @@ export const XButton = () => {
 
     )
 }
+
+
+interface Wallet {
+    width?: number;
+    height?: number;
+    stroke?: string;
+    strokeWidth?: number;
+}
+
+export const Wallet = ({ width = 20, height = 20, stroke = '#6B7280', strokeWidth = 2 }: Wallet) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};
+
+interface Eye {
+    width?: number;
+    height?: number;
+    stroke?: string;
+    strokeWidth?: number;
+}
+
+export const Eye = ({ width = 24, height = 24, stroke = '#6A6A67', strokeWidth = 2 }: Eye) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="12" r="3" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};
+
+interface EyeOff {
+    width?: number;
+    height?: number;
+    stroke?: string;
+    strokeWidth?: number;
+}
+
+export const EyeOff = ({ width = 24, height = 24, stroke = '#6A6A67', strokeWidth = 2 }: EyeOff) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="m2 2 20 20" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};
+
+interface CircleCheck {
+    width?: number;
+    height?: number;
+    fill?: string;
+    check?: string;
+}
+
+export const CircleCheck = ({ width = 24, height = 24, fill = '#FD5D35', check = '#FFFFFF' }: CircleCheck) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill={fill} />
+            <path d="m8 12 2.5 2.5 5.5-5.5" stroke={check} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+};
+
+interface Truck {
+    width?: number;
+    height?: number;
+    stroke?: string;
+    strokeWidth?: number;
+}
+
+export const Truck = ({ width = 24, height = 24, stroke = '#4576F7', strokeWidth = 2 }: Truck) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15 18H9" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx="17" cy="18" r="2" stroke={stroke} strokeWidth={strokeWidth} />
+            <circle cx="7" cy="18" r="2" stroke={stroke} strokeWidth={strokeWidth} />
+        </svg>
+    );
+};
+
+interface CircleEmpty {
+    width?: number;
+    height?: number;
+    color?: string;
+}
+
+export const CircleEmpty = ({ width = 24, height = 24, color = '#6A6A67' }: CircleEmpty) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" fill={color} />
+            <circle cx="12" cy="12" r="5" fill="#FFFFFF" />
+        </svg>
+    );
+};

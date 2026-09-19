@@ -1,0 +1,117 @@
+.route-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+ 
+/* 출발/도착 경로 */
+.route-info__route {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+}
+ 
+/* 마커 + 주소 한 줄 */
+.route-info__stop {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+ 
+.route-info__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    flex-shrink: 0;
+}
+ 
+
+.route-info__line {
+    width: 0;
+    flex: 1;
+    min-height: 12px;
+    margin: 4px 0;
+    border-left: 2px solid #d7dae0;
+}
+ 
+.route-info__address {
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+.route-info__stop:not(:last-child) .route-info__address {
+    padding-bottom: 16px;
+}
+ 
+.route-info__addr-main {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #14191f;
+}
+ 
+.route-info__addr-sub {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #6b7280;
+}
+ 
+/* 배송날 / 희망금액 */
+.route-info__meta {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px 32px;
+}
+ 
+.route-info__meta-item {
+    display: flex;
+    gap: 8px;
+}
+ 
+.route-info__meta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+ 
+.route-info__meta-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #6b7280;
+}
+ 
+.route-info__meta-value {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #14191f;
+}
+ 
+.route-info__meta-time {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #14191f;
+}
+ 
+.route-info__divider {
+    width: 0;
+    height: 48px;
+    align-self: center;
+    border-left: 1px solid #d7dae0;
+}
+ 

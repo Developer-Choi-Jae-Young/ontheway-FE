@@ -26,12 +26,17 @@ import CustomFilterChip from './components/CustomFilterChip.tsx'
 import CustomCheckbox from './components/CustomCheckbox.tsx'
 import CustomTab from './components/CustomTab.tsx'
 import CustomFab from './components/CustomFab.tsx'
+import CustomAccordion from './components/CustomAccordion.tsx'
 
 // 최인하 페이지
 import HomePage from './pages/CustomHomePage.tsx'
 
-import CustomAccordion from './components/CustomAccordion.tsx'
+import RouteDetailPage from './pages/CustomRouteDetailPage.tsx'
 
+import LoginPage from './pages/CustomLoginPage.tsx'
+
+
+// 이예진 페이지
 import FindId from './pages/FindId'
 
 
@@ -106,7 +111,8 @@ function App() {
         <br />
 
         <CustomDeliveryCard width={349} count={20} startAddr={'서울특별시 강남구'} endAddr={'경기도 성남시'} date={'00월 00일(월)'} startTime={'00:00'} endTime={'00:00'} price={'00,000'} />
-
+        <br />
+        <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'} />
 
         <TextField label="Label" height={56} borderColor="lightGray" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="none" />
         <TextField label="Label" height={56} borderColor="orange" backgroundColor="white" leftLocationIcon={false} placeholder="내용을 입력해주세요." timer={false} rightButton="x" />
@@ -189,7 +195,7 @@ function App() {
         <CustomTab tabs={['Label', 'Label']} activeIndex={1} />
 
         <CustomFab />
-        <CustomAccordion width={361} clientName={'최재영'} itemName={'품목명'} price={'00,000'} />
+    
 
 
 
@@ -198,7 +204,11 @@ function App() {
 
       <FindId />
       <HomePage />
-
+      <br/>
+      <LoginPage />
+      <br/>
+      <RouteDetailPage />
+      
     </>
   )
 }
