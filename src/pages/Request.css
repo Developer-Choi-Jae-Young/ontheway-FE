@@ -4,6 +4,8 @@
     min-height:852px;
     margin:0 auto;
     box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
 }
 
 
