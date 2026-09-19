@@ -4,7 +4,7 @@ interface CustomTopAppBarProps {
     title: string;
     subtitle?: string;
     meta?: string;
-    variant?: "centered" | "meta" | "large";
+    variant?: "centered" | "meta" | "large" | "title";
     onBack?: () => void;
 }
  
@@ -12,7 +12,8 @@ function BackArrowIcon() {
     return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m15 18-6-6 6-6" />
+            <path d="M19 12H5" />
+            <path d="m12 19-7-7 7-7" />
         </svg>
     )
 }
@@ -24,6 +25,15 @@ function CustomTopAppBar({ title, subtitle, meta, variant = "centered", onBack }
             <BackArrowIcon />
         </button>
     )
+ 
+    // 뒤로가기 없이 왼쪽 제목만 (예: 마이 탭)
+    if (variant === "title") {
+        return (
+            <header className="top-app-bar top-app-bar--title">
+                <p className="top-app-bar__page-title">{title}</p>
+            </header>
+        )
+    }
  
     if (variant === "large") {
         return (
@@ -49,4 +59,3 @@ function CustomTopAppBar({ title, subtitle, meta, variant = "centered", onBack }
 }
  
 export default CustomTopAppBar
- 
