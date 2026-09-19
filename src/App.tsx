@@ -33,6 +33,10 @@ import MyPage from './pages/CustomMyPage.tsx'
 import ReviewPage from './pages/CustomReviewPage.tsx'
 import ReviewWritePage from './pages/CustomReviewWritePage.tsx'
 import WithdrawlPage from './pages/CustomWithdrawlPage.tsx'
+import ReportPostPage from './pages/CustomReportPostPage.tsx'
+import ReportUserPage from './pages/CustomReportUserPage.tsx'
+import ProfileEdit from './pages/CustomProfileEditPage.tsx'
+
 // 이예진 페이지
 import FindId from './pages/FindId'
 import FindPw from './pages/FindPw'
@@ -172,6 +176,12 @@ function App() {
       <ReviewWritePage/>
       <br/>
       <WithdrawlPage/>
+      <br/>
+      <ReportPostPage/>
+      <br/>
+      <ReportUserPage/>
+      <br/>
+      <ProfileEdit/>
     </>
   )
 }

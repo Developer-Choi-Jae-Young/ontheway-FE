@@ -21,6 +21,8 @@ type TextFieldProps = {
   rightButton: 'x' | 'label' | 'eye' | 'none'
   rightButtonLabel?: string
   helperText?: string
+  defaultValue?: string
+  disabled?: boolean
 }
  
 function HelperCheck() {
@@ -53,7 +55,7 @@ useEffect(() => {
       <p>{props.label}</p>
       <div className="text-field" style={{ height: `${props.height}px`, borderColor: colors[props.borderColor], backgroundColor: colors[props.backgroundColor] }}>
         {props.leftLocationIcon && <span><MapPinOutline width={20} height={24} stroke="#4B5663" strokeWidth={2} /></span>}
-        <input type={inputType} placeholder={props.placeholder} />
+        <input type={inputType} placeholder={props.placeholder} defaultValue={props.defaultValue} disabled={props.disabled} />
         {(props.timer || props.rightButton === 'label') && <div className='text-field-right'>
           {props.timer && <span className='timer'>{minutes}:{seconds.toString().padStart(2, '0')}</span>}
           {props.rightButton === 'label' && <div className='label-button'><button style={{color:'#9CA3AF'}}>{props.rightButtonLabel ?? 'Label'}</button></div>}
