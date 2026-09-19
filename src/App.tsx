@@ -38,6 +38,8 @@ import LoginPage from './pages/CustomLoginPage.tsx'
 
 // 이예진 페이지
 import FindId from './pages/FindId'
+import FindPw from './pages/FindPw'
+import Agree from './pages/Agree.tsx'
 
 
 function App() {
@@ -195,14 +197,16 @@ function App() {
         <CustomTab tabs={['Label', 'Label']} activeIndex={1} />
 
         <CustomFab />
+
+        <FindId />
+        <FindPw />
+        <Agree />
     
 
 
 
       </CustomDiv>
 
-
-      <FindId />
       <HomePage />
       <br/>
       <LoginPage />
