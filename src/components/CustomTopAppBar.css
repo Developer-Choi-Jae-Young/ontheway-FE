@@ -16,7 +16,7 @@
 .top-app-bar--large {
     flex-direction: column;
     gap: 4px;
-    padding: 0 16px 24px;
+    padding: 0 4px 24px;
 }
  
 .top-app-bar__back {
@@ -86,4 +86,3 @@
     line-height: 24px;
     color: #4b5663;
 }
- 

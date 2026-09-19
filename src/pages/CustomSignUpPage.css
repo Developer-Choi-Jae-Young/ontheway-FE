@@ -1,0 +1,65 @@
+.signup {
+    width: 393px;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+ 
+/* 본문: 입력 필드들 */
+.signup__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 8px 16px 24px;
+    box-sizing: border-box;
+}
+ 
+/* 회원가입 화면에서는 입력칸이 가로를 꽉 채우도록 (TextField 기본 폭 337px 덮어쓰기) */
+.signup .text-field-container {
+    width: 100%;
+    min-width: 0;
+}
+ 
+/* box-sizing이 없으면 padding·border가 더해져 페이지를 넘으므로 여기서 보정 */
+.signup .text-field {
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+/* 필드 + 오른쪽 바깥 버튼 (중복확인 / 인증받기 / 재전송) */
+.signup__row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+ 
+.signup__row .text-field-container {
+    flex: 1;
+}
+ 
+.signup__side-btn {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: #f2f2f2;
+    color: #14191F;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+}
+ 
+/* 이메일 인증 타이머 색 (디자인은 파랑) */
+.signup .timer {
+    color: #4576f7;
+}
+ 
+/* 하단 버튼 */
+.signup__footer {
+    padding: 8px 16px 24px;
+}

@@ -1,34 +1,36 @@
 .text-field {
   width: 337px;
+  box-sizing: border-box;
   border-radius: 12px;
   display: flex;
   align-items: center;
   border: 1px solid;
-  
+ 
   padding: 0 12px;
 }
-
+ 
 .text-field-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
+ 
 .text-field-container p {
-
+ 
   margin: 0;
-
+ 
 }
-
-.text-field input { 
+ 
+.text-field input {
   border: none;
   outline: none;
   background: transparent;
   width: 100%;
+  min-width: 0;
   font-size: 16px;
   padding-left: 4px;
 }
-
+ 
 .x-button {
     display: flex;
     justify-content: center;
@@ -38,17 +40,18 @@
     background: none;
     border-radius: 50%;
 }
-
+ 
 .x-button:hover {
     cursor: pointer;
 }
-
+ 
 .x-button:active {
     transform: scale(0.8);
 }
-
+ 
 .label-button{
   display: flex;
+  flex-shrink: 0;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -56,16 +59,17 @@
   background: var(--Neutral-Border4, #F2F2F2);
   border-radius: 8px;
 }
-
+ 
 .label-button button {
   all: unset;
   cursor: pointer;
+  white-space: nowrap;
 }
-
+ 
 .label-button button:active{
   transform: scale(0.9);
 }
-
+ 
 .eye-button {
     display: flex;
     align-items: center;
@@ -74,21 +78,34 @@
     background: none;
     cursor: pointer;
 }
-
+ 
 /* Edge/IE가 password input에 자동으로 붙이는 눈·X 아이콘 숨기기 */
 .text-field input::-ms-reveal,
 .text-field input::-ms-clear {
     display: none;
 }
-
+ 
 .text-field-right {
   display: flex;
+  flex-shrink: 0;
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
 }
-
+ 
 .timer {
   color: #D7DAE0;
   white-space: nowrap;
+}
+ 
+/* 입력칸 아래 도움말 (예: ✓ 8~15자리 이내) */
+.text-field-help {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #FD5D35;
 }

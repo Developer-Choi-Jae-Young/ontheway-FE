@@ -29,6 +29,7 @@ import HomePage from './pages/CustomHomePage.tsx'
 import RouteDetailPage from './pages/CustomRouteDetailPage.tsx'
 import LoginPage from './pages/CustomLoginPage.tsx'
 import Request from './pages/Request.tsx'
+import SignUpPage from './pages/CustomSignUpPage.tsx'
 // 이예진 페이지
 import FindId from './pages/FindId'
 import FindPw from './pages/FindPw'
@@ -156,6 +157,8 @@ function App() {
       <LoginPage />
       <br/>
       <RouteDetailPage />
+      <br/>
+      <SignUpPage/>
     </>
   )
 }
