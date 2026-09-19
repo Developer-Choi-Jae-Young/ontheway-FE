@@ -1,0 +1,61 @@
+.request-page {
+    background-color: white;
+    width: 393px;
+    height: 852px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.new-box {
+    width: 349px;
+    height: 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin: 16px auto 0;
+
+    border: 1px solid #D7DAE0;;
+    border-radius: 12px;
+    background-color: white;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    color: #14191F;
+
+    cursor: pointer;
+}
+
+.request-products {
+    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request-button {
+    margin-top: auto;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* 요청하기 → 첫 번째 카드: 40px */
+.request-products .top-app-bar + .custom-product {
+    margin-top: 40px;
+}
+
+/* 카드 → 카드: 8px */
+.request-products .custom-product + .custom-product {
+    margin-top: 8px;
+}

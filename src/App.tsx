@@ -28,6 +28,7 @@ import CustomAccordion from './components/CustomAccordion.tsx'
 import HomePage from './pages/CustomHomePage.tsx'
 import RouteDetailPage from './pages/CustomRouteDetailPage.tsx'
 import LoginPage from './pages/CustomLoginPage.tsx'
+import Request from './pages/Request.tsx'
 // 이예진 페이지
 import FindId from './pages/FindId'
 import FindPw from './pages/FindPw'
@@ -148,6 +149,7 @@ function App() {
       <FindId />
       <FindPw />
       <Agree />
+      <Request />
       {/* 최인하 페이지 */}
       <HomePage />
       <br/>
