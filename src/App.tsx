@@ -30,6 +30,9 @@ import LoginPage from './pages/CustomLoginPage.tsx'
 import Request from './pages/Request.tsx'
 import SignUpPage from './pages/CustomSignUpPage.tsx'
 import MyPage from './pages/CustomMyPage.tsx'
+import ReviewPage from './pages/CustomReviewPage.tsx'
+import ReviewWritePage from './pages/CustomReviewWritePage.tsx'
+import WithdrawlPage from './pages/CustomWithdrawlPage.tsx'
 // 이예진 페이지
 import FindId from './pages/FindId'
 import FindPw from './pages/FindPw'
@@ -163,6 +166,12 @@ function App() {
       <SignUpPage/>
       <br/>
       <MyPage/>
+      <br/>
+      <ReviewPage/>
+      <br/>
+      <ReviewWritePage/>
+      <br/>
+      <WithdrawlPage/>
     </>
   )
 }

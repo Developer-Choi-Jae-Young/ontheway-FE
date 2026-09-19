@@ -1,0 +1,37 @@
+.review-page {
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+    height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+ 
+/* 상단바 배경을 페이지 배경과 같게 (컴포넌트는 안 건드리고 여기서만) */
+.review-page .top-app-bar {
+    background-color: transparent;
+}
+ 
+/* 탭 영역 (좌우 16px) */
+.review-page__tab {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+ 
+/* 후기 카드 목록 (스크롤) */
+.review-page__list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 16px 24px;
+    box-sizing: border-box;
+}
+
+.review-page__list .custom-review {
+    width: 100%;
+}
