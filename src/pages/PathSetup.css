@@ -12,6 +12,11 @@
 }
 
 .path-setup-page{
+    height:852px;
+    overflow-y:auto;
+}
+
+.path-setup-page{
     width:393px;
     min-height:852px;
     margin:0 auto;

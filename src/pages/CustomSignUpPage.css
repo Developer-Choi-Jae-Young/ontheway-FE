@@ -1,9 +1,10 @@
 .signup {
-    width: 393px;
-    min-height: 100vh;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: #ffffff;
+    width:393px;
+    height:852px;
+    margin:0 auto;
+    box-sizing:border-box;
+    background-color:#ffffff;
+    overflow-y:auto;
 }
  
 /* 본문: 입력 필드들 */

@@ -1,14 +1,14 @@
 .mypage {
-    display: flex;
-    flex-direction: column;
-    width: 393px;
-    height: 100vh;
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow: hidden;
-    background-color: #f3f4f6;
+    display:flex;
+    flex-direction:column;
+    width:393px;
+    height:852px;
+    margin:0 auto;
+    box-sizing:border-box;
+    overflow-y:auto;
+    background-color:#f3f4f6;
 }
- 
+
 /* 상단바 배경을 페이지 배경과 같게 (컴포넌트는 안 건드리고 여기서만 덮어씀) */
 .mypage .top-app-bar--title {
     background-color: transparent;
@@ -17,7 +17,6 @@
 /* 가운데: 스크롤 영역 */
 .mypage__body {
     flex: 1;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
