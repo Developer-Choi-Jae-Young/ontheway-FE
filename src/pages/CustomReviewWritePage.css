@@ -1,0 +1,83 @@
+.review-write {
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+    height: 852px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+ 
+/* 가운데: 스크롤 영역 */
+.review-write__body {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-sizing: border-box;
+}
+ 
+/* 프로필 카드: 이 화면에선 폭 100%·연회색 배경, 칩 빈자리 제거 */
+.review-write .custom-profile-card {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f3f6f9;
+}
+ 
+.review-write .custom-profile-card-title {
+    display: none;
+}
+ 
+/* 별점 + 라벨 */
+.review-write__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+}
+ 
+.review-write__stars {
+    display: flex;
+    gap: 24px;
+}
+ 
+.review-write__star {
+    display: flex;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+ 
+.review-write__rating-label {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #14191f;
+}
+ 
+/* 후기 입력 */
+.review-write__area {
+    margin-top: 32px;
+}
+ 
+.review-write__area-label {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #14191f;
+}
+ 
+/* 하단 고정 버튼 */
+.review-write__footer {
+    flex-shrink: 0;
+    padding: 16px;
+    box-sizing: border-box;
+}
