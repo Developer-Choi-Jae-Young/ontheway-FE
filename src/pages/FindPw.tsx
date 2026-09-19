@@ -8,11 +8,14 @@ function FindPw(){
     return(
         <>
         <div className="find-pw-page">
-            <div className='find-pw-page-hug'>
-                <CustomTopAppBar
+            <CustomTopAppBar
                 title="비밀번호 찾기"
+                variant="large"
+                subtitle="가입하신 비밀번호를 확인하실 수 있습니다."
                 onBack={() => window.history.back()}
                 />
+            <div className='find-pw-page-hug'>
+                
             
 
                 <div className="email-input">
