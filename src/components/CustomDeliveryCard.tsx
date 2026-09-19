@@ -1,7 +1,7 @@
 import './CustomDeliveryCard.css'
 import { Circle, MapPin, Calendar, FileText } from './CustomIcon'
 import CustomRequestCount from './CustomRequestCount'
- 
+
 interface CustomDeliveryCard {
     width: number;
     count: number;
@@ -11,13 +11,13 @@ interface CustomDeliveryCard {
     startTime: string;
     endTime: string;
     price: string;
+    review?: boolean;
 }
- 
-function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime, endTime, price }: CustomDeliveryCard) {
+
+function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime, endTime, price, review=false }: CustomDeliveryCard) {
     return (
-        <div className="custom-delivery" style={{ '--delivery-width': width } as React.CSSProperties}>
+        <div className={`custom-delivery ${review ? 'review' : ''}`} style={{ '--delivery-width': width } as React.CSSProperties}>
             <CustomRequestCount count={count} />
- 
             <div className="delivery-content">
                 <div className="delivery-route">
                     <div className="delivery-route-row">
@@ -32,7 +32,6 @@ function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime,
                         <span className="delivery-address">{endAddr}</span>
                     </div>
                 </div>
- 
                 <div className="delivery-info">
                     <div className="delivery-info-row">
                         <div className="delivery-info-label">
@@ -50,8 +49,9 @@ function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime,
                     </div>
                 </div>
             </div>
+            {review && <button className="delivery-review-button">후기 작성하기</button>}
         </div>
     )
 }
- 
+
 export default CustomDeliveryCard
