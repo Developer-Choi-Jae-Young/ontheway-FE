@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 0px 1px white;
-    border-radius: 16px;
+    border: 1px solid #D7DAE0;
+    border-radius: 12px;  
     background-color: white;
     padding: 16px;
     width: calc(var(--product-width) * 1px);
     gap: 16px;
+
+    box-sizing: border-box; 
 }
 
 .product-section {
@@ -18,7 +20,7 @@
 .product-box-section {
     width: 40px;
     height: 40px;
-    background-color: #E3EAFD;
+    background-color: #FDF7F5;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -33,21 +35,38 @@
 }
 
 .product-number {
-    font-size: 12pt;
     color: #6B7280;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
 }
 
 .product-category {
-    font-size: 16pt;
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 .product-money {
-    font-weight: 600;
-    font-size: 18pt;
     color: #FD5D35;
+    text-align: right;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 .product-money-unit {
-    font-size: 14pt;
-    color: #FD5D35;
+    color: #14191F;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
