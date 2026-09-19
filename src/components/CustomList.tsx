@@ -5,7 +5,8 @@ interface CustomListProps {
     variant?: "list01" | "list02" | "list03";
  
     label?: string;
-    icon?: ReactNode;
+    icon?: ReactNode;          // 왼쪽 아이콘 (없으면 표시 안 함)
+    trailing?: ReactNode;      // 오른쪽 요소 (없으면 showChevron에 따라 기본 → 표시)
     showChevron?: boolean;
     onClick?: () => void;
  
@@ -13,15 +14,6 @@ interface CustomListProps {
     date?: string;
     time?: string;
     thumbnail?: ReactNode;
-}
- 
-function StarIcon() {
-    return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-        </svg>
-    )
 }
  
 function ChevronRightIcon() {
@@ -37,6 +29,7 @@ function CustomList({
     variant = "list01",
     label = "Text",
     icon,
+    trailing,
     showChevron = true,
     onClick,
     title = "배송날짜",
@@ -71,10 +64,10 @@ function CustomList({
     return (
         <button className="list list--list01" onClick={onClick}>
             <span className="list__left">
-                {icon ?? <StarIcon />}
+                {icon}
                 <span className="list__label">{label}</span>
             </span>
-            {showChevron && <ChevronRightIcon />}
+            {trailing ?? (showChevron ? <ChevronRightIcon /> : null)}
         </button>
     )
 }

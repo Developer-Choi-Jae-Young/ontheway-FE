@@ -6,8 +6,12 @@ type NavType = "home" | "history" | "posts" | "my";
  
 const ITEMS: NavType[] = ["home", "history", "posts", "my"];
  
-function CustomNavBar() {
-    const [active, setActive] = useState<NavType>("home");
+interface CustomNavBarProps {
+    initialActive?: NavType;
+}
+ 
+function CustomNavBar({ initialActive = "home" }: CustomNavBarProps) {
+    const [active, setActive] = useState<NavType>(initialActive);
  
     return (
         <nav className="nav-bar">
