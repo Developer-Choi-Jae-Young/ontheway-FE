@@ -2,7 +2,7 @@ import CustomTopAppBar from '../components/CustomTopAppBar'
 import TextField from '../components/TextField'
 import DateInput from '../components/DateInput'
 import CustomButton from '../components/CustomButton'
-import './CustomSignupPage.css'
+import './CustomSignUpPage.css'
  
 function CustomSignupPage() {
     return (
