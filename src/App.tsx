@@ -43,6 +43,10 @@ import FindPw from './pages/FindPw'
 import Agree from './pages/Agree.tsx'
 import PathSetup from './pages/PathSetup.tsx'
 import CreateRequest from './pages/CreateRequest.tsx'
+import UsageHistory from './pages/UsageHistory.tsx'
+import MyPosts from './pages/MyPosts.tsx'
+import RequestDetail from './pages/RequestDetail.tsx'
+import RouteDetailWaitingPage from './pages/CustomRouteDetailPage_waiting.tsx'
 
 function App() {
   return (
@@ -155,11 +159,26 @@ function App() {
       </CustomDiv>
       {/* 이예진 페이지 */}
       <FindId />
+      <br/>
       <FindPw />
+      <br/>
       <Agree />
+      <br/>
       <Request />
+      <br/>
       <PathSetup />
+      <br/>
       <CreateRequest />
+      <br/>
+      <UsageHistory />
+      <br/>
+      <MyPosts />
+      <br/>
+      <RequestDetail />
+      <br/>
+      <RouteDetailWaitingPage/>
+      <br />
+
       {/* 최인하 페이지 */}
       <HomePage />
       <br/>
