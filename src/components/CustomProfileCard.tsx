@@ -3,16 +3,16 @@ import './CustomProfileCard.css'
 import { Arrow } from './CustomIcon';
  
 interface CustomProfileCard {
-    width: number;
     nickname: string;
     date: string;
     rateing: number;
     review: number;
     chipElement?: ReactNode;
     profileElement: ReactNode;
+    onClick?: () => void;
 }
  
-function CustomProfileCard({ width, nickname, date, rateing, review, chipElement, profileElement }: CustomProfileCard) {
+function CustomProfileCard({ nickname, date, rateing, review, chipElement, profileElement, onClick }: CustomProfileCard) {
     const [isOpen, setIsOpen] = useState(false);
  
     const handleClickArrow = () => {
@@ -20,7 +20,7 @@ function CustomProfileCard({ width, nickname, date, rateing, review, chipElement
     };
  
     return (
-        <div className="custom-profile-card" style={{ '--card-width': width } as React.CSSProperties}>
+        <div className="custom-profile-card">
             {/* 칩은 넘겨줬을 때만 표시 */}
             {chipElement && <div className="custom-profile-card-title">{chipElement}</div>}
  
@@ -48,7 +48,7 @@ function CustomProfileCard({ width, nickname, date, rateing, review, chipElement
                     >
                         <Arrow width={48} height={48} strokeWidth={2} />
                     </button>
-                    {isOpen && <span className="profile-report">신고</span>}
+                    {isOpen && <span onClick={onClick} className="profile-report">신고</span>}
                 </div>
             </div>
         </div>

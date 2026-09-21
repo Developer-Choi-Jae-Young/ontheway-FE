@@ -3,6 +3,7 @@ import CustomProfile from '../components/CustomProfile'
 import CustomList from '../components/CustomList'
 import CustomNavBar from '../components/CustomNavBar'
 import './CustomMyPage.css'
+import CustomProfileCard from '../components/CustomProfileCard'
  
 /* 이 페이지에서만 쓰는 아이콘들 — CustomIcon에 추가하지 않고 여기서 인라인 SVG로 사용 */
 const ICON = { w: 24, h: 24, stroke: "#33363D", sw: 2 }
@@ -96,14 +97,14 @@ function CustomMyPage() {
  
             <div className="mypage__body">
                 {/* 프로필 카드 — 펼침이 아니라 이동(오른쪽 화살표)이라 이 페이지에서 직접 구성 */}
-                <button className="mypage__profile">
-                    <CustomProfile width={16} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />
-                    <div className="mypage__profile-text">
-                        <p className="mypage__profile-name">하루</p>
-                        <p className="mypage__profile-date">2026.09.08</p>
-                    </div>
-                    <ChevronRightIcon />
-                </button>
+                <CustomProfileCard
+                    nickname="하루"
+                    date="2026.09.17"
+                    rateing={0}
+                    review={0}
+                    chipElement={null}
+                    profileElement={<CustomProfile width={40} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
+                />
  
                 {/* 후기 */}
                 <div className="mypage__section">

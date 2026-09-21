@@ -412,3 +412,86 @@ export const CheckIcon = ({}: CheckIcon) => {
         </svg>
     );
 };
+ 
+interface CircleX {
+    width?: number;
+    height?: number;
+    fill?: string;
+    x?: string;
+}
+ 
+// 진행 단계 취소/중단 표시 (주황 원 + 흰 X)
+export const CircleX = ({ width = 24, height = 24, fill = '#FD5D35', x = '#FFFFFF' }: CircleX) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill={fill} />
+            <path d="m9 9 6 6M15 9l-6 6" stroke={x} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+};
+
+export const PackageIcon = () => {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m7.5 4.27 9 5.15" /><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" />
+        </svg>
+    )
+}
+
+export const CardIcon = () => {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" />
+        </svg>
+    )
+}
+
+export const CheckSmallIcon = () => {
+    return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" fill="#FEF1ED" stroke="none" /><path d="m8 12 2.5 2.5 5.5-5.5" />
+        </svg>
+    )
+}
+
+export const MegaphoneIcon = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+        </svg>
+    )
+}
+
+export const PlusIcon = () => {
+    return(
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M12 5V19" stroke="#6A6A67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+ 
+export const MinusIcon = () => {
+    return(
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19" stroke="#6A6A67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const BackArrowIcon = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m12 19-7-7 7-7" />
+        </svg>
+    )
+}
+
+export const PathXButton = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18" stroke="#BABABA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M6 6L18 18" stroke="#BABABA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}

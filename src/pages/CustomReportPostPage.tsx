@@ -5,6 +5,7 @@ import CustomCheckbox from '../components/CustomCheckbox'
 import TextArea from '../components/TextArea'
 import CustomButton from '../components/CustomButton'
 import './CustomReportPostPage.css'
+import CustomDiv from '../components/CustomDiv'
  
 const REASONS = [
     '허용되지 않은 물품 또는 위험 물품을 요청합니다.',
@@ -16,12 +17,12 @@ const REASONS = [
  
 function CustomReportPostPage() {
     return (
-        <div className="report">
+        <CustomDiv>
             <CustomTopAppBar variant="centered" title="게시글 신고" />
  
             <div className="report__body">
                 {/* 물품 카드 */}
-                <CustomProductCard number="물품번호" category="서류봉투" money="5,000" width={361} />
+                <CustomProductCard number="물품번호" category="서류봉투" money="5,000"/>
  
                 {/* 신고 사유 선택 */}
                 <div className="report__section">
@@ -46,7 +47,7 @@ function CustomReportPostPage() {
             <div className="report__footer">
                 <CustomButton name="신고하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
             </div>
-        </div>
+        </CustomDiv>
     )
 }
  

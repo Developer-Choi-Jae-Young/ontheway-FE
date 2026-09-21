@@ -1,7 +1,7 @@
 .custom-profile {
     border: 0px solid var(--bg-color);
     background-color: var(--bg-color);
-    width: calc(var(--profile-diameter) * 1px);
+    width: 100%;
     height: calc(var(--profile-diameter) * 1px);
     border-radius: 100%;
     display: flex;

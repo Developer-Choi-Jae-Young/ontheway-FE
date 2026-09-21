@@ -1,10 +1,10 @@
 import './App.css'
-// 최인하 페이지
+// ===== 페이지 =====
+import LoginPage from './pages/CustomLoginPage.tsx'
+import SignUpPage from './pages/CustomSignUpPage.tsx'
 import HomePage from './pages/CustomHomePage.tsx'
 import RouteDetailPage from './pages/CustomRouteDetailPage.tsx'
-import LoginPage from './pages/CustomLoginPage.tsx'
 import Request from './pages/Request.tsx'
-import SignUpPage from './pages/CustomSignUpPage.tsx'
 import MyPage from './pages/CustomMyPage.tsx'
 import ReviewPage from './pages/CustomReviewPage.tsx'
 import ReviewWritePage from './pages/CustomReviewWritePage.tsx'
@@ -55,5 +55,6 @@ function App() {
     </>
   )
 }
-
+ 
 export default App
+ 

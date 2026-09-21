@@ -51,11 +51,11 @@ function MyPosts(){
                         </div>
 
                         <div className="my-posts__products">
-                            <CustomProductCard number="302384-334592" category="노트북 파우치" money="15,000" width={361}/>
-                            <CustomProductCard number="581247-903164" category="전자기기" money="20,000" width={361}/>
-                            <CustomProductCard number="746291-128537" category="화장품 선물세트" money="10,000" width={361}/>
-                            <CustomProductCard number="193805-672418" category="교재 3권" money="12,000" width={361}/>
-                            <CustomProductCard number="824630-451927" category="화분" money="7,000" width={361}/>
+                            <CustomProductCard number="302384-334592" category="노트북 파우치" money="15,000"/>
+                            <CustomProductCard number="581247-903164" category="전자기기" money="20,000"/>
+                            <CustomProductCard number="746291-128537" category="화장품 선물세트" money="10,000"/>
+                            <CustomProductCard number="193805-672418" category="교재 3권" money="12,000"/>
+                            <CustomProductCard number="824630-451927" category="화분" money="7,000"/>
                         </div>
                     </>
                 )}

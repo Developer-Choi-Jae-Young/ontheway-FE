@@ -65,3 +65,7 @@
 .login-page__links span {
     cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}

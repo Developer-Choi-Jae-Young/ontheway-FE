@@ -5,13 +5,12 @@ interface CustomProductCard {
     number: string;
     category: string;
     money: string;
-    width: number;
 }
 
-function CustomProductCard({number, category, money, width}: CustomProductCard) {
+function CustomProductCard({number, category, money}: CustomProductCard) {
   return (
     <>
-        <div className="custom-product" style={{'--product-width':width} as React.CSSProperties}>
+        <div className="custom-product">
             <div className='product-section'>
                 <div className='product-box-section'>
                     <Box width={22} height={22} strokeWidth={2}></Box>

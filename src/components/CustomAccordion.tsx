@@ -1,39 +1,24 @@
 import { useState } from 'react'
 import './CustomAccordion.css'
-
+import { MinusIcon, PlusIcon } from './CustomIcon'
+ 
 interface CustomAccordion {
-    width: number
     clientName: string
     itemName: string
     price: string
+    defaultOpen?: boolean
     children?: React.ReactNode
 }
-
-function PlusIcon(){
-    return(
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M12 5V19" stroke="#6A6A67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-    )
-}
-
-function MinusIcon(){
-    return(
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19" stroke="#6A6A67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-    )
-}
-
-function CustomAccordion({width, clientName, itemName, price, children}: CustomAccordion){
-    const [isOpen, setIsOpen] = useState<boolean>(false)
-
+ 
+function CustomAccordion({clientName, itemName, price, defaultOpen = false, children}: CustomAccordion){
+    const [isOpen, setIsOpen] = useState<boolean>(defaultOpen)
+ 
     const toggleAccordion = () => {
         setIsOpen(prev => !prev)
     }
-
+ 
     return(
-        <div className={`custom-accordion ${isOpen ? 'is-open' : ''}`} style={{'--accordion-width': width} as React.CSSProperties}>
+        <div className={`custom-accordion ${isOpen ? 'is-open' : ''}`}>
             <div className="accordion-card-header">
                 <div className="accordion-card-indicator"/>
                 <div className="accordion-card-info">
@@ -47,12 +32,12 @@ function CustomAccordion({width, clientName, itemName, price, children}: CustomA
                     </button>
                 </div>
             </div>
-
+ 
             <div className="accordion-card-content">
                 {children || <div className="accordion-default-box"/>}
             </div>
         </div>
     )
 }
-
+ 
 export default CustomAccordion

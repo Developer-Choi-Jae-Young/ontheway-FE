@@ -3,10 +3,11 @@ import TextField from '../components/TextField'
 import DateInput from '../components/DateInput'
 import CustomButton from '../components/CustomButton'
 import './CustomSignUpPage.css'
+import CustomDiv from '../components/CustomDiv'
  
 function CustomSignupPage() {
     return (
-        <div className="signup">
+        <CustomDiv>
             <CustomTopAppBar variant="large" title="회원가입" />
  
             <div className="signup__body">
@@ -55,7 +56,7 @@ function CustomSignupPage() {
             <div className="signup__footer">
                 <CustomButton name="다음으로" color="#fd5d35" fontColor="#ffffff" size="lg" />
             </div>
-        </div>
+        </CustomDiv>
     )
 }
  

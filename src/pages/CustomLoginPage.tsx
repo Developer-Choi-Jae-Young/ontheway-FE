@@ -49,7 +49,7 @@ function CustomLoginPage() {
                 <span className="login-page__divider"></span>
                 <Link to={'/find/pw'}>비밀번호 찾기</Link>
                 <span className="login-page__divider"></span>
-                <Link to={'/signup'}>회원가입</Link>
+                <Link to={'/agree'}>회원가입</Link>
             </div>
         </div>
     )

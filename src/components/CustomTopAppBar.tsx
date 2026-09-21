@@ -1,3 +1,4 @@
+import { BackArrowIcon } from './CustomIcon';
 import './CustomTopAppBar.css'
  
 interface CustomTopAppBarProps {
@@ -6,18 +7,10 @@ interface CustomTopAppBarProps {
     meta?: string;
     variant?: "centered" | "meta" | "large" | "title";
     onBack?: () => void;
+    onClick?: () => void;
 }
  
-function BackArrowIcon() {
-    return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m12 19-7-7 7-7" />
-        </svg>
-    )
-}
- 
-function CustomTopAppBar({ title, subtitle, meta, variant = "centered", onBack }: CustomTopAppBarProps) {
+function CustomTopAppBar({ title, subtitle, meta, variant = "centered", onBack, onClick }: CustomTopAppBarProps) {
  
     const back = (
         <button className="top-app-bar__back" onClick={onBack} aria-label="뒤로가기">
@@ -50,7 +43,7 @@ function CustomTopAppBar({ title, subtitle, meta, variant = "centered", onBack }
         <header className={`top-app-bar top-app-bar--${variant}`}>
             {back}
             <p className="top-app-bar__title">{title}</p>
-            <div className="top-app-bar__trailing">
+            <div className="top-app-bar__trailing" onClick={onClick}>
                 {variant === "meta" && meta && <p className="top-app-bar__meta">{meta}</p>}
             </div>
         </header>

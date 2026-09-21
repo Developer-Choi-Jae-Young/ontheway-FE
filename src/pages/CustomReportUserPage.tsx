@@ -6,6 +6,7 @@ import CustomCheckbox from '../components/CustomCheckbox'
 import TextArea from '../components/TextArea'
 import CustomButton from '../components/CustomButton'
 import './CustomReportUserPage.css'
+import CustomDiv from '../components/CustomDiv'
  
 const REASONS = [
     '약속한 픽업 또는 전달 시간을 지키지 않았습니다.',
@@ -19,19 +20,18 @@ const REASONS = [
  
 function CustomReportUser() {
     return (
-        <div className="report-user">
+        <CustomDiv>
             <CustomTopAppBar variant="centered" title="유저 신고" />
  
             <div className="report-user__body">
                 {/* 신고 대상 프로필 카드 */}
                 <CustomProfileCard
-                    width={361}
                     nickname="하늘고양이"
                     date="2026.09.08"
                     rateing={0}
                     review={0}
                     chipElement={null}
-                    profileElement={<CustomProfile width={16} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
+                    profileElement={<CustomProfile width={40} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
                 />
  
                 {/* 신고 사유 선택 */}
@@ -57,7 +57,7 @@ function CustomReportUser() {
             <div className="report-user__footer">
                 <CustomButton name="신고하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
             </div>
-        </div>
+        </CustomDiv>
     )
 }
  

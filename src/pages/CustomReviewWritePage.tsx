@@ -28,13 +28,12 @@ function CustomReviewWritePage() {
  
             <div className="review-write__body">
                 <CustomProfileCard
-                    width={361}
                     nickname="하루"
                     date="2026.09.17"
                     rateing={0}
                     review={0}
                     chipElement={null}
-                    profileElement={<CustomProfile width={16} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
+                    profileElement={<CustomProfile width={40} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
                 />
  
                 {/* 별점 + 라벨 (피그마대로 직접 구현, 클릭해서 선택) */}

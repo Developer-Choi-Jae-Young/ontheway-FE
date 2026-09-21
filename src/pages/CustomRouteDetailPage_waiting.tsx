@@ -145,15 +145,15 @@ function CustomRouteDetailPage_waiting(){
                 <div className="route-detail-waiting__requests">
                     <h3>배송 의뢰요청</h3>
 
-                    <CustomAccordion width={361} clientName="퇴근길" itemName="2026.08.17" price="15,000">
+                    <CustomAccordion clientName="퇴근길" itemName="2026.08.17" price="15,000">
                         <RequestInfo/>
                     </CustomAccordion>
 
-                    <CustomAccordion width={361} clientName="오렌지" itemName="2026.09.19" price="10,000">
+                    <CustomAccordion clientName="오렌지" itemName="2026.09.19" price="10,000">
                         <RequestInfo/>
                     </CustomAccordion>
 
-                    <CustomAccordion width={361} clientName="동네한바퀴" itemName="2026.09.22" price="5,000">
+                    <CustomAccordion clientName="동네한바퀴" itemName="2026.09.22" price="5,000">
                         <RequestInfo/>
                     </CustomAccordion>
                 </div>

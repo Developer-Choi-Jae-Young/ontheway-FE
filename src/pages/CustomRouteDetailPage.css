@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
  
-/* 프로필 */
+/* ===== 프로필 ===== */
 .route-detail__profile {
     display: flex;
     align-items: center;
@@ -30,29 +30,11 @@
     border-radius: 16px;
     background-color: #ffffff;
 }
+.route-detail__profile-text { flex: 1; min-width: 0; }
+.route-detail__profile-name { margin: 0; font-size: 16px; font-weight: 600; line-height: 24px; color: #14191f; }
+.route-detail__profile-date { margin: 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #6b7280; }
  
-.route-detail__profile-text {
-    flex: 1;
-    min-width: 0;
-}
- 
-.route-detail__profile-name {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    color: #14191f;
-}
- 
-.route-detail__profile-date {
-    margin: 0;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-    color: #6b7280;
-}
- 
-/* 추가정보 */
+/* ===== 추가정보 ===== */
 .route-detail__extra {
     display: flex;
     flex-direction: column;
@@ -60,8 +42,6 @@
     border-radius: 16px;
     background-color: #ffffff;
 }
- 
-/* 게시자가 등록한 내용을 그대로 보여주는 읽기전용 문단 */
 .route-detail__extra-text {
     margin: 0 16px;
     padding: 20px;
@@ -72,14 +52,132 @@
     font-weight: 400;
     line-height: 20px;
     color: #14191f;
-    white-space: pre-wrap;      /* 줄바꿈 유지 */
+    white-space: pre-wrap;
 }
  
-/* 하단 고정 버튼 */
+/* ===== 취소/중단 알림 박스 ===== */
+.route-detail__notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+.route-detail__notice-time { margin: 0; font-size: 16px; font-weight: 600; line-height: 24px; color: #14191f; }
+.route-detail__notice-msg  { margin: 2px 0 0; font-size: 12px; font-weight: 400; line-height: 16px; color: #6b7280; }
+ 
+/* ===== 배송 의뢰요청 ===== */
+.route-detail__requests {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+/* 제목(list03)은 카드 배경 없이 */
+.route-detail__requests .list--list03 {
+    padding: 0 0 4px;
+    background-color: transparent;
+}
+/* 고정폭(361) 컴포넌트를 반응형으로 — 세로 스크롤바가 생겨도 안 넘침 */
+.route-detail .custom-accordion,
+.route-detail .empty-state,
+.route-detail .text-area {
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+/* 의뢰카드 펼침 내용 */
+.request-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+.request-body__section { display: flex; flex-direction: column; gap: 6px; }
+.request-body__heading {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #14191f;
+}
+.request-body__row {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.request-body__row span:first-child { flex-shrink: 0; width: 64px; color: #6b7280; }
+.request-body__row span:last-child  { flex: 1; min-width: 0; color: #14191f; word-break: keep-all; }
+.request-body__agree {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6b7280;
+}
+.request-body__agree svg { flex-shrink: 0; margin-top: 1px; }
+ 
+/* ===== 지도 / 사진 자리 ===== */
+.route-detail__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 130px;
+    box-sizing: border-box;
+    border: 1px dashed #d7dae0;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6b7280;
+}
+ 
+/* ===== 배송중단사유 ===== */
+.route-detail__stop-reason { display: flex; flex-direction: column; gap: 8px; }
+.route-detail__stop-label  { margin: 0; font-size: 16px; font-weight: 600; line-height: 24px; color: #14191f; }
+ 
+/* ===== 확인요청 안내 문구 (피게시자) ===== */
+.route-detail__confirm-note {
+    margin: -8px 0 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6b7280;
+}
+ 
+/* ===== 하단 버튼 ===== */
 .route-detail__footer {
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
     padding: 16px;
+    box-sizing: border-box;
     background-color: #f3f4f6;
+}
+.route-detail__footer-row {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+.route-detail__footer-slot {
+    flex: 1;
+    min-width: 0;
+}
+/* CustomButton이 폭을 인라인 style로 넣고 있어 !important로 슬롯 폭에 맞춤
+   (1개면 전체, 2개면 절반씩) */
+.route-detail__footer-slot > * {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
