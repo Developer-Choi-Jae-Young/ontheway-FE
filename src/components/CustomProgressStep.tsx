@@ -1,8 +1,9 @@
 import './CustomProgressStep.css'
 import CustomList from './CustomList'
-import { CircleCheck, Truck, CircleEmpty } from './CustomIcon'
+import { CircleCheck, Truck, CircleEmpty, CircleX } from './CustomIcon'
  
-type StepStatus = "done" | "current" | "pending"
+// canceled: 배송취소/배송중단 (주황 X)
+type StepStatus = "done" | "current" | "pending" | "canceled"
  
 export type Step = {
     title: string;
@@ -18,6 +19,7 @@ interface CustomProgressStepProps {
 function StepIcon({ status }: { status: StepStatus }) {
     if (status === "done") return <CircleCheck width={24} height={24} />
     if (status === "current") return <Truck width={24} height={24} stroke="#4576F7" />
+    if (status === "canceled") return <CircleX width={24} height={24} />
     return <CircleEmpty width={24} height={24} />
 }
  
