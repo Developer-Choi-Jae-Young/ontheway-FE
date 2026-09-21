@@ -70,15 +70,6 @@ function ChevronDownIcon() {
     )
 }
  
-function ChevronRightIcon() {
-    return (
-        <svg width={ICON.w} height={ICON.h} viewBox="0 0 24 24" fill="none"
-            stroke={ICON.stroke} strokeWidth={ICON.sw} strokeLinecap="round" strokeLinejoin="round">
-            <path d="m9 18 6-6-6-6" />
-        </svg>
-    )
-}
- 
 function LogoutIcon() {
     return (
         <svg width={ICON.w} height={ICON.h} viewBox="0 0 24 24" fill="none"

@@ -112,8 +112,8 @@ function Footer() {
    ========================================================= */
 function CustomRouteDetailPage() {
     const navigate = useNavigate();
-    const { id } = useParams();
-
+    const { id: _id } = useParams();
+    
     return (
         <CustomDiv backgroundColor='#f3f4f6' footerElement={<Footer/>}>
             <CustomTopAppBar variant="meta" title="하루님의 가는길" meta="신고" onClick={() => navigate('/board/report')}/>
