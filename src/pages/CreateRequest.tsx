@@ -4,27 +4,18 @@ import CustomButton from '../components/CustomButton'
 import TextField from '../components/TextField'
 import TextArea from '../components/TextArea'
 import TimeInput from '../components/TimeInput'
-import { Circle, MapPin } from '../components/CustomIcon'
+import { Circle, MapPin, PathXButton } from '../components/CustomIcon'
 import { Info2 } from '../components/Info'
 import CustomCheckbox from '../components/CustomCheckbox'
 import { useState } from 'react'
-
-function PathXButton() {
-    return (
-        <button className="create-request-x">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M18 6L6 18" stroke="#BABABA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6 6L18 18" stroke="#BABABA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-        </button>
-    )
-}
+import CustomDiv from '../components/CustomDiv'
 
 function CreateRequest() {
     const [payment, setPayment] = useState<'pre' | 'post'>('pre')
 
     return (
-        <div className="create-request-page">
+        <CustomDiv>
+        
             <CustomTopAppBar title="배송의뢰"/>
 
             <div className="create-request-content">
@@ -40,8 +31,16 @@ function CreateRequest() {
 
                             <div className="request-route-content">
                                 <div className="request-label">물건수령지</div>
-                                <div className="request-address"><span>인천 연수구 송도과학로 32</span><PathXButton/></div>
-                                <div className="request-address"><span>송도테크노파크IT센터 앞</span><PathXButton/></div>
+                                <div className="request-address"><span>인천 연수구 송도과학로 32</span>
+                                    <button className='create-request-x'>
+                                        <PathXButton/>
+                                    </button>
+                                </div>
+                                <div className="request-address"><span>송도테크노파크IT센터 앞</span>
+                                    <button className='create-request-x'>
+                                        <PathXButton/>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -52,8 +51,16 @@ function CreateRequest() {
 
                             <div className="request-route-content">
                                 <div className="request-label">배송목적지</div>
-                                <div className="request-address"><span>서울 영등포구 국제금융로 10</span><PathXButton/></div>
-                                <div className="request-address"><span>서울국제금융센터 앞</span><PathXButton/></div>
+                                <div className="request-address"><span>서울 영등포구 국제금융로 10</span>
+                                    <button className='create-request-x'>
+                                        <PathXButton/>
+                                    </button>
+                                </div>
+                                <div className="request-address"><span>서울국제금융센터 앞</span>
+                                    <button className='create-request-x'>
+                                        <PathXButton/>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +121,7 @@ function CreateRequest() {
                     <CustomButton name="작성완료" color="#FD5D35" fontColor="#FFFFFF" size="lg"/>
                 </div>
             </div>
-        </div>
+        </CustomDiv>
     )
 }
 

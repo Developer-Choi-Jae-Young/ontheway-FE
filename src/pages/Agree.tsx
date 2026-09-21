@@ -3,8 +3,12 @@ import { Arrow } from '../components/CustomIcon.tsx'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton.tsx'
 import CustomTopAppBar from '../components/CustomTopAppBar'
+import { useNavigate } from 'react-router-dom'
+import CustomDiv from '../components/CustomDiv.tsx'
 
 function Agree(){
+    const navigate = useNavigate();
+
     const [agreed, setAgreed] = useState([false, false, false, false, false, false])
     const [opened, setOpened] = useState([false, false, false, false, false, false])
 
@@ -22,7 +26,7 @@ function Agree(){
 
     return(
         <>
-        <div className="agree-page">
+        <CustomDiv>
             <CustomTopAppBar
                     title="약관동의"
                     variant="large"
@@ -81,10 +85,10 @@ function Agree(){
                     
                 </div>
                  <div className='agree-button'>
-                    <CustomButton name="동의하고 가입 완료" color="#fd5d35" fontColor="#ffffff" size="lg"/>
+                    <CustomButton name="동의하고 가입 완료" color="#fd5d35" fontColor="#ffffff" size="lg" onClick={() => navigate('/signup')}/>
                 </div>
             </div>
-        </div>
+        </CustomDiv>
         </>
     )
 }

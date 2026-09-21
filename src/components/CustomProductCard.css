@@ -6,7 +6,7 @@
     border-radius: 12px;  
     background-color: white;
     padding: 16px;
-    width: calc(var(--product-width) * 1px);
+    width: 100%;
     gap: 16px;
 
     box-sizing: border-box; 

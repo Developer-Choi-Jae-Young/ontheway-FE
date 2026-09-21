@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:api": "npx swagger-typescript-api generate -p https://swyp-ontheway.duckdns.org/v3/api-docs -r -o ./src/api --modular -d --extract-request-body --extract-response-body --extract-response-error --axios"
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
+    "swagger-typescript-api": "^13.13.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

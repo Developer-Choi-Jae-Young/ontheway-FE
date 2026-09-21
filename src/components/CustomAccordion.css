@@ -1,7 +1,7 @@
 .custom-accordion{
     display: flex;
     flex-direction: column;
-    width: calc(var(--accordion-width) * 1px);
+    width: 100%;
     padding: 12px 16px;
     box-sizing: border-box;
     position: relative;

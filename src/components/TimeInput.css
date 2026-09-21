@@ -1,6 +1,6 @@
 .time-input{
   display:flex;
-  width:359px;
+  width:100%;
   flex-direction:column;
   align-items:flex-start;
   gap:8px;

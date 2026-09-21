@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import './CustomDeliveryCard.css'
 import { Circle, MapPin, Calendar, FileText } from './CustomIcon'
 import CustomRequestCount from './CustomRequestCount'
 
 interface CustomDeliveryCard {
-    width: number;
+    id:number;
     count: number;
     startAddr: string;
     endAddr: string;
@@ -14,9 +15,9 @@ interface CustomDeliveryCard {
     review?: boolean;
 }
 
-function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime, endTime, price, review=false }: CustomDeliveryCard) {
+function CustomDeliveryCard({ id, count, startAddr, endAddr, date, startTime, endTime, price, review=false }: CustomDeliveryCard) {
     return (
-        <div className={`custom-delivery ${review ? 'review' : ''}`} style={{ '--delivery-width': width } as React.CSSProperties}>
+        <div className={`custom-delivery ${review ? 'review' : ''}`}> <Link to={`/delivery/detail/${id}`}>
             <CustomRequestCount count={count} />
             <div className="delivery-content">
                 <div className="delivery-route">
@@ -50,6 +51,7 @@ function CustomDeliveryCard({ width, count, startAddr, endAddr, date, startTime,
                 </div>
             </div>
             {review && <button className="delivery-review-button">후기 작성하기</button>}
+            </Link>
         </div>
     )
 }

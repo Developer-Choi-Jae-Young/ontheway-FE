@@ -1,3 +1,4 @@
+import { useParams, useNavigate} from 'react-router-dom';
 import CustomTopAppBar from '../components/CustomTopAppBar'
 import CustomProfile from '../components/CustomProfile'
 import CustomRouteInfo from '../components/CustomRouteInfo'
@@ -7,10 +8,10 @@ import CustomAccordion from '../components/CustomAccordion'
 import EmptyState from '../components/EmptyState'
 import TextArea from '../components/TextArea'
 import CustomButton from '../components/CustomButton'
-import { Truck } from '../components/CustomIcon'
+import { CardIcon, CheckSmallIcon, MegaphoneIcon, PackageIcon, Truck } from '../components/CustomIcon'
 import './CustomRouteDetailPage.css'
- 
-
+import CustomDiv from '../components/CustomDiv';
+import CustomProfileCard from '../components/CustomProfileCard';
  
 // 진행 단계 7개 전부 — 완료/현재/취소/대기 네 가지 모양이 모두 보이도록 섞어둠
 const ALL_STEPS: Step[] = [
@@ -49,47 +50,7 @@ const REQUESTS: RequestItem[] = [
       payment: { timing: "선결제" } },
 ]
  
-const extraInfo = "자차 이용합니다! 퇴근하면서 이동하는 경로라 시간 맞으면 바로 전달 가능해요. 작은 물품은 여러 개도 가능합니다."
- 
-/* =========================================================
-   이 페이지에서만 쓰는 아이콘
-   ========================================================= */
-function ChevronDownIcon() {
-    return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m6 9 6 6 6-6" />
-        </svg>
-    )
-}
-function PackageIcon() {
-    return (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m7.5 4.27 9 5.15" /><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" />
-        </svg>
-    )
-}
-function CardIcon() {
-    return (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" />
-        </svg>
-    )
-}
-function CheckSmallIcon() {
-    return (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10" fill="#FEF1ED" stroke="none" /><path d="m8 12 2.5 2.5 5.5-5.5" />
-        </svg>
-    )
-}
-function MegaphoneIcon() {
-    return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
-        </svg>
-    )
-}
- 
+const extraInfo = "자차 이용합니다! 퇴근하면서 이동하는 경로라 시간 맞으면 바로 전달 가능해요. 작은 물품은 여러 개도 가능합니다." 
 /* =========================================================
    하단 블록 (페이지 내부 전용)
    ========================================================= */
@@ -123,26 +84,52 @@ function RequestBody({ r }: { r: RequestItem }) {
 function Placeholder({ label }: { label: string }) {
     return <div className="route-detail__placeholder">{label}</div>
 }
+
+function Footer() {
+    const navigate = useNavigate();
+    
+    return (
+            <div className="route-detail__footer">
+                <div className="route-detail__footer-row">
+                    <div className="route-detail__footer-slot">
+                        <CustomButton name="의뢰하기" color="#fd5d35" fontColor="#ffffff" size="lg" onClick={() => navigate('/delivery/request')}/>
+                    </div>
+                </div>
+                <div className="route-detail__footer-row route-detail__footer-row--double">
+                    <div className="route-detail__footer-slot">
+                        <CustomButton name="거절하기" color="#FEF1ED" fontColor="#fd5d35" size="lg" />
+                    </div>
+                    <div className="route-detail__footer-slot">
+                        <CustomButton name="수락하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
+                    </div>
+                </div>
+            </div>
+            );
+}
  
 /* =========================================================
    페이지 — 나올 수 있는 조각을 전부 한 번씩 보여줍니다
    ========================================================= */
 function CustomRouteDetailPage() {
+    const navigate = useNavigate();
+    const { id: _id } = useParams();
+    
     return (
-        <div className="route-detail">
-            <CustomTopAppBar variant="meta" title="하루님의 가는길" meta="신고" />
+        <CustomDiv backgroundColor='#f3f4f6' footerElement={<Footer/>}>
+            <CustomTopAppBar variant="meta" title="하루님의 가는길" meta="신고" onClick={() => navigate('/board/report')}/>
  
             <div className="route-detail__body">
                 {/* ===== 공통 상단 ===== */}
-                <div className="route-detail__profile">
-                    <CustomProfile width={16} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />
-                    <div className="route-detail__profile-text">
-                        <p className="route-detail__profile-name">하루</p>
-                        <p className="route-detail__profile-date">2026.09.17</p>
-                    </div>
-                    <ChevronDownIcon />
-                </div>
- 
+                <CustomProfileCard
+                    nickname="하루"
+                    date="2026.09.17"
+                    rateing={0}
+                    review={0}
+                    chipElement={null}
+                    profileElement={<CustomProfile width={40} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
+                    onClick={() => navigate('/user/report')}
+                />
+
                 <CustomRouteInfo
                     startAddr="인천 연수구 송도과학로 32" startDetail="송도테크노파크IT센터 앞"
                     endAddr="서울 영등포구 국제금융로 10" endDetail="서울국제금융센터 앞"
@@ -170,7 +157,7 @@ function CustomRouteDetailPage() {
                 <div className="route-detail__requests">
                     <CustomList variant="list03" label="배송 의뢰요청" />
                     {REQUESTS.map((r, i) => (
-                        <CustomAccordion key={r.id} width={361} clientName={r.clientName} itemName={r.date} price={r.price} defaultOpen={i === 0}>
+                        <CustomAccordion key={r.id} clientName={r.clientName} itemName={r.date} price={r.price} defaultOpen={i === 0}>
                             <RequestBody r={r} />
                         </CustomAccordion>
                     ))}
@@ -193,24 +180,7 @@ function CustomRouteDetailPage() {
                 <Placeholder label="사진" />
                 <p className="route-detail__confirm-note">의뢰자 미수락시, 요청 이후 72시간 이후 자동 수락됩니다.</p>
             </div>
- 
-            {/* ===== 하단 버튼: 1개짜리 / 2개짜리 ===== */}
-            <div className="route-detail__footer">
-                <div className="route-detail__footer-row">
-                    <div className="route-detail__footer-slot">
-                        <CustomButton name="의뢰하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
-                    </div>
-                </div>
-                <div className="route-detail__footer-row route-detail__footer-row--double">
-                    <div className="route-detail__footer-slot">
-                        <CustomButton name="거절하기" color="#FEF1ED" fontColor="#fd5d35" size="lg" />
-                    </div>
-                    <div className="route-detail__footer-slot">
-                        <CustomButton name="수락하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
-                    </div>
-                </div>
-            </div>
-        </div>
+        </CustomDiv>
     )
 }
  

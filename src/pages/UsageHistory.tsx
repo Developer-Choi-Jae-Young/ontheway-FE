@@ -17,11 +17,11 @@ function UsageHistory(){
                 </div>
 
                 <div className="usage-history__cards">
-                    <CustomDeliveryCard width={361} count={6} startAddr="인천 연수구 송도과학로 32" endAddr="서울 영등포구 국제금융로 10" date="2026.09.16" startTime="18:00" endTime="20:00" price="20,000"/>
+                    <CustomDeliveryCard id={1} count={6} startAddr="인천 연수구 송도과학로 32" endAddr="서울 영등포구 국제금융로 10" date="2026.09.16" startTime="18:00" endTime="20:00" price="20,000"/>
 
-                    <CustomDeliveryCard width={361} count={6} startAddr="부천시 길주 300" endAddr="서울 마포구 성미산로 25" date="2026.09.17" startTime="14:00" endTime="17:00" price="6,000" review/>
+                    <CustomDeliveryCard id={2} count={6} startAddr="부천시 길주 300" endAddr="서울 마포구 성미산로 25" date="2026.09.17" startTime="14:00" endTime="17:00" price="6,000" review/>
 
-                    <CustomDeliveryCard width={361} count={6} startAddr="수원시 영통구 광교로 145" endAddr="서울 용산구 한강대로 100" date="2026.09.12" startTime="10:00" endTime="12:00" price="5,000"/>
+                    <CustomDeliveryCard id={3} count={6} startAddr="수원시 영통구 광교로 145" endAddr="서울 용산구 한강대로 100" date="2026.09.12" startTime="10:00" endTime="12:00" price="5,000"/>
                 </div>
             </div>
 

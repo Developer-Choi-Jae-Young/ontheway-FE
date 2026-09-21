@@ -3,7 +3,7 @@
     border-radius: 16px;
     background-color: white;
     padding: 16px 12px;
-    width: calc(var(--card-width) * 1px);
+    width: 100%;
 }
  
 /* 칩(있을 때만 렌더) */
