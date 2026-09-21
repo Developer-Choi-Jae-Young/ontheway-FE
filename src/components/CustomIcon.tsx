@@ -353,3 +353,20 @@ export const CircleEmpty = ({ width = 24, height = 24, color = '#6A6A67' }: Circ
         </svg>
     );
 };
+ 
+interface CircleX {
+    width?: number;
+    height?: number;
+    fill?: string;
+    x?: string;
+}
+ 
+// 진행 단계 취소/중단 표시 (주황 원 + 흰 X)
+export const CircleX = ({ width = 24, height = 24, fill = '#FD5D35', x = '#FFFFFF' }: CircleX) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill={fill} />
+            <path d="m9 9 6 6M15 9l-6 6" stroke={x} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+};

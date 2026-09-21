@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import './CustomAccordion.css'
-
+ 
 interface CustomAccordion {
     width: number
     clientName: string
     itemName: string
     price: string
+    defaultOpen?: boolean
     children?: React.ReactNode
 }
-
+ 
 function PlusIcon(){
     return(
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -16,7 +17,7 @@ function PlusIcon(){
         </svg>
     )
 }
-
+ 
 function MinusIcon(){
     return(
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -24,14 +25,14 @@ function MinusIcon(){
         </svg>
     )
 }
-
-function CustomAccordion({width, clientName, itemName, price, children}: CustomAccordion){
-    const [isOpen, setIsOpen] = useState<boolean>(false)
-
+ 
+function CustomAccordion({width, clientName, itemName, price, defaultOpen = false, children}: CustomAccordion){
+    const [isOpen, setIsOpen] = useState<boolean>(defaultOpen)
+ 
     const toggleAccordion = () => {
         setIsOpen(prev => !prev)
     }
-
+ 
     return(
         <div className={`custom-accordion ${isOpen ? 'is-open' : ''}`} style={{'--accordion-width': width} as React.CSSProperties}>
             <div className="accordion-card-header">
@@ -47,12 +48,12 @@ function CustomAccordion({width, clientName, itemName, price, children}: CustomA
                     </button>
                 </div>
             </div>
-
+ 
             <div className="accordion-card-content">
                 {children || <div className="accordion-default-box"/>}
             </div>
         </div>
     )
 }
-
+ 
 export default CustomAccordion

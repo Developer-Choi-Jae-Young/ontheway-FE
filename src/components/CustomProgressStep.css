@@ -101,3 +101,9 @@
     color: #ffffff;
     white-space: nowrap;
 }
+ 
+/* 취소/중단 : 제목 주황색 */
+.progress-step__text--canceled .progress-step__step-title {
+    color: #fd5d35;
+}
+ 
