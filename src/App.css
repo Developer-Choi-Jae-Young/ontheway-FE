@@ -65,3 +65,13 @@ body {
   background-color: #E9E9E9;
   font-family: 'Pretendard', sans-serif;
 }
+
+/* 모든 요소의 스크롤바 숨김 (스크롤 동작은 유지) */
+* {
+    scrollbar-width: none;        /* Firefox, 최신 크롬·엣지 */
+    -ms-overflow-style: none;     /* 구형 IE·엣지 */
+}
+
+*::-webkit-scrollbar {
+    display: none;                /* 크롬·사파리·엣지 (웹킷) */
+}
