@@ -4,25 +4,23 @@ import CustomDeliveryCard from '../components/CustomDeliveryCard'
 import CustomFab from '../components/CustomFab'
 import CustomNavBar from '../components/CustomNavBar'
 import './CustomHomePage.css'
+import CustomDiv from '../components/CustomDiv'
  
 function CustomHomePage() {
     return (
-        <div className="home-page">
-            <div className="home-page__header">
+        <CustomDiv backgroundColor={'#f3f4f6'} headerElement={<div className="home-page__header">
                 <CustomLogo className="home-page__logo" />
- 
-                <div className="home-page__filters">
-                    <CustomFilterChip label="출발지" variant="full" icon="chevron" />
-                    <CustomFilterChip label="도착지" variant="full" icon="chevron" />
-                    <CustomFilterChip label="후기" variant="full" icon="chevron" />
-                    <CustomFilterChip label="희망금액" variant="full" icon="chevron" />
-                </div>
+            </div>} footerElement={<CustomNavBar />}>
+            <div className="home-page__filters">
+                <CustomFilterChip label="출발지" variant="full" icon="chevron" />
+                <CustomFilterChip label="도착지" variant="full" icon="chevron" />
+                <CustomFilterChip label="후기" variant="full" icon="chevron" />
+                <CustomFilterChip label="희망금액" variant="full" icon="chevron" />
             </div>
- 
             <div className="home-page__body">
                 <div className="home-page__cards">
                     <CustomDeliveryCard
-                        width={361}
+                        id={1}
                         count={6}
                         startAddr="서울 마포구 성미산로 25"
                         endAddr="서울 강남구 테헤란로 123"
@@ -32,7 +30,7 @@ function CustomHomePage() {
                         price="8,000"
                     />
                     <CustomDeliveryCard
-                        width={361}
+                        id={2}
                         count={26}
                         startAddr="인천 연수구 송도과학로 32"
                         endAddr="서울 영등포구 국제금융로 10"
@@ -42,7 +40,7 @@ function CustomHomePage() {
                         price="20,000"
                     />
                     <CustomDeliveryCard
-                        width={361}
+                        id={3}
                         count={13}
                         startAddr="경기 성남시 분당구 정자일로 120"
                         endAddr="서울 마포구 월드컵로123"
@@ -52,7 +50,7 @@ function CustomHomePage() {
                         price="12,000"
                     />
                     <CustomDeliveryCard
-                        width={361}
+                        id={4}
                         count={8}
                         startAddr="서울 송파구 올림픽로 300"
                         endAddr="경기 하남시 미사강변대로 100"
@@ -62,7 +60,7 @@ function CustomHomePage() {
                         price="15,000"
                     />
                     <CustomDeliveryCard
-                        width={361}
+                        id={5}
                         count={4}
                         startAddr="서울 용산구 한강대로 92"
                         endAddr="서울 종로구 세종대로 175"
@@ -72,7 +70,7 @@ function CustomHomePage() {
                         price="6,000"
                     />
                     <CustomDeliveryCard
-                        width={361}
+                        id={6}
                         count={19}
                         startAddr="경기 수원시 영통구 광교로 145"
                         endAddr="서울 강서구 마곡중앙로 161"
@@ -87,9 +85,7 @@ function CustomHomePage() {
             <div className="home-page__fab">
                 <CustomFab />
             </div>
- 
-            <CustomNavBar />
-        </div>
+        </CustomDiv>
     )
 }
  

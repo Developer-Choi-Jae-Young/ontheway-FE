@@ -1,5 +1,7 @@
 .custom-div {
+    position: relative;
     width: 500px;
+    min-width: 393px;
     height: 100vh;
     margin: auto;
     display: flex;
@@ -21,4 +23,5 @@
     flex: 1;
     overflow-y: auto;
     box-sizing: border-box;
+    background-color: var(--bg-color);
 }

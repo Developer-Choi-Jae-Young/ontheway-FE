@@ -3,6 +3,7 @@ import TextField from '../components/TextField'
 import CustomCheckbox from '../components/CustomCheckbox'
 import CustomButton from '../components/CustomButton'
 import './CustomLoginPage.css'
+import { Link } from 'react-router-dom'
  
 function CustomLoginPage() {
     return (
@@ -44,11 +45,11 @@ function CustomLoginPage() {
             </div>
  
             <div className="login-page__links">
-                <span>아이디 찾기</span>
+                <Link to={'/find/id'}>아이디 찾기</Link>
                 <span className="login-page__divider"></span>
-                <span>비밀번호 찾기</span>
+                <Link to={'/find/pw'}>비밀번호 찾기</Link>
                 <span className="login-page__divider"></span>
-                <span>회원가입</span>
+                <Link to={'/signup'}>회원가입</Link>
             </div>
         </div>
     )

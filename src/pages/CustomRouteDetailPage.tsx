@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom';
 import CustomTopAppBar from '../components/CustomTopAppBar'
 import CustomProfile from '../components/CustomProfile'
 import CustomRouteInfo from '../components/CustomRouteInfo'
@@ -5,15 +6,7 @@ import CustomProgressStep, { type Step } from '../components/CustomProgressStep'
 import CustomList from '../components/CustomList'
 import CustomButton from '../components/CustomButton'
 import './CustomRouteDetailPage.css'
- 
-function ChevronDownIcon() {
-    return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m6 9 6 6 6-6" />
-        </svg>
-    )
-}
+import { ChevronDownIcon } from '../components/CustomIcon';
  
 // 아직 의뢰 전(매칭대기중) 상태 — 첫 단계에만 택배 아이콘, 나머지는 대기
 const STEPS: Step[] = [
@@ -30,6 +23,8 @@ const STEPS: Step[] = [
 const extraInfo = "부피가 큰 물품입니다. 픽업 시 연락 부탁드려요."
  
 function CustomRouteDetailPage() {
+    const { id } = useParams();
+
     return (
         <div className="route-detail">
             <CustomTopAppBar variant="meta" title="하루님의 가는길" meta="신고" />

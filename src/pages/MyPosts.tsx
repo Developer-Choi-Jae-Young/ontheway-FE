@@ -38,9 +38,9 @@ function MyPosts(){
                         </div>
 
                         <div className="my-posts__cards">
-                            <CustomDeliveryCard width={361} count={6} startAddr="서울 마포구 성미산로 25" endAddr="서울 강남구 테헤란로 123" date="2026.09.17" startTime="08:00" endTime="09:00" price="8,000"/>
-                            <CustomDeliveryCard width={361} count={26} startAddr="인천 연수구 송도과학로 32" endAddr="서울 영등포구 국제금융로 10" date="2026.09.22" startTime="08:00" endTime="10:00" price="20,000"/>
-                            <CustomDeliveryCard width={361} count={13} startAddr="경기 성남시 분당구 정자일로 120" endAddr="서울 마포구 월드컵로 123" date="2026.09.12" startTime="14:00" endTime="16:00" price="12,000"/>
+                            <CustomDeliveryCard id={1} count={6} startAddr="서울 마포구 성미산로 25" endAddr="서울 강남구 테헤란로 123" date="2026.09.17" startTime="08:00" endTime="09:00" price="8,000"/>
+                            <CustomDeliveryCard id={2} count={26} startAddr="인천 연수구 송도과학로 32" endAddr="서울 영등포구 국제금융로 10" date="2026.09.22" startTime="08:00" endTime="10:00" price="20,000"/>
+                            <CustomDeliveryCard id={3} count={13} startAddr="경기 성남시 분당구 정자일로 120" endAddr="서울 마포구 월드컵로 123" date="2026.09.12" startTime="14:00" endTime="16:00" price="12,000"/>
                         </div>
                     </>
                             ) : (

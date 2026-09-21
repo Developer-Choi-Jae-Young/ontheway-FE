@@ -353,3 +353,62 @@ export const CircleEmpty = ({ width = 24, height = 24, color = '#6A6A67' }: Circ
         </svg>
     );
 };
+
+interface PencilIcon {
+}
+
+export const PencilIcon = ({}: PencilIcon) => {
+    return (
+        <svg viewBox="0 0 24 24" fill="none"
+            stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z" />
+        </svg>
+    );
+};
+
+interface ChevronDownIcon {
+}
+
+export const ChevronDownIcon = ({}: ChevronDownIcon) => {
+    return(
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M5 7.5L10 12.5L15 7.5" stroke="#4B5663" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+};
+
+interface ClockIcon {
+}
+
+export const ClockIcon = ({}: ClockIcon) => {
+    return(
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10.0003 4.99984V9.99984H13.3337M18.3337 9.99984C18.3337 14.6022 14.6027 18.3332 10.0003 18.3332C5.39795 18.3332 1.66699 14.6022 1.66699 9.99984C1.66699 5.39746 5.39795 1.6665 10.0003 1.6665C14.6027 1.6665 18.3337 5.39746 18.3337 9.99984Z" stroke="#6A6A67" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};
+
+interface WalletIcon {
+}
+
+export const WalletIcon = ({}: WalletIcon) => {
+    return(
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15.8333 5.83333V3.33333C15.8333 3.11232 15.7455 2.90036 15.5893 2.74408C15.433 2.5878 15.221 2.5 15 2.5H4.16667C3.72464 2.5 3.30072 2.67559 2.98816 2.98816C2.67559 3.30072 2.5 3.72464 2.5 4.16667C2.5 4.60869 2.67559 5.03262 2.98816 5.34518C3.30072 5.65774 3.72464 5.83333 4.16667 5.83333H16.6667C16.8877 5.83333 17.0996 5.92113 17.2559 6.07741C17.4122 6.23369 17.5 6.44565 17.5 6.66667V10M17.5 10H15C14.558 10 14.134 10.1756 13.8215 10.4882C13.5089 10.8007 13.3333 11.2246 13.3333 11.6667C13.3333 12.1087 13.5089 12.5326 13.8215 12.8452C14.134 13.1577 14.558 13.3333 15 13.3333H17.5C17.721 13.3333 17.933 13.2455 18.0893 13.0893C18.2455 12.933 18.3333 12.721 18.3333 12.5V10.8333C18.3333 10.6123 18.2455 10.4004 18.0893 10.2441C17.933 10.0878 17.721 10 17.5 10Z" stroke="#6A6A67" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2.5 4.16675V15.8334C2.5 16.2754 2.67559 16.6994 2.98816 17.0119C3.30072 17.3245 3.72464 17.5001 4.16667 17.5001H16.6667C16.8877 17.5001 17.0996 17.4123 17.2559 17.256C17.4122 17.0997 17.5 16.8878 17.5 16.6667V13.3334" stroke="#6A6A67" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};
+
+interface CheckIcon {
+}
+
+export const CheckIcon = ({}: CheckIcon) => {
+    return(
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10.0003 18.3332C14.6027 18.3332 18.3337 14.6022 18.3337 9.99984C18.3337 5.39746 14.6027 1.6665 10.0003 1.6665C5.39795 1.6665 1.66699 5.39746 1.66699 9.99984C1.66699 14.6022 5.39795 18.3332 10.0003 18.3332Z" fill="#FEC7B8" stroke="#FEC7B8" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M13.3337 7.5L8.75033 12.0833L6.66699 10" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+};

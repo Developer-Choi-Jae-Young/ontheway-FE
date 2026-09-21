@@ -3,13 +3,14 @@ import { type ReactNode } from 'react'
 
 interface CustomDiv {
     children: ReactNode;
+    backgroundColor?: string;
     headerElement?: ReactNode;
     footerElement?: ReactNode;
 }
 
-function CustomDiv({children, headerElement, footerElement}: CustomDiv) {
+function CustomDiv({children, backgroundColor='#ffffff', headerElement, footerElement}: CustomDiv) {
   return (
-    <div className='custom-div'>
+    <div className='custom-div' style={{ '--bg-color': backgroundColor } as React.CSSProperties}>
         <div>{headerElement}</div>
         <div className='custom-div-body'>
             {children}
