@@ -1,10 +1,19 @@
 import CustomTopAppBar from '../components/CustomTopAppBar'
-import TextField from '../components/TextField'
+import CustomReasonSelect from '../components/CustomReasonSelect'
 import CustomButton from '../components/CustomButton'
 import './CustomWithdrawlPage.css'
 import CustomDiv from '../components/CustomDiv'
 import { WarnIcon } from '../components/CustomIcon'
- 
+
+const WITHDRAWAL_REASONS = [
+    '서비스 이용 빈도가 낮아요.',
+    '다른 서비스를 이용할 예정이에요.',
+    '원하는 배송 경로가 부족해요.',
+    '서비스가 기대와 달라요.',
+    '개인정보 및 안전이 걱정돼요.',
+    '기타',
+]
+
 function CustomWithdrawalPage() {
     return (
         <CustomDiv>
@@ -24,16 +33,10 @@ function CustomWithdrawalPage() {
                     </div>
     
                     {/* 탈퇴 사유 */}
-                    <TextField
-                        label="탈퇴 사유"
-                        height={48}
-                        borderColor="lightGray"
-                        backgroundColor="white"
-                        leftLocationIcon={false}
-                        placeholder="더 이상 서비스를 이용하지 않아요."
-                        timer={false}
-                        rightButton="none"
-                    />
+                    <div className="withdrawal__reason">
+                        <p className="withdrawal__reason-label">탈퇴 사유</p>
+                        <CustomReasonSelect options={WITHDRAWAL_REASONS} placeholder="탈퇴 사유를 선택해주세요." />
+                    </div>
                 </div>
     
                 <div className="withdrawal__footer">

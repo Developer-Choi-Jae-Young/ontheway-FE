@@ -6,6 +6,8 @@ interface CustomCheckboxProps {
     defaultChecked?: boolean;
     disabled?: boolean;
     size?: "sm" | "lg";
+    checked?: boolean;                        // 넘기면 바깥에서 상태를 관리한다
+    onChange?: (checked: boolean) => void;
 }
 
 function CheckIcon() {
@@ -17,11 +19,15 @@ function CheckIcon() {
     )
 }
 
-function CustomCheckbox({ label, defaultChecked = false, disabled = false, size = "lg" }: CustomCheckboxProps) {
-    const [checked, setChecked] = useState(defaultChecked);
+function CustomCheckbox({ label, defaultChecked = false, disabled = false, size = "lg", checked: controlled, onChange }: CustomCheckboxProps) {
+    const [internalChecked, setInternalChecked] = useState(defaultChecked);
+
+    // checked를 넘긴 곳은 바깥 값을, 안 넘긴 곳은 지금까지처럼 내부 값을 쓴다
+    const checked = controlled ?? internalChecked;
 
     const handleChange = () => {
-        setChecked(!checked);
+        if (controlled === undefined) setInternalChecked(!checked);
+        onChange?.(!checked);
     };
 
     return (

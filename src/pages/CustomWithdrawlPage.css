@@ -73,3 +73,17 @@
     flex-direction: column;
     height: 90vh;
 }
+/* 탈퇴 사유 선택 */
+.withdrawal__reason {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.withdrawal__reason-label {
+    margin: 0;
+    color: #14191f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
