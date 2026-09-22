@@ -11,6 +11,7 @@ import ReviewWritePage from './pages/CustomReviewWritePage.tsx'
 import WithdrawlPage from './pages/CustomWithdrawlPage.tsx'
 import ReportPostPage from './pages/CustomReportPostPage.tsx'
 import ReportUserPage from './pages/CustomReportUserPage.tsx'
+import Profile from './pages/CustomProfilePage.tsx'
 import ProfileEdit from './pages/CustomProfileEditPage.tsx'
 
 // 이예진 페이지
@@ -47,7 +48,7 @@ function App() {
           <Route path="/my/page" element={<MyPage/>} />
           <Route path="/with-draw" element={<WithdrawlPage/>} />
           <Route path="/my/review" element={<ReviewPage/>} />
-          <Route path="/my/profile" element={<ProfileEdit />} />
+          <Route path="/my/profile" element={<Profile/>} />
           <Route path="/my/profile/edit" element={<ProfileEdit/>} />
           <Route path="/review/write" element={<ReviewWritePage/>} />
         </Routes>

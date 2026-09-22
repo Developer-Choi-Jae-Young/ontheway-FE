@@ -3,8 +3,7 @@ import CustomProfile from '../components/CustomProfile'
 import TextField from '../components/TextField'
 import DateInput from '../components/DateInput'
 import CustomButton from '../components/CustomButton'
-import './CustomProfileEditPage.css'
-import CustomDiv from '../components/CustomDiv';
+import './CustomProfilePage.css'
  
 /* 이 페이지에서만 쓰는 카메라 배지 아이콘 (lucide/camera) */
 function CameraIcon() {
@@ -17,9 +16,9 @@ function CameraIcon() {
     )
 }
  
-function CustomProfileEditPage() {
+function CustomProfilePage() {
     return (
-        <CustomDiv backgroundColor='#FFFFFF'>
+        <div className="profile-edit">
             <CustomTopAppBar variant="centered" title="하루님의 프로필" />
  
             <div className="profile__body">
@@ -44,23 +43,14 @@ function CustomProfileEditPage() {
                     <TextField label="이메일" height={56} borderColor="lightGray" backgroundColor="white"
                         leftLocationIcon={false} placeholder="이메일을 입력해주세요." timer={false} rightButton="none"
                         defaultValue="haru27@example.com" />
-                    <div className="profile-edit__side-btn">인증받기</div>
+                    <div className="profile__side-btn">인증받기</div>
                 </div>
  
                 {/* 비밀번호 */}
-                <TextField label="현재 비밀번호" height={56} borderColor="lightGray" backgroundColor="white"
-                    leftLocationIcon={false} placeholder="현재 비밀번호를 입력해주세요." timer={false} rightButton="eye"
-                />
- 
-                {/* 새 비밀번호 */}
-                <TextField label="새 비밀번호" height={56} borderColor="lightGray" backgroundColor="white"
-                    leftLocationIcon={false} placeholder="새 비밀번호를 입력해주세요." timer={false} rightButton="eye"
-                    helperText="8~15자리이내"/>
+                <TextField label="비밀번호" height={56} borderColor="lightGray" backgroundColor="white"
+                    leftLocationIcon={false} placeholder="비밀번호를 입력해주세요." timer={false} rightButton="eye"
+                    helperText="8~15자리 이내" defaultValue="password" />
 
-                {/* 새 비밀번호 확인*/}
-                <TextField label="새 비밀번호 확인" height={56} borderColor="lightGray" backgroundColor="white"
-                    leftLocationIcon={false} placeholder="새 비밀번호를 입력해주세요." timer={false} rightButton="eye"
-                    helperText="비밀번호 일치"/>
  
                 {/* 닉네임 */}
                 <TextField label="닉네임" height={56} borderColor="lightGray" backgroundColor="white"
@@ -69,10 +59,10 @@ function CustomProfileEditPage() {
             </div>
  
             <div className="profile__footer">
-                <CustomButton name="작성완료" color="#fd5d35" fontColor="#ffffff" size="lg" />
+                <CustomButton name="수정하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
             </div>
-        </CustomDiv>
+        </div>
     )
 }
  
-export default CustomProfileEditPage
+export default CustomProfilePage
