@@ -6,7 +6,7 @@
     border-radius: 16px;
     background-color: white;
     padding: 16px;
-    width: calc(var(--review-width) * 1px);
+    width: 100%;
     gap: 12px;
 }
  
@@ -44,4 +44,10 @@
 .review-content {
     font-size: 16px;
     color: #6B7280;
+}
+
+.review-profile-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }

@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
 import './CustomFab.css'
 import { PencilIcon } from './CustomIcon';
  
 interface CustomFabProps {
+    onClick?: () => void;
 }
   
-function CustomFab({}: CustomFabProps) {
+function CustomFab({onClick}: CustomFabProps) {
     return (
-        <Link to='/delivery/write' className="custom-fab" aria-label="글쓰기">
+        <div className="custom-fab" aria-label="글쓰기" onClick={onClick}>
             <PencilIcon />
-        </Link>
+        </div>
     )
 }
  

@@ -5,8 +5,11 @@ import CustomFab from '../components/CustomFab'
 import CustomNavBar from '../components/CustomNavBar'
 import './CustomHomePage.css'
 import CustomDiv from '../components/CustomDiv'
+import { useNavigate } from 'react-router-dom'
  
 function CustomHomePage() {
+    const navigate = useNavigate();
+
     return (
         <CustomDiv backgroundColor={'#f3f4f6'} headerElement={<div className="home-page__header">
                 <CustomLogo className="home-page__logo" />
@@ -83,7 +86,7 @@ function CustomHomePage() {
             </div>
  
             <div className="home-page__fab">
-                <CustomFab />
+                <CustomFab onClick={() => navigate('/delivery/write')}/>
             </div>
         </CustomDiv>
     )

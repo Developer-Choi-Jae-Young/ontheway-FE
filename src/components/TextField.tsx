@@ -11,7 +11,7 @@ const colors = {
 }
  
 type TextFieldProps = {
-  label: string
+  label?: string
   height: 56 | 48
   borderColor: 'lightGray' | 'gray' | 'orange' | 'none'
   backgroundColor: 'white' | 'gray'
@@ -52,7 +52,7 @@ useEffect(() => {
  
   return (
     <div className="text-field-container">
-      <p>{props.label}</p>
+      {props.label && <p>{props.label}</p>}
       <div className="text-field" style={{ height: `${props.height}px`, borderColor: colors[props.borderColor], backgroundColor: colors[props.backgroundColor] }}>
         {props.leftLocationIcon && <span><MapPinOutline width={20} height={24} stroke="#4B5663" strokeWidth={2} /></span>}
         <input type={inputType} placeholder={props.placeholder} defaultValue={props.defaultValue} disabled={props.disabled} />

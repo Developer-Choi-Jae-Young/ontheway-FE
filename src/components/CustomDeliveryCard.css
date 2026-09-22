@@ -94,7 +94,7 @@
 }
 
 .custom-delivery.review{
-    height: 230px;
+    min-height: 230px;
     padding: 24px 16px;
     box-sizing: border-box;
     gap: 16px;
@@ -118,5 +118,8 @@
 
 a {
   text-decoration: none;
-  width: 100%;
+}
+
+.w-100 {
+    width: 100%;
 }
