@@ -224,3 +224,26 @@
     margin:0;
     word-break:keep-all;
 }
+/* ===== 주소 검색 (react-daum-postcode) ===== */
+
+/* 주소 칸: 누를 수 있음 표시 */
+.request-address{
+    cursor:pointer;
+}
+
+/* 검색 전 안내 문구 */
+.request-address .placeholder{
+    color:#9ca3af;
+}
+
+/* 상세 주소 입력칸: 테두리 없이 칸 안에 자연스럽게 */
+.request-address input{
+    flex:1;
+    min-width:0;
+    border:none;
+    outline:none;
+    background:transparent;
+    font:inherit;
+    color:inherit;
+    cursor:text;
+}
