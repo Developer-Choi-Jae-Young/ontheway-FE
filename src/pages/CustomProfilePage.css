@@ -1,4 +1,4 @@
-.profile-edit{
+.profile{
     width: 393px;
     min-height: 852px;
     margin: 0 auto;
@@ -7,7 +7,7 @@
 }
  
 /* 본문 */
-.profile-edit__body {
+.profile__body {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -16,7 +16,7 @@
 }
  
 /* 프로필 사진 + 카메라 배지 */
-.profile-edit__avatar {
+.profile__avatar {
     position: relative;
     align-self: center;
     width: 90px;
@@ -24,7 +24,7 @@
     margin: 8px 0 16px;
 }
  
-.profile-edit__camera {
+.profile__camera {
     position: absolute;
     right: -2px;
     bottom: 2px;
@@ -42,29 +42,29 @@
 }
  
 /* 입력칸이 가로를 꽉 채우도록 (TextField 기본 폭 덮어쓰기) */
-.profile-edit .text-field-container {
+.profile .text-field-container {
     width: 100%;
     min-width: 0;
 }
  
 /* box-sizing 보정 (padding·border가 더해져 페이지를 넘지 않게) */
-.profile-edit .text-field {
+.profile .text-field {
     width: 100%;
     box-sizing: border-box;
 }
  
 /* 이메일 + 오른쪽 인증받기 버튼 */
-.profile-edit__row {
+.profile__row {
     display: flex;
     align-items: flex-end;
     gap: 8px;
 }
  
-.profile-edit__row .text-field-container {
+.profile__row .text-field-container {
     flex: 1;
 }
  
-.profile-edit__side-btn {
+.profile__side-btn {
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -81,6 +81,6 @@
 }
  
 /* 하단 버튼 */
-.profile-edit__footer {
+.profile__footer {
     padding: 8px 16px 24px;
 }
