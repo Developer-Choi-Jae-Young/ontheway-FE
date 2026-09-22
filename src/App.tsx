@@ -2,7 +2,6 @@ import './App.css'
 // ===== 페이지 =====
 import LoginPage from './pages/CustomLoginPage.tsx'
 import SignUpPage from './pages/CustomSignUpPage.tsx'
-import HomePage from './pages/CustomHomePage.tsx'
 import RouteDetailPage from './pages/CustomRouteDetailPage.tsx'
 import Request from './pages/Request.tsx'
 import MyPage from './pages/CustomMyPage.tsx'
@@ -25,34 +24,46 @@ import UsageHistory from './pages/UsageHistory.tsx'
 import MyPosts from './pages/MyPosts.tsx'
 import RequestDetail from './pages/RequestDetail.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { OnboardingRoute, PrivateRoute, PublicRoute } from './components/AuthRoute.tsx'
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<OnboardingRoute />} />
+          
+          {/* 온보딩 페이지 단독 접근 경로 */}
           <Route path="/onboarding" element={<OnBoardingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignUpPage/>} />
-          <Route path="/agree" element={<Agree />} />
-          <Route path="/find/id" element={<FindId />} />
-          <Route path="/find/pw" element={<FindPw />} />
-          <Route path="/user/report" element={<ReportUserPage/>} />
-          <Route path="/board/report" element={<ReportPostPage/>} />
-          <Route path="/delivery/write" element={<PathSetup />} />
+          
           <Route path="/delivery/detail/:id" element={<RouteDetailPage />} />
-          <Route path="/delivery/request" element={<Request />} />
-          <Route path="/product/write" element={<CreateRequest />} />
           <Route path="/product/detail/:id" element={<RequestDetail />} />
-          <Route path="/history" element={<UsageHistory />} />
-          <Route path="/my/post" element={<MyPosts />} />
-          <Route path="/my/page" element={<MyPage/>} />
-          <Route path="/with-draw" element={<WithdrawlPage/>} />
-          <Route path="/my/review" element={<ReviewPage/>} />
-          <Route path="/my/profile" element={<Profile/>} />
-          <Route path="/my/profile/edit" element={<ProfileEdit/>} />
-          <Route path="/review/write" element={<ReviewWritePage/>} />
+
+          {/* 비로그인 상태일 때만 접근 가능 */}
+          <Route element={<PublicRoute />}>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/agree" element={<Agree />} />
+            <Route path="/find/id" element={<FindId />} />
+            <Route path="/find/pw" element={<FindPw />} />
+          </Route>
+
+          {/* 로그인한 사용자만 접근 가능 */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/user/report" element={<ReportUserPage />} />
+            <Route path="/board/report" element={<ReportPostPage />} />
+            <Route path="/delivery/write" element={<PathSetup />} />
+            <Route path="/delivery/request" element={<Request />} />
+            <Route path="/product/write" element={<CreateRequest />} />
+            <Route path="/history" element={<UsageHistory />} />
+            <Route path="/my/post" element={<MyPosts />} />
+            <Route path="/my/page" element={<MyPage />} />
+            <Route path="/with-draw" element={<WithdrawlPage />} />
+            <Route path="/my/review" element={<ReviewPage />} />
+            <Route path="/my/profile" element={<Profile />} />
+            <Route path="/my/profile/edit" element={<ProfileEdit />} />
+            <Route path="/review/write" element={<ReviewWritePage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

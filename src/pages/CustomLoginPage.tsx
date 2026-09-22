@@ -3,10 +3,28 @@ import TextField from '../components/TextField'
 import CustomCheckbox from '../components/CustomCheckbox'
 import CustomButton from '../components/CustomButton'
 import './CustomLoginPage.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import CustomDiv from '../components/CustomDiv'
+import { useAuthStore } from '../store/useAuthStore'
  
 function CustomLoginPage() {
+    const navigate = useNavigate();
+    const setLogin = useAuthStore((state) => state.setLogin);
+
+    const handleLoginSubmit = async () => {
+        try {
+            // TODO: 실제 백엔드 로그인 API 연동
+            // const response = await api.post('/login', { id, password });
+            // const token = response.data.accessToken;
+
+            const dummyToken = "fake-jwt-token-12345";
+            setLogin(dummyToken);
+            navigate('/');
+        } catch (error) {
+            console.error('로그인 실패', error);
+        }
+    };
+
     return (
         <CustomDiv>
             <div style={{display:'flex', justifyContent:'center'}}>
@@ -45,7 +63,7 @@ function CustomLoginPage() {
                 </div>
     
                 <div className="login-page__button">
-                    <CustomButton name="로그인" color="#fd5d35" fontColor="#ffffff" size="lg" />
+                    <CustomButton name="로그인" color="#fd5d35" fontColor="#ffffff" size="lg" onClick={handleLoginSubmit}/>
                 </div>
     
                 <div className="login-page__links">
