@@ -1,0 +1,36 @@
+/* ===== 주소 검색 (react-daum-postcode) 공통 스타일 =====
+   주소 검색을 쓰는 페이지에서 각자 import 한다. (PathSetup, CreateRequest) */
+
+/* 어두운 배경 */
+.postcode-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 화면 한가운데 뜨는 검색 패널 */
+.postcode-panel {
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+    max-width: calc(100% - 32px);
+    height: 70vh;
+    border-radius: 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.postcode-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    padding: 12px 8px 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #14191f;
+}

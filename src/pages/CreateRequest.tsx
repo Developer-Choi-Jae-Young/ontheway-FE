@@ -1,4 +1,6 @@
+import DaumPostcode, { type Address } from 'react-daum-postcode'
 import './CreateRequest.css'
+import './postcode.css'
 import CustomTopAppBar from '../components/CustomTopAppBar'
 import CustomButton from '../components/CustomButton'
 import TextField from '../components/TextField'
@@ -10,8 +12,39 @@ import CustomCheckbox from '../components/CustomCheckbox'
 import { useState } from 'react'
 import CustomDiv from '../components/CustomDiv'
 
+function RequestXButton({ onClick }: { onClick?: () => void }) {
+    return (
+        <button
+            type="button"
+            className='create-request-x'
+            onClick={(e) => {
+                e.stopPropagation()   // 바깥 주소 칸의 onClick(검색창 열기)으로 전달되지 않게
+                onClick?.()
+            }}
+        >
+            <PathXButton/>
+        </button>
+    )
+}
+
 function CreateRequest() {
     const [payment, setPayment] = useState<'pre' | 'post'>('pre')
+
+    // 주소는 사용자가 검색해서 채우므로 상태로 관리
+    const [pickupAddr, setPickupAddr] = useState('')
+    const [pickupDetail, setPickupDetail] = useState('')
+    const [destAddr, setDestAddr] = useState('')
+    const [destDetail, setDestDetail] = useState('')
+
+    // 지금 검색 중인 칸: 'pickup' | 'dest' | null(닫힘)
+    const [searchTarget, setSearchTarget] = useState<'pickup' | 'dest' | null>(null)
+
+    // 주소 선택 시 → 검색 중이던 칸에 넣고 창 닫기
+    const handleComplete = (data: Address) => {
+        if (searchTarget === 'pickup') setPickupAddr(data.address)
+        if (searchTarget === 'dest') setDestAddr(data.address)
+        setSearchTarget(null)
+    }
 
     return (
         <CustomDiv>
@@ -31,15 +64,17 @@ function CreateRequest() {
 
                             <div className="request-route-content">
                                 <div className="request-label">물건수령지</div>
-                                <div className="request-address"><span>인천 연수구 송도과학로 32</span>
-                                    <button className='create-request-x'>
-                                        <PathXButton/>
-                                    </button>
+
+                                {/* 칸을 누르면 주소 검색이 열림, X는 비우기 */}
+                                <div className="request-address" onClick={() => setSearchTarget('pickup')}>
+                                    <span className={pickupAddr ? '' : 'placeholder'}>{pickupAddr || '물건수령지를 검색해주세요'}</span>
+                                    <RequestXButton onClick={() => setPickupAddr('')}/>
                                 </div>
-                                <div className="request-address"><span>송도테크노파크IT센터 앞</span>
-                                    <button className='create-request-x'>
-                                        <PathXButton/>
-                                    </button>
+
+                                {/* 상세 주소는 직접 입력 */}
+                                <div className="request-address">
+                                    <input value={pickupDetail} onChange={(e) => setPickupDetail(e.target.value)} placeholder="상세 주소 (예: 건물 앞)"/>
+                                    <RequestXButton onClick={() => setPickupDetail('')}/>
                                 </div>
                             </div>
                         </div>
@@ -51,15 +86,15 @@ function CreateRequest() {
 
                             <div className="request-route-content">
                                 <div className="request-label">배송목적지</div>
-                                <div className="request-address"><span>서울 영등포구 국제금융로 10</span>
-                                    <button className='create-request-x'>
-                                        <PathXButton/>
-                                    </button>
+
+                                <div className="request-address" onClick={() => setSearchTarget('dest')}>
+                                    <span className={destAddr ? '' : 'placeholder'}>{destAddr || '배송목적지를 검색해주세요'}</span>
+                                    <RequestXButton onClick={() => setDestAddr('')}/>
                                 </div>
-                                <div className="request-address"><span>서울국제금융센터 앞</span>
-                                    <button className='create-request-x'>
-                                        <PathXButton/>
-                                    </button>
+
+                                <div className="request-address">
+                                    <input value={destDetail} onChange={(e) => setDestDetail(e.target.value)} placeholder="상세 주소 (예: 건물 앞)"/>
+                                    <RequestXButton onClick={() => setDestDetail('')}/>
                                 </div>
                             </div>
                         </div>
@@ -121,6 +156,19 @@ function CreateRequest() {
                     <CustomButton name="작성완료" color="#FD5D35" fontColor="#FFFFFF" size="lg"/>
                 </div>
             </div>
+
+            {/* 주소 검색 오버레이 — searchTarget이 있을 때만 */}
+            {searchTarget && (
+                <div className="postcode-overlay" onClick={() => setSearchTarget(null)}>
+                    <div className="postcode-panel" onClick={(e) => e.stopPropagation()}>
+                        <div className="postcode-header">
+                            <span>{searchTarget === 'pickup' ? '물건수령지' : '배송목적지'} 검색</span>
+                            <RequestXButton onClick={() => setSearchTarget(null)}/>
+                        </div>
+                        <DaumPostcode onComplete={handleComplete} style={{ flex: 1 }}/>
+                    </div>
+                </div>
+            )}
         </CustomDiv>
     )
 }
