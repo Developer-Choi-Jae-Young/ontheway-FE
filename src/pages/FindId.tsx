@@ -12,7 +12,6 @@ function FindId(){
                 variant="large"
                 title="아이디 찾기"
                 subtitle="가입하신 아이디를 확인하실 수 있습니다."
-                onBack={() => window.history.back()}
                 />
                 
             <div className='find-id-page-hug'>

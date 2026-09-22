@@ -1,3 +1,4 @@
+import { useNavigate, useLocation } from 'react-router-dom';
 import { BackArrowIcon } from './CustomIcon';
 import './CustomTopAppBar.css'
  
@@ -11,9 +12,17 @@ interface CustomTopAppBarProps {
 }
  
 function CustomTopAppBar({ title, subtitle, meta, variant = "centered", onBack, onClick }: CustomTopAppBarProps) {
- 
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    // 이 화면이 앱에서 처음 연 화면이면(링크로 바로 들어온 경우) 돌아갈 곳이 없으므로 홈으로
+    const goBack = () => {
+        if (location.key === 'default') navigate('/')
+        else navigate(-1)
+    }
+
     const back = (
-        <button className="top-app-bar__back" onClick={onBack} aria-label="뒤로가기">
+        <button className="top-app-bar__back" onClick={onBack ?? goBack} aria-label="뒤로가기">
             <BackArrowIcon />
         </button>
     )
