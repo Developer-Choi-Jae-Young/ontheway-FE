@@ -1,0 +1,239 @@
+/* 필터 칩을 누르면 아래에 펼쳐지는 선택 패널 */
+
+.filter-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+/* 제목 + 닫기 */
+.filter-panel__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.filter-panel__title {
+    flex: 1;
+    margin: 0;
+    color: #14191f;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    word-break: break-word;
+}
+
+.filter-panel__close {
+    display: flex;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* 선택 항목 한 줄 (지역·후기 공용) */
+.filter-panel__option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #14191f;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.filter-panel__option span {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.filter-panel__option--selected {
+    background-color: #fef1ed;
+}
+
+/* 지역: 시·도 / 시군구 두 칸 */
+.filter-panel__columns {
+    display: flex;
+    gap: 4px;
+    padding: 0 4px 8px;
+}
+
+.filter-panel__column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 118px;
+    max-height: 196px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    list-style: none;
+}
+
+/* 시·도를 고르기 전에는 오른쪽 칸이 비어 있어서 폭만 잡아둔다 */
+.filter-panel__column:empty {
+    min-height: 44px;
+}
+
+/* 후기: 별점 목록 */
+.filter-panel__ratings {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    margin: 0;
+    padding: 0 8px 8px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* 희망금액: 값 + 슬라이더 + 최소·최대 안내 */
+.filter-panel__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.filter-panel__price-value {
+    margin: 0;
+    color: #fd5d35;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.filter-panel__slider {
+    position: relative;
+    width: 252px;
+    height: 12px;
+}
+
+.filter-panel__track,
+.filter-panel__track-selected {
+    position: absolute;
+    top: 4px;
+    height: 4px;
+    border-radius: 100px;
+}
+
+.filter-panel__track {
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+}
+
+.filter-panel__track-selected {
+    background-color: #fd5d35;
+}
+
+/* 손잡이 두 개를 같은 자리에 겹쳐 놓고, 트랙은 위의 div로 그린다 */
+.filter-panel__slider input[type="range"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    margin: 0;
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+    pointer-events: none;   /* 손잡이에서만 다시 켠다 */
+}
+
+.filter-panel__slider input[type="range"]::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../assets/filter/circle.svg');
+    background-size: 12px 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.filter-panel__slider input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../assets/filter/circle.svg');
+    background-size: 12px 12px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.filter-panel__price-range {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #4b5663;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* 초기화 + 적용하기 */
+.filter-panel__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 12px 8px;
+    box-sizing: border-box;
+    border-radius: 0 0 16px 16px;
+    background-color: #ffffff;
+    filter: drop-shadow(0 -2px 4px rgba(0, 0, 0, 0.06));
+}
+
+.filter-panel__reset {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #4b5663;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.filter-panel__apply {
+    padding: 6px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fd5d35;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}

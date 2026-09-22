@@ -2,7 +2,7 @@ import './MyPosts.css'
 import { useState } from 'react'
 import CustomTopAppBar from '../components/CustomTopAppBar'
 import CustomTab from '../components/CustomTab'
-import CustomFilterChip from '../components/CustomFilterChip'
+import CustomFilterBar from '../components/CustomFilterBar'
 import CustomDeliveryCard from '../components/CustomDeliveryCard'
 import CustomProductCard from '../components/CustomProductCard'
 import CustomFab from '../components/CustomFab'
@@ -26,12 +26,7 @@ function MyPosts(){
 
                 {tab===0 ? (
                     <>
-                        <div className="my-posts__filters">
-                            <CustomFilterChip label="출발지" variant="full" icon="chevron"/>
-                            <CustomFilterChip label="도착지" variant="full" icon="chevron"/>
-                            <CustomFilterChip label="후기" variant="full" icon="chevron"/>
-                            <CustomFilterChip label="희망금액" variant="full" icon="chevron"/>
-                        </div>
+                        <CustomFilterBar className="my-posts__filters"/>
 
                         <div className="my-posts__cards">
                             <CustomDeliveryCard id={1} count={6} startAddr="서울 마포구 성미산로 25" endAddr="서울 강남구 테헤란로 123" date="2026.09.17" startTime="08:00" endTime="09:00" price="8,000"/>
