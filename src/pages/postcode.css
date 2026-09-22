@@ -7,18 +7,19 @@
     inset: 0;
     z-index: 100;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* 아래에서 올라오는 검색 패널 */
+/* 화면 한가운데 뜨는 검색 패널 */
 .postcode-panel {
     display: flex;
     flex-direction: column;
     width: 393px;
+    max-width: calc(100% - 32px);
     height: 70vh;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
     background-color: #ffffff;
     overflow: hidden;
 }
