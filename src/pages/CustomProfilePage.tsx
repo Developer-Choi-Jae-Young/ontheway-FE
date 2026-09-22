@@ -4,7 +4,6 @@ import TextField from '../components/TextField'
 import DateInput from '../components/DateInput'
 import CustomButton from '../components/CustomButton'
 import './CustomProfilePage.css'
-import CustomDiv from '../components/CustomDiv';
  
 /* 이 페이지에서만 쓰는 카메라 배지 아이콘 (lucide/camera) */
 function CameraIcon() {
