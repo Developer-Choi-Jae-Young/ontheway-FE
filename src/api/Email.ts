@@ -10,13 +10,14 @@
  * ---------------------------------------------------------------
  */
 
-import {
+import type{
   EmailAuthRequestDto,
   EmailValidRequestDto,
   SendCodeData,
   VerifyCodeData,
 } from "./data-contracts";
-import { ContentType, HttpClient, RequestParams } from "./http-client";
+import { ContentType, HttpClient } from "./http-client";
+import type { RequestParams } from "./http-client";
 
 export class Email<
   SecurityDataType = unknown,

@@ -18,11 +18,15 @@ type TextFieldProps = {
   leftLocationIcon: boolean
   placeholder: string
   timer: boolean
+  resetKey?: number
   rightButton: 'x' | 'label' | 'eye' | 'none'
   rightButtonLabel?: string
   helperText?: string
   defaultValue?: string
   disabled?: boolean
+  value?: string
+  onRightButtonClick?: () => void
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
  
 function HelperCheck() {
@@ -41,7 +45,11 @@ const isPassword = props.rightButton === 'eye'
 const inputType = isPassword && !showPassword ? 'password' : 'text'
 const minutes = Math.floor(time / 60)
 const seconds = time % 60
- 
+
+useEffect(() => {
+  setTime(300);
+}, [props.resetKey])
+
 useEffect(() => {
   if (!props.timer || time <= 0) return
   const timer = setInterval(() => {
@@ -55,10 +63,10 @@ useEffect(() => {
       {props.label && <p>{props.label}</p>}
       <div className="text-field" style={{ height: `${props.height}px`, borderColor: colors[props.borderColor], backgroundColor: colors[props.backgroundColor] }}>
         {props.leftLocationIcon && <span><MapPinOutline width={20} height={24} stroke="#4B5663" strokeWidth={2} /></span>}
-        <input type={inputType} placeholder={props.placeholder} defaultValue={props.defaultValue} disabled={props.disabled} />
+        <input type={inputType} placeholder={props.placeholder} defaultValue={props.defaultValue} value={props.value} onChange={props.onChange} disabled={props.disabled} />
         {(props.timer || props.rightButton === 'label') && <div className='text-field-right'>
           {props.timer && <span className='timer'>{minutes}:{seconds.toString().padStart(2, '0')}</span>}
-          {props.rightButton === 'label' && <div className='label-button'><button style={{color:'#9CA3AF'}}>{props.rightButtonLabel ?? 'Label'}</button></div>}
+          {props.rightButton === 'label' && <div className='label-button'><button style={{color:'#9CA3AF'}} onClick={props.onRightButtonClick}>{props.rightButtonLabel ?? 'Label'}</button></div>}
         </div>}
         {props.rightButton === 'x' && <XButton />}
         {props.rightButton === 'eye' && (

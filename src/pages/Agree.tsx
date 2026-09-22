@@ -24,6 +24,14 @@ function Agree(){
         setOpened(prev => prev.map((value, i) => i === index ? !value : value))
     }
 
+    const isMandatoryChecked = agreed[0] && agreed[1] && agreed[2] && agreed[3];
+
+    const handleNextClick = () => {
+        if (isMandatoryChecked) {
+            navigate('/signup');
+        }
+    }
+
     return(
         <>
         <CustomDiv>
@@ -85,7 +93,7 @@ function Agree(){
                     
                 </div>
                  <div className='agree-button'>
-                    <CustomButton name="동의하고 가입 완료" color="#fd5d35" fontColor="#ffffff" size="lg" onClick={() => navigate('/signup')}/>
+                    <CustomButton name="동의하고 가입 완료" color={isMandatoryChecked ? "#fd5d35" : "#BABABA"} fontColor="#ffffff" size="lg" onClick={handleNextClick}/>
                 </div>
             </div>
         </CustomDiv>
