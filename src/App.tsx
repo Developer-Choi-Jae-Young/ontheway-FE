@@ -13,6 +13,7 @@ import ReportPostPage from './pages/CustomReportPostPage.tsx'
 import ReportUserPage from './pages/CustomReportUserPage.tsx'
 import Profile from './pages/CustomProfilePage.tsx'
 import ProfileEdit from './pages/CustomProfileEditPage.tsx'
+import OnBoardingPage from './pages/CustomOnBoardingPage.tsx'
 
 // 이예진 페이지
 import FindId from './pages/FindId'
@@ -31,6 +32,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/onboarding" element={<OnBoardingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage/>} />
           <Route path="/agree" element={<Agree />} />
