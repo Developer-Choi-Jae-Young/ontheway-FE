@@ -5,25 +5,16 @@ import CustomProfile from '../components/CustomProfile'
 import TextArea from '../components/TextArea'
 import CustomButton from '../components/CustomButton'
 import './CustomReviewWritePage.css'
+import CustomDiv from '../components/CustomDiv'
+import { StarIcon } from '../components/CustomIcon'
  
 const RATING_LABELS = ['평가를 선택해주세요', '별로예요', '그저 그래요', '괜찮아요', '만족해요', '최고예요']
- 
-function StarIcon({ filled }: { filled: boolean }) {
-    return (
-        <svg width="42" height="42" viewBox="0 0 24 24"
-            fill={filled ? '#FD5D35' : 'none'}
-            stroke={filled ? '#FD5D35' : '#33363D'}
-            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-        </svg>
-    )
-}
  
 function CustomReviewWritePage() {
     const [rating, setRating] = useState(4)
  
     return (
-        <div className="review-write">
+        <CustomDiv>
             <CustomTopAppBar variant="centered" title="배송 후기 작성" />
  
             <div className="review-write__body">
@@ -64,7 +55,7 @@ function CustomReviewWritePage() {
             <div className="review-write__footer">
                 <CustomButton name="등록하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
             </div>
-        </div>
+        </CustomDiv>
     )
 }
  
