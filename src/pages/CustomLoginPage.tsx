@@ -6,19 +6,23 @@ import './CustomLoginPage.css'
 import { Link, useNavigate } from 'react-router-dom'
 import CustomDiv from '../components/CustomDiv'
 import { useAuthStore } from '../store/useAuthStore'
+import { useState } from 'react'
+import axios from 'axios'
  
 function CustomLoginPage() {
     const navigate = useNavigate();
     const setLogin = useAuthStore((state) => state.setLogin);
 
+    const [id, setId] = useState('');
+    const [password, setPassword] = useState('');
+
     const handleLoginSubmit = async () => {
         try {
-            // TODO: 실제 백엔드 로그인 API 연동
-            // const response = await api.post('/login', { id, password });
-            // const token = response.data.accessToken;
+            const response = await axios.post('/user/login', { id, password });
+            const accessToken = response.data.accessToken;
+            const refreshToken = response.data.refreshToken;
 
-            const dummyToken = "fake-jwt-token-12345";
-            setLogin(dummyToken);
+            setLogin(accessToken, refreshToken);
             navigate('/');
         } catch (error) {
             console.error('로그인 실패', error);
@@ -41,6 +45,8 @@ function CustomLoginPage() {
                         leftLocationIcon={false}
                         placeholder="아이디를 입력해주세요."
                         timer={false}
+                        value={id}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setId(e.target.value)}
                         rightButton="none"
                     />
                 </div>
@@ -54,6 +60,8 @@ function CustomLoginPage() {
                         leftLocationIcon={false}
                         placeholder="비밀번호를 입력해주세요."
                         timer={false}
+                        value={password}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                         rightButton="eye"
                     />
                 </div>
