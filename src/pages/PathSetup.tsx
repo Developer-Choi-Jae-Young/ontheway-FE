@@ -6,6 +6,7 @@ import { Circle, MapPin } from '../components/CustomIcon'
 import TextField from '../components/TextField'
 import TextArea from '../components/TextArea'
 import TimeInput from '../components/TimeInput'
+import CustomDiv from '../components/CustomDiv'
 
 function PathXButton() {
     return (
@@ -25,7 +26,7 @@ function PathSetup() {
     const endDetail = '서울국제금융센터 앞'
 
     return (
-        <div className="path-setup-page">
+        <CustomDiv>
             <CustomTopAppBar title="경로등록" />
 
             <div className="recent-post">
@@ -96,7 +97,7 @@ function PathSetup() {
             <div className="path-setup-button">
                 <CustomButton name="작성완료" color="#FD5D35" fontColor="#FFFFFF" size="lg" />
             </div>
-        </div>
+        </CustomDiv>
     )
 }
 
