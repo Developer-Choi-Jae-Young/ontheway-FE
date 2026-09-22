@@ -12,6 +12,7 @@ import { CardIcon, CheckSmallIcon, MegaphoneIcon, PackageIcon, Truck } from '../
 import './CustomRouteDetailPage.css'
 import CustomDiv from '../components/CustomDiv';
 import CustomProfileCard from '../components/CustomProfileCard';
+import { Map, MapMarker } from "react-kakao-maps-sdk";
  
 // 진행 단계 7개 전부 — 완료/현재/취소/대기 네 가지 모양이 모두 보이도록 섞어둠
 const ALL_STEPS: Step[] = [
@@ -110,6 +111,28 @@ function Footer() {
 /* =========================================================
    페이지 — 나올 수 있는 조각을 전부 한 번씩 보여줍니다
    ========================================================= */
+
+
+function KakaoMap() {
+  return (
+    <Map
+      center={{ lat: 33.450701, lng: 126.570667 }}
+      style={{ width: '100%', height: '600px'}}
+      level={3}
+    >
+    <MapMarker // 마커를 생성합니다
+        position={{
+          // 마커가 표시될 위치입니다
+          lat: 33.450701,
+          lng: 126.570667,
+        }}
+    />
+    </Map>
+  );
+}
+
+
+
 function CustomRouteDetailPage() {
     const navigate = useNavigate();
     const { id: _id } = useParams();
@@ -164,7 +187,7 @@ function CustomRouteDetailPage() {
                 </div>
  
                 {/* 지도 자리 */}
-                <Placeholder label="지도" />
+                <KakaoMap />
  
                 {/* 배송중단사유 입력 */}
                 <div className="route-detail__stop-reason">
