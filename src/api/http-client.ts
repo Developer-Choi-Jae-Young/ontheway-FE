@@ -18,6 +18,7 @@ import type {
   ResponseType,
 } from "axios";
 import axios from "axios";
+import { useAuthStore } from "../store/useAuthStore";
 
 export type QueryParamsType = Record<string | number, any>;
 
@@ -79,6 +80,42 @@ export class HttpClient<SecurityDataType = unknown> {
     this.secure = secure;
     this.format = format;
     this.securityWorker = securityWorker;
+
+    this.instance.interceptors.request.use(
+      (config) => {
+        const token = useAuthStore.getState().accessToken;
+
+        if (token) {
+          config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+      },
+      (error) => {
+        return Promise.reject(error);
+      }
+    );
+
+    this.instance.interceptors.response.use(
+      (response) => {
+        const authHeader = response.headers["authorization"] || response.headers["Authorization"];
+        
+        if (authHeader && authHeader.startsWith("Bearer ")) {
+          const newToken = authHeader.substring(7);
+          const currentRefreshToken = useAuthStore.getState().refreshToken;
+          useAuthStore.getState().setLogin(newToken, currentRefreshToken);
+        }
+        
+        return response;
+      },
+      (error) => {
+        if (error.response?.status === 401) {
+          useAuthStore.getState().setLogout();
+          window.location.href = '/login';
+        }
+        
+        return Promise.reject(error);
+      }
+    );
   }
 
   public setSecurityData = (data: SecurityDataType | null) => {
