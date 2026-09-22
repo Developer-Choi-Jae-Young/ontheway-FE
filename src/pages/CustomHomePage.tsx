@@ -1,5 +1,5 @@
 import CustomLogo from '../components/CustomLogo'
-import CustomFilterChip from '../components/CustomFilterChip'
+import CustomFilterBar from '../components/CustomFilterBar'
 import CustomDeliveryCard from '../components/CustomDeliveryCard'
 import CustomFab from '../components/CustomFab'
 import CustomNavBar from '../components/CustomNavBar'
@@ -14,12 +14,7 @@ function CustomHomePage() {
         <CustomDiv backgroundColor={'#f3f4f6'} headerElement={<div className="home-page__header">
                 <CustomLogo className="home-page__logo" />
             </div>} footerElement={<CustomNavBar />}>
-            <div className="home-page__filters">
-                <CustomFilterChip label="출발지" variant="full" icon="chevron" />
-                <CustomFilterChip label="도착지" variant="full" icon="chevron" />
-                <CustomFilterChip label="후기" variant="full" icon="chevron" />
-                <CustomFilterChip label="희망금액" variant="full" icon="chevron" />
-            </div>
+            <CustomFilterBar className="home-page__filters" />
             <div className="home-page__body">
                 <div className="home-page__cards">
                     <CustomDeliveryCard

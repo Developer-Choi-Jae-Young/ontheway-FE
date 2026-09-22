@@ -18,11 +18,11 @@ function CustomLoginPage() {
 
     const handleLoginSubmit = async () => {
         try {
-            const response = await axios.post('/user/login', { id, password });
-            const accessToken = response.data.accessToken;
-            const refreshToken = response.data.refreshToken;
+            //const response = await axios.post('/user/login', { id, password });
+            //const accessToken = response.data.accessToken;
+            //const refreshToken = response.data.refreshToken;
 
-            setLogin(accessToken, refreshToken);
+            setLogin("abcd","abcd");
             navigate('/');
         } catch (error) {
             console.error('로그인 실패', error);

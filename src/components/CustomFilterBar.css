@@ -1,0 +1,35 @@
+/* 필터 칩 줄 + 각 칩 아래에 펼쳐지는 패널 */
+
+.filter-bar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* 칩 하나와 그 칩에 딸린 패널의 기준점 */
+.filter-bar__item {
+    position: relative;
+    display: flex;
+}
+
+/* 패널 바깥을 눌러 닫기 위한 투명한 판 */
+.filter-bar__backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+}
+
+/* 누른 칩 바로 아래 */
+.filter-bar__panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 21;
+}
+
+/* 오른쪽으로 넘칠 때는 칩 오른쪽 끝에 맞춘다 */
+.filter-bar__panel--right {
+    left: auto;
+    right: 0;
+}
