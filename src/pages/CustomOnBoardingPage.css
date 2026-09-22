@@ -1,0 +1,134 @@
+.onboarding-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 178px;
+    overflow: hidden;
+}
+
+/* 슬라이드 영역 */
+.onboarding-page__viewport {
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.onboarding-page__viewport:active {
+    cursor: grabbing;
+}
+
+.onboarding-page__track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.onboarding-page__track--dragging {
+    transition: none;
+}
+
+.onboarding-page__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+/* 이미지 칸: 가장 큰 2번 이미지(283px) 기준, 나머지는 피그마 위치대로 내림 */
+.onboarding-page__image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 283px;
+    box-sizing: border-box;
+}
+
+.onboarding-page__image--1 {
+    padding-top: 22px;
+}
+
+.onboarding-page__image--3 {
+    padding-top: 19px;
+}
+
+.onboarding-page__image img {
+    display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.onboarding-page__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 225px;
+    text-align: center;
+}
+
+.onboarding-page__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #14191f;
+}
+
+.onboarding-page__description {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #6b7280;
+    word-break: keep-all;
+}
+
+/* 페이지 표시 점 */
+.onboarding-page__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.onboarding-page__dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #d7dae0;
+    cursor: pointer;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.onboarding-page__dot--active {
+    width: 20px;
+    background-color: #fd5d35;
+}
+
+/* CustomDiv footerElement: 화면 하단에 고정 */
+.onboarding-page__footer {
+    padding: 0 16px 41px;
+    background-color: #ffffff;
+}
+
+.onboarding-page__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 24px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+/* CustomDeliveryCard.css의 전역 a { width: 100% } 덮어쓰기 */
+.onboarding-page__login a {
+    width: auto;
+    color: #fd5d35;
+}
