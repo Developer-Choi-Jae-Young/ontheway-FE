@@ -39,7 +39,6 @@ function Agree(){
                     title="약관동의"
                     variant="large"
                     subtitle="서비스 이용을 위해 약관에 동의해 주세요."
-                    onBack={() => window.history.back()}
                     />
             <div className='find-pw-page-hug'>
                 
