@@ -3,22 +3,27 @@ import CustomTopAppBar from '../components/CustomTopAppBar'
 import CustomProfile from '../components/CustomProfile'
 import CustomRouteInfo from '../components/CustomRouteInfo'
 import CustomButton from '../components/CustomButton'
-import { CheckIcon, ChevronDownIcon, ClockIcon, WalletIcon } from '../components/CustomIcon'
+import { CheckIcon, ClockIcon, WalletIcon } from '../components/CustomIcon'
+import { useParams } from 'react-router-dom'
+import CustomProfileCard from '../components/CustomProfileCard'
+import CustomDiv from '../components/CustomDiv'
 
 function RequestDetail(){
+    const { id: _id } = useParams();
+
     return(
-        <div className="request-detail">
+        <CustomDiv backgroundColor='#f3f4f6'>
             <CustomTopAppBar title="배송의뢰"/>
 
             <div className="request-detail__body">
-                <div className="request-detail__profile">
-                    <CustomProfile width={16} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED"/>
-                    <div className="request-detail__profile-text">
-                        <div className="request-detail__name">하루</div>
-                        <div className="request-detail__date">2026.09.08</div>
-                    </div>
-                    <ChevronDownIcon/>
-                </div>
+                <CustomProfileCard
+                    nickname="하늘고양이"
+                    date="2026.09.08"
+                    rateing={0}
+                    review={0}
+                    chipElement={null}
+                    profileElement={<CustomProfile width={40} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
+                />
 
                 <CustomRouteInfo
                     startAddr="인천 연수구 송도과학로 32"
@@ -80,7 +85,7 @@ function RequestDetail(){
                     <CustomButton name="수정하기" color="#FD5D35" fontColor="#FFFFFF" size="md"/>
                 </div>
             </div>
-        </div>
+        </CustomDiv>
     )
 }
 

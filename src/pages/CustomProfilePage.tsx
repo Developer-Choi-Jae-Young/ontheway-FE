@@ -4,21 +4,15 @@ import TextField from '../components/TextField'
 import DateInput from '../components/DateInput'
 import CustomButton from '../components/CustomButton'
 import './CustomProfilePage.css'
- 
-/* 이 페이지에서만 쓰는 카메라 배지 아이콘 (lucide/camera) */
-function CameraIcon() {
-    return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-            stroke="#6A6A67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-            <circle cx="12" cy="13" r="3" />
-        </svg>
-    )
-}
+import { CameraIcon } from '../components/CustomIcon'
+import CustomDiv from '../components/CustomDiv'
+import { useNavigate } from 'react-router-dom'
  
 function CustomProfilePage() {
+    const navigate = useNavigate();
+
     return (
-        <div className="profile-edit">
+        <CustomDiv backgroundColor='#FFFFFF'>
             <CustomTopAppBar variant="centered" title="하루님의 프로필" />
  
             <div className="profile__body">
@@ -59,9 +53,9 @@ function CustomProfilePage() {
             </div>
  
             <div className="profile__footer">
-                <CustomButton name="수정하기" color="#fd5d35" fontColor="#ffffff" size="lg" />
+                <CustomButton name="수정하기" color="#fd5d35" fontColor="#ffffff" size="lg" onClick={() => navigate('/my/profile/edit')}/>
             </div>
-        </div>
+        </CustomDiv>
     )
 }
  

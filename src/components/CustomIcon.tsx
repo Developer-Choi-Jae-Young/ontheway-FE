@@ -454,9 +454,13 @@ export const CheckSmallIcon = () => {
     )
 }
 
-export const MegaphoneIcon = () => {
+interface MegaphoneIcon {
+    stroke?: string;
+}
+
+export const MegaphoneIcon = ({stroke = '#FD5D35'}: MegaphoneIcon) => {
     return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FD5D35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
         </svg>
     )
@@ -492,6 +496,97 @@ export const PathXButton = () => {
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18" stroke="#BABABA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M6 6L18 18" stroke="#BABABA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const ThumbsUpIcon = () => {
+    return (
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
+            stroke={'#33363D'} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 10v12" />
+            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+        </svg>
+    )
+}
+ 
+export const TruckIcon = () => {
+    return (
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
+            stroke={'#33363D'} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+            <path d="M15 18H9" />
+            <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+            <circle cx="17" cy="18" r="2" />
+            <circle cx="7" cy="18" r="2" />
+        </svg>
+    )
+}
+ 
+export const MapPinIcon = () => {
+    return (
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
+            stroke={'#33363D'} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+            <circle cx="12" cy="10" r="3" />
+        </svg>
+    )
+}
+ 
+export const EditIcon = () => {
+    return (
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
+            stroke={'#33363D'} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+            <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+        </svg>
+    )
+}
+ 
+export const LogoutIcon = () => {
+    return (
+        <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
+            stroke={'#33363D'} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <path d="m16 17 5-5-5-5" />
+            <path d="M21 12H9" />
+        </svg>
+    )
+}
+
+export const SearchIcon = () => {
+    return(
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M17.5 17.5L13.8833 13.8833M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z" stroke="#4B5663" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const ChevronRightIcon = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#33363D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m9 18 6-6-6-6" />
+        </svg>
+    )
+}
+
+export const WarnIcon = () => {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#FD5D35" />
+            <path d="M12 7.5v5" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="12" cy="16" r="1.1" fill="#ffffff" />
+        </svg>
+    )
+}
+
+export const CameraIcon = () => {
+    return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="#6A6A67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+            <circle cx="12" cy="13" r="3" />
         </svg>
     )
 }

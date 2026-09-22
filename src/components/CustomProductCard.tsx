@@ -5,12 +5,13 @@ interface CustomProductCard {
     number: string;
     category: string;
     money: string;
+    onClick?: () => void;
 }
 
-function CustomProductCard({number, category, money}: CustomProductCard) {
+function CustomProductCard({number, category, money, onClick}: CustomProductCard) {
   return (
     <>
-        <div className="custom-product">
+        <div className="custom-product" onClick={onClick}>
             <div className='product-section'>
                 <div className='product-box-section'>
                     <Box width={22} height={22} strokeWidth={2}></Box>

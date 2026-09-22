@@ -3,6 +3,7 @@ import CustomTab from '../components/CustomTab'
 import CustomReviewCard from '../components/CustomReviewCard'
 import CustomProfile from '../components/CustomProfile'
 import './CustomReviewPage.css'
+import CustomDiv from '../components/CustomDiv'
  
 // 화면용 더미 데이터 (나중에 API로 교체)
 const REVIEWS = [
@@ -15,7 +16,7 @@ const REVIEWS = [
  
 function CustomReviewPage() {
     return (
-        <div className="review-page">
+        <CustomDiv backgroundColor={'#f3f4f6'}>
             <CustomTopAppBar variant="centered" title="하루님의 후기" />
  
             <div className="review-page__tab">
@@ -26,8 +27,7 @@ function CustomReviewPage() {
                 {REVIEWS.map((r, i) => (
                     <CustomReviewCard
                         key={i}
-                        width={361}
-                        profileElement={<CustomProfile width={16} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
+                        profileElement={<CustomProfile width={40} height={20} strok="#FD5D35" strokWidth={2} diameter={40} backgroundColor="#FEF1ED" />}
                         nickname={r.nickname}
                         date={r.date}
                         rating={r.rating}
@@ -35,7 +35,7 @@ function CustomReviewPage() {
                     />
                 ))}
             </div>
-        </div>
+        </CustomDiv>
     )
 }
  

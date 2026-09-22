@@ -1,9 +1,8 @@
-import React, { type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { Star } from './CustomIcon';
 import './CustomReviewCard.css'
 
 interface CustomReviewCard {
-    width: number;
     profileElement: ReactNode;
     nickname: string;
     date: string;
@@ -11,7 +10,7 @@ interface CustomReviewCard {
     content: string;
 }
 
-function CustomReviewCard({width, profileElement, nickname, date, rating, content}: CustomReviewCard) {
+function CustomReviewCard({profileElement, nickname, date, rating, content}: CustomReviewCard) {
   const renderStars = (currentRating: number) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -34,12 +33,16 @@ function CustomReviewCard({width, profileElement, nickname, date, rating, conten
 
   return (
     <>
-        <div className="custom-review" style={{'--review-width':width} as React.CSSProperties}>
+        <div className="custom-review">
             <div>
                 <div className='review-profile-info'>
-                    <div className='review-profile-content'>
-                        {profileElement}
+                    <div className='review-profile-title'>
+                      <div className='review-profile-content'>
+                          {profileElement}          
+                      </div>
+                      <div>
                         <span className='review-nickname'>{nickname}</span>
+                      </div>
                     </div>
                     <div>
                         <span className='reivew-date'>{date}</span>
