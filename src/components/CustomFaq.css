@@ -1,0 +1,79 @@
+/* 마이페이지 FAQ: 질문을 누르면 답이 펼쳐진다 */
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.faq__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    color: #14191f;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.faq__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.faq__question {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq__icon {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.faq__question-text {
+    flex: 1;
+    min-width: 0;
+    color: #14191f;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    word-break: break-word;
+}
+
+.faq__chevron {
+    flex-shrink: 0;
+}
+
+.faq__answer {
+    width: 100%;
+    margin: 0;
+    padding-right: 48px;
+    box-sizing: border-box;
+    color: #4b5663;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}

@@ -3,7 +3,8 @@ import CustomProfile from '../components/CustomProfile'
 import CustomList from '../components/CustomList'
 import CustomNavBar from '../components/CustomNavBar'
 import './CustomMyPage.css'
-import { ChevronDownIcon, ChevronRightIcon, EditIcon, LogoutIcon, MapPinIcon, MegaphoneIcon, ThumbsUpIcon, TruckIcon } from '../components/CustomIcon'
+import CustomFaq from '../components/CustomFaq'
+import { ChevronRightIcon, LogoutIcon, ThumbsUpIcon } from '../components/CustomIcon'
 import CustomDiv from '../components/CustomDiv'
 import { useNavigate } from 'react-router-dom'
  
@@ -35,11 +36,7 @@ function CustomMyPage() {
  
                 {/* FAQ */}
                 <div className="mypage__section">
-                    <CustomList variant="list03" label="FAQ" />
-                    <CustomList variant="list01" label="배송의뢰" icon={<TruckIcon />} trailing={<ChevronDownIcon />} />
-                    <CustomList variant="list01" label="이동경로" icon={<MapPinIcon />} trailing={<ChevronDownIcon />} />
-                    <CustomList variant="list01" label="의뢰 수정" icon={<EditIcon />} trailing={<ChevronDownIcon />} />
-                    <CustomList variant="list01" label="배송 중단" icon={<MegaphoneIcon stroke={'#33363D'} />} trailing={<ChevronDownIcon />} />
+                    <CustomFaq />
                 </div>
  
                 {/* 계정관리 */}
