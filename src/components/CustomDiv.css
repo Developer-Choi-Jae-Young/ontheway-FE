@@ -4,6 +4,7 @@
     min-width: 393px;
     max-width: 500px;
     height: 100vh;
+    height: 100dvh;   /* 모바일: 주소창을 뺀 실제 보이는 높이. 미지원 브라우저는 위 100vh 사용 */
     margin: auto;
     display: flex;
     flex-direction: column;
